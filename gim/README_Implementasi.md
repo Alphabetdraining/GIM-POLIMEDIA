@@ -44,15 +44,15 @@ gim/
 │   ├── powerup.tscn       # Power-up
 │   └── ground.tscn        # Ground platform (optional)
 └── script/
-    ├── player.gd          # Player logic
-    ├── piece.gd           # Piece logic
-    ├── tetromino.gd       # Tetromino logic
-    ├── board.gd           # Board manager
-    ├── spawner.gd         # Spawner & signal connector
-    ├── ui.gd              # UI manager
-    ├── powerup.gd         # Power-up logic
-    ├── shared.gd          # Shared data (autoload)
-    └── pieces_data.gd     # Pieces data resource
+	├── player.gd          # Player logic
+	├── piece.gd           # Piece logic
+	├── tetromino.gd       # Tetromino logic
+	├── board.gd           # Board manager
+	├── spawner.gd         # Spawner & signal connector
+	├── ui.gd              # UI manager
+	├── powerup.gd         # Power-up logic
+	├── shared.gd          # Shared data (autoload)
+	└── pieces_data.gd     # Pieces data resource
 ```
 
 ### 🎮 Sistem Utama
@@ -185,7 +185,7 @@ Piece (Area2D)
 ├── Sprite2D
 ├── CollisionShape2D (Area2D)
 └── Platform (StaticBody2D)  ← BARU!
-    └── CollisionShape2D
+	└── CollisionShape2D
 ```
 
 #### **C. script/ui.gd**
@@ -498,8 +498,8 @@ enemy_portrait.texture = preload("res://assets/enemy.png")
 ```gdscript
 # Di board.gd atau spawner.gd
 func shrink_arena():
-    tetromino.bounds["min_x"] += 58  # Sempit dari kiri
-    tetromino.bounds["max_x"] -= 58  # Sempit dari kanan
+	tetromino.bounds["min_x"] += 58  # Sempit dari kiri
+	tetromino.bounds["max_x"] -= 58  # Sempit dari kanan
 ```
 
 #### **D. Special Blocks (Priority: LOW)**
@@ -512,8 +512,8 @@ func shrink_arena():
 # Di board.gd
 var special_blocks = []
 func spawn_special_block():
-    # Spawn di kolom 0 atau 9 (paling samping)
-    pass
+	# Spawn di kolom 0 atau 9 (paling samping)
+	pass
 ```
 
 #### **E. Dialog System (Priority: LOW)**
@@ -537,10 +537,10 @@ func spawn_special_block():
 # Di spawner.gd atau main.gd
 var current_level = 1
 func load_level(level_number):
-    match level_number:
-        1: setup_level_1()
-        2: setup_level_2()
-        3: setup_level_3()
+	match level_number:
+		1: setup_level_1()
+		2: setup_level_2()
+		3: setup_level_3()
 ```
 
 ---

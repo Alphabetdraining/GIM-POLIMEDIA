@@ -9,6 +9,15 @@ var bounds = {
 	"max_x": 267,
 	"max_y": 542
 }
+@export var follow_interval = 0.1
+var follow_timer_step = 0.0
+
+
+var player
+@export var follow_player = true
+@export var follow_duration = 2.0 # detik mengikuti player
+var follow_timer = 0.0
+var auto_hard_dropped = false
 
 var rotation_index = 0
 var wall_kicks
@@ -41,8 +50,8 @@ func _input(event):
 		move(Vector2.RIGHT)
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
-	elif Input.is_action_just_pressed("hard_drop"):
-		hard_drop()
+	#elif Input.is_action_just_pressed("hard_drop"):
+		#hard_drop()
 	elif Input.is_action_just_pressed("rotate_left"):
 		rotate_tetromino(-1)
 	elif Input.is_action_just_pressed("rotate_right"):
@@ -122,6 +131,26 @@ func hard_drop():
 	while move(Vector2.DOWN):
 		await get_tree().create_timer(hard_drop_speed).timeout
 	lock()
+func _physics_process(delta):
+	if is_next_piece:
+		return
+	
+	if follow_player and player and not auto_hard_dropped:
+		follow_timer_step += delta
+		follow_timer += delta
+		if follow_timer_step >= follow_interval:
+			follow_timer_step = 0
+			follow_player_logic(delta)
+			if follow_timer >= follow_duration:
+				auto_hard_dropped = true
+				hard_drop()
+		
+func follow_player_logic(delta):
+	var dir = player.global_position.x - global_position.x
+	
+	if abs(dir) > 20:
+		var move_dir = sign(dir)
+		move(Vector2(move_dir, 0))
 
 func lock():
 	timer.stop()

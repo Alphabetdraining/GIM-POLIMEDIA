@@ -5,7 +5,7 @@ enum Tetromino{
 }
 
 var cells = {
-	Tetromino.I: [Vector2(-1, 0), Vector2(0, 0), Vector2(1, 0), Vector2(2, 0)],
+	Tetromino.I: [Vector2(-1, 0), Vector2(0, 0), Vector2(1, 0)],
 #-------------------------------------------------------------------
 	Tetromino.J: [Vector2(-1, 1), Vector2(-1, 0), Vector2(0,0), Vector2(1, 0 )],
 	#-------------------------------------------------------------------

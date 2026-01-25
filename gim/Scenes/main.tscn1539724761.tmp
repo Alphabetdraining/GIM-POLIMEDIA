@@ -60,7 +60,6 @@ color = Color(0.3, 0.3, 0.3, 0.5)
 
 [node name="spawner" type="Node" parent="."]
 script = ExtResource("3_8gbba")
-powerup_scene = null
 
 [node name="board" type="Node" parent="."]
 script = ExtResource("4_jjvhh")

@@ -23,6 +23,9 @@ const POWERUP_2_ACTION = "powerup_2"
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var used_jumps = MAX_JUMPS
 
+const MIN_X = -262
+const MAX_X = 267
+
 var is_dashing = false
 var dash_timer = 0.0
 var dash_direction = 0
@@ -92,6 +95,7 @@ func _physics_process(delta):
 		play_animation("jump")
 
 	move_and_slide()
+	global_position.x = clamp(global_position.x, MIN_X, MAX_X)
 
 func take_damage(amount := 1):
 	if is_dead or is_invulnerable:
