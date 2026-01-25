@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2pfsh08wg3b7"]
+[gd_scene load_steps=10 format=3 uid="uid://c2pfsh08wg3b7"]
 
 [ext_resource type="Texture2D" uid="uid://b7ornwlji6ale" path="res://assets/Border.png" id="1_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://kkaot20dhx3p" path="res://assets/Grid.png" id="2_8gbba"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dfi4m0f8wpms5" path="res://Scenes/tetromino.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://70xyug53wjvd" path="res://Scenes/ui.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://Scenes/player.tscn" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://bt3gckli7ovql" path="res://Scenes/pausemenu.tscn" id="8_344ge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(600, 50)
@@ -45,7 +46,6 @@ stretch_mode = 1
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(0, 590)
-collision_layer = 1
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
@@ -69,3 +69,9 @@ tetromino_scene = ExtResource("5_kry3j")
 
 [node name="Player" parent="." instance=ExtResource("7_6bp64")]
 position = Vector2(-16, 480)
+
+[node name="Menu" parent="." instance=ExtResource("8_344ge")]
+offset_left = -613.0
+offset_top = -367.0
+offset_right = -613.0
+offset_bottom = -367.0
