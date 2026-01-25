@@ -7,18 +7,16 @@ const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 const MAX_JUMPS = 2
 
-const DASH_SPEED = 400.0
-const DASH_TIME = 0.15
-const DASH_COOLDOWN = 2.0
-
 const MAX_HP = 3
 var hp = MAX_HP
 var is_invulnerable = false
 var invulnerable_timer = 0.0
 const INVULNERABLE_TIME = 1.5
 
-const POWERUP_1_ACTION = "powerup_1"
 const POWERUP_2_ACTION = "powerup_2"
+
+const TELEPORT_COOLDOWN = 3.0
+var teleport_cooldown_timer = 0.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var used_jumps = MAX_JUMPS
@@ -26,10 +24,6 @@ var used_jumps = MAX_JUMPS
 const MIN_X = -262
 const MAX_X = 267
 
-var is_dashing = false
-var dash_timer = 0.0
-var dash_direction = 0
-var dash_cooldown_timer = 0.0
 var is_dead = false
 
 @onready var animated_sprite = $AnimatedSprite2D
@@ -40,6 +34,9 @@ func _physics_process(delta):
 	if is_dead:
 		return
 
+	if teleport_cooldown_timer > 0:
+		teleport_cooldown_timer -= delta
+
 	if is_invulnerable:
 		invulnerable_timer -= delta
 		if invulnerable_timer <= 0:
@@ -48,43 +45,29 @@ func _physics_process(delta):
 		else:
 			modulate.a = 0.5 if fmod(invulnerable_timer * 10, 2) < 1 else 1.0
 
-	if dash_cooldown_timer > 0:
-		dash_cooldown_timer -= delta
-
-	# DASH
-	if is_dashing:
-		dash_timer -= delta
-		velocity.x = dash_direction * DASH_SPEED
-		velocity.y = 0
-
-		if dash_timer <= 0:
-			is_dashing = false
+	if not is_on_floor():
+		velocity.y += gravity * delta
 	else:
-		if not is_on_floor():
-			velocity.y += gravity * delta
-		else:
-			used_jumps = MAX_JUMPS
+		used_jumps = MAX_JUMPS
 
-		if Input.is_action_just_pressed("jump") and used_jumps > 0:
-			velocity.y = JUMP_VELOCITY
-			used_jumps -= 1
+	if Input.is_action_just_pressed("jump") and used_jumps > 0:
+		velocity.y = JUMP_VELOCITY
+		used_jumps -= 1
 
-		var direction = Input.get_axis("move_left", "move_right")
-		if direction != 0:
-			velocity.x = direction * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
+	var direction = Input.get_axis("move_left", "move_right")
+	if direction != 0:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-		if direction > 0:
-			animated_sprite.flip_h = false
-		elif direction < 0:
-			animated_sprite.flip_h = true
+	if direction > 0:
+		animated_sprite.flip_h = false
+	elif direction < 0:
+		animated_sprite.flip_h = true
 
-	if Input.is_action_just_pressed(POWERUP_1_ACTION) \
-	and not is_dashing \
-	and dash_cooldown_timer <= 0:
-		start_dash()
-		dash_cooldown_timer = DASH_COOLDOWN
+	if Input.is_action_just_pressed(POWERUP_2_ACTION) and teleport_cooldown_timer <= 0:
+		teleport_to_safe_position()
+		teleport_cooldown_timer = TELEPORT_COOLDOWN
 
 	if is_on_floor():
 		if abs(velocity.x) < 1:
@@ -96,6 +79,39 @@ func _physics_process(delta):
 
 	move_and_slide()
 	global_position.x = clamp(global_position.x, MIN_X, MAX_X)
+
+func teleport_to_safe_position():
+	var board = get_node_or_null("/root/Main/board")
+	if not board:
+		return
+
+	var highest_block_y = get_highest_block_y()
+	var target_y = highest_block_y - 58
+	var target_pos = Vector2(global_position.x, target_y)
+
+	if is_position_safe(target_pos, board):
+		global_position = target_pos
+	else:
+		respawn_to_safe_position()
+
+func get_highest_block_y() -> float:
+	var board = get_node_or_null("/root/Main/board")
+	if not board:
+		return global_position.y
+
+	var highest_y = null
+
+	for tetromino in board.tetrominos:
+		var pieces = tetromino.get_children().filter(func(c): return c is Piece)
+		for piece in pieces:
+			var y = tetromino.global_position.y + piece.position.y
+			if highest_y == null or y < highest_y:
+				highest_y = y
+
+	if highest_y == null:
+		return global_position.y
+
+	return highest_y
 
 func take_damage(amount := 1):
 	if is_dead or is_invulnerable:
@@ -161,16 +177,6 @@ func play_animation(base_anim: String):
 			animated_sprite.play(base_anim + "_hurt")
 		1:
 			animated_sprite.play(base_anim + "_critical")
-
-func start_dash():
-	is_dashing = true
-	dash_timer = DASH_TIME
-
-	dash_direction = sign(Input.get_axis("move_left", "move_right"))
-	if dash_direction == 0:
-		dash_direction = sign(velocity.x)
-		if dash_direction == 0:
-			dash_direction = 1
 
 func _on_hit_detector_area_entered(area):
 	if area is Piece and not is_invulnerable:
