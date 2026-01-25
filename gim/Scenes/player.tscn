@@ -280,6 +280,7 @@ radius = 8.0
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 2
+collision_mask = 1
 script = ExtResource("1_x3wgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -291,3 +292,13 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -8)
 shape = SubResource("CircleShape2D_bvcm0")
+
+[node name="HitDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitDetector"]
+position = Vector2(-1, -8)
+shape = SubResource("CircleShape2D_bvcm0")
+
+[connection signal="area_entered" from="HitDetector" to="." method="_on_hit_detector_area_entered"]

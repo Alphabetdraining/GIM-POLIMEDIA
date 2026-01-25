@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://70xyug53wjvd"]
 
-[ext_resource type="Script" uid="uid://dhuqfu6xbhkin" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Script" uid="uid://dhuqfu6xbhkin" path="res://script/ui.gd" id="1_jxero"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_jxero")
@@ -34,5 +34,59 @@ text = "Game Over"
 layout_mode = 2
 text = "Restart
 "
+
+[node name="MCPanel" type="PanelContainer" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 220.0
+offset_bottom = 270.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MCPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MCPanel/VBoxContainer"]
+layout_mode = 2
+text = "PLAYER"
+horizontal_alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="MCPanel/VBoxContainer"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HPLabel" type="Label" parent="MCPanel/VBoxContainer"]
+layout_mode = 2
+text = "HP: 3/3"
+horizontal_alignment = 1
+
+[node name="EnemyPanel" type="PanelContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 270.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EnemyPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EnemyPanel/VBoxContainer"]
+layout_mode = 2
+text = "ENEMY"
+horizontal_alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="EnemyPanel/VBoxContainer"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HPLabel" type="Label" parent="EnemyPanel/VBoxContainer"]
+layout_mode = 2
+text = "Enemy HP: 10/10"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

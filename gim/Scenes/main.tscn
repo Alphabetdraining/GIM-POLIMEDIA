@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://70xyug53wjvd" path="res://Scenes/ui.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://Scenes/player.tscn" id="7_6bp64"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(600, 50)
+
 [node name="Main" type="Node"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -40,6 +43,21 @@ texture = ExtResource("2_8gbba")
 expand_mode = 1
 stretch_mode = 1
 
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(0, 590)
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="ColorRect" type="ColorRect" parent="Ground"]
+offset_left = -300.0
+offset_top = -25.0
+offset_right = 300.0
+offset_bottom = 25.0
+color = Color(0.3, 0.3, 0.3, 0.5)
+
 [node name="spawner" type="Node" parent="."]
 script = ExtResource("3_8gbba")
 
@@ -50,4 +68,4 @@ tetromino_scene = ExtResource("5_kry3j")
 [node name="UI" parent="." instance=ExtResource("6_21xkr")]
 
 [node name="Player" parent="." instance=ExtResource("7_6bp64")]
-position = Vector2(-16, 190)
+position = Vector2(-16, 480)

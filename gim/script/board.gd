@@ -3,11 +3,13 @@ class_name Board
 
 signal tetromino_locked
 signal game_over
+signal line_cleared(count: int)
 
 const ROW_COUNT = 20
 const COLUMN_COUNT = 10
 
 var tetrominos: Array[Tetromino] = []
+var cleared_lines_count = 0
 @export var tetromino_scene : PackedScene  
 
 func spawn_tetromino(type:Shared.Tetromino, is_next_piece, spawn_position):
@@ -40,7 +42,10 @@ func check_game_over():
 				game_over.emit()
 func clear_lines():
 	var board_pieces = fill_board_pieces()
-	clear_board_pieces(board_pieces)
+	var lines_cleared_this_time = clear_board_pieces(board_pieces)
+	if lines_cleared_this_time > 0:
+		cleared_lines_count += lines_cleared_this_time
+		line_cleared.emit(lines_cleared_this_time)
 func fill_board_pieces():
 	var board_pieces = []
 	
@@ -56,14 +61,16 @@ func fill_board_pieces():
 	
 func clear_board_pieces(board_pieces):
 	var i = ROW_COUNT - 1
+	var lines_cleared = 0
 	while i >= 0:
 		if board_pieces[i].size() == COLUMN_COUNT:
 			clear_row(board_pieces[i])
 			board_pieces[i].clear()
 			move_all_pieces_down(board_pieces, i)
-			# JANGAN i -= 1 di sini
+			lines_cleared += 1
 		else:
 			i -= 1
+	return lines_cleared
 
 
 
