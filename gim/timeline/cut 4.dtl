@@ -1,0 +1,64 @@
+Setelah menyelesaikan tantangan pertama CARISSA dan cube pun terlempar ke ruangan yang gelap
+[wait time="0.5" hide_text="false"]
+join Carissa (sedih) leftmost
+Carissa (sedih): Aw.. Ruangan apa ini, Gelap sekali
+join cube (New portrait) rightmost
+cube (New portrait): Sepertinya kita masih terjebak di dalam game ini
+Carissa (senyum): Tuan Cube kamu hebat banget sudah ngebantu aku dalam tantangan tadi
+cube (malu): Yaa sama-sama.
+Carissa (Netral): Tuan Cube kenapa muka kamu malah seperti itu
+cube (uncomfortable): Ah tidak apa-apa, karna sejauh ini hanya kamu yang berhasil menyelesaikan tantangan dari AI sialan itu
+Carissa (senyum): Serius?
+[wait time="0.5" hide_text="false"]
+cube (New portrait): Ya..
+[wait time="0.5"]
+Carissa (Netral): Tuan cube aku ingin bertanya, asal kamu dari mana? Dan kenapa kamu menolongku
+cube (New portrait): Oh tentang itu yaa, apakah kamu akan percaya pada ku?
+Carissa (senyum): Tentu saja tuan cube
+cube (marah): Bisakah kamu tidak memanggilku tuan cube!!
+Carissa (senyum): Ya karena kamu cube
+cube (New portrait): Tidak salah juga sih..
+[wait time="0.5" hide_text="false"]
+Carissa (senyum): Jadi aku bisa manggil kamu siapa?
+[wait time="0.5" hide_text="false"]
+leave cube [animation="Instant Out"]
+join XANDER rightmost [animation="Instant In"]
+XANDER: Yaa karena kita belom berkenalan jadi pekenalkan nama ku Xander aku cube yang bertujuan untuk menyelamatkan orang yang terjebak dalam dunia ini
+update Carissa (Netral)
+Carissa (senyum): Xander! Nama ku Carissa, makasih sudah membantu ku
+XANDER (malu): Ya bukan masalah besar
+Carissa (Netral): Jadi Xander, jawablah pertanyaan ku. Dari mana asalmu dan kenapa kamu menolongku?
+XANDER (uncomfortable): Yaaa aku kan tadi sudah bilang tujuan ku untuk membantu orang yang terjebak dalam game ini, dan asal ku seperti dunia kau juga, aku adalah manusia sebelumnya.
+Carissa (kaget): Tidak mungkin!
+XANDER (netral): Ya kau pasti terkejut, aku juga seperti mu sebelumnya
+leave --All--
+Xander mulai menceritakan masa lalunya yang terjebak dalam game ini
+join XANDER center
+XANDER: Pada waktu itu aku melihat social media di komputer ku dan aku menghabiskan waktu dan merasa bosan, sesaat aku menemukan web yang merujuk ke game ini karena aku bosan jadi aku menginstal game ini dan ingin mencobanya, terkejut tiba-tiba aku tertarik ke dalam game ini dan di sambut oleh AI bodoh itu.
+[wait time="1.5" hide_text="false"]
+XANDER: Aku mencoba bertahan hidup dari block block yang berjatuhan tetapi aku gagal, aku tertimpa oleh block-block itu dan tanpa sadar pandanganku terasa hampa  aku tidak melihat apa-pun yang ada di sekitar.
+[wait time="1.5" hide_text="false"]
+XANDER: Aku terbangun kembali ke dalam dunia game ini tetapi tanpa sadar tubuhku berubah menjadi cube, aku melihat korban selanjutnya dan aku berusaha menolong mereka tetapi aku gagal.
+[wait time="1.5" hide_text="false"]
+XANDER: Suasana kembali hampa kegagalan yang ku dapat membuatku merasa tidak berguna, tetapi aku kembali lagi dan bertemu dengan kamu dan akhirnya aku berhasil menyelamatkan mu tetapi aku tidak  tahu bagaimana keluar dalam game ini
+[wait time="1.5" hide_text="false"]
+update XANDER rightmost
+join Carissa (sedih) leftmost [animation="Slide In Up"]
+Carissa (sedih): XA-XANDER AKU TERHARU BANGETT
+[wait time="0.5" hide_text="false"]
+XANDER (malu): Ga usah segitunya, itu emang tugasku
+Carissa (sedih): Tapi kau sudah seperti hero di pandangan ku
+Carissa (senyum): Terimakasih ya Xander
+[wait time="1.0" hide_text="false"]
+XANDER (malu): Iya sama-sama
+[wait time="1.0" hide_text="false"]
+Carissa (senyum): Aku janji akan membantu mu keluar dari sini
+XANDER (netral): Ta-Tapii
+Carissa (senyum): Kita akan nyari jalan keluarnya
+XANDER (uncomfortable): (menghela nafas) aku tidak di dengar yaaa, ya sudahlah
+[wait time="1.0" hide_text="false"]
+leave --All--
+Alarm berbunyi yang membuat Xander dan Carissa terkejut\
+Seketika lampu menyala dan memperlihatkan ruangan yang sama seperti sebelumnya tetapi.
+[wait time="1.5" hide_text="false"]
+[signal arg="cut_04"]

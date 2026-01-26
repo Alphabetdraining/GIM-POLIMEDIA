@@ -22,8 +22,38 @@ Shared="*res://script/shared.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Carissa": "res://character/Carissa.dch",
+"Morana": "res://character/Morana.dch",
+"XANDER": "res://character/XANDER.dch",
+"cube": "res://character/cube.dch",
+"layar_HP": "res://character/layar_HP.dch",
+"tanda tanya": "res://character/tanda tanya.dch",
+"tanuki": "res://character/tanuki.dch",
+"teman_1": "res://character/teman_1.dch",
+"teman_2": "res://character/teman_2.dch"
+}
+directories/dtl_directory={
+"cut 4": "res://timeline/cut 4.dtl",
+"cut 5": "res://timeline/cut 5.dtl",
+"cut 6": "res://timeline/cut 6.dtl",
+"cut_1": "res://timeline/cut_1.dtl",
+"cut_2": "res://timeline/cut_2.dtl",
+"cut_3": "res://timeline/cut_3.dtl",
+"cut_in_1": "res://timeline/cut_in_1.dtl",
+"cut_in_2": "res://timeline/cut_in_2.dtl",
+"cut_in_2_clear": "res://timeline/cut_in_2_clear.dtl",
+"cut_in_3": "res://timeline/cut_in_3.dtl",
+"cut_in_3_clear": "res://timeline/cut_in_3_clear.dtl"
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://style/Dialog_Box_Style.tres"]
+layout/default_style="res://style/Dialog_Box_Style.tres"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 

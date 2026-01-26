@@ -1,0 +1,17 @@
+Setelah sepulang sekolah CARISSA cepat cepat masuk kedalam kamarnya dan merasa penasaran dangan game yang dibicarakan saat dikelas
+join Carissa center [animation="Instant In"]
+Carissa (marah): Ahhhhhhhhh, Kenapa aku malah penasaran dengan game nyaaa, tapi aku takut itu beneran terjadi.
+Carissa (senyum): Oke, Mungkin aku coba download game nya aku takut aku mati penasaran.
+Lalu karena Carissa sangat penasaran ia pun menginstal gamenya
+[wait time="0.3" hide_text="false"]
+Carissa (Netral): Sip aku sudah mendownload nya, Akan ku buktikan kalo game itu hanyalah hoax dari Social media.
+Setelah Selesai menginstal
+[wait time="0.3" hide_text="false"]
+Carissa (senyum): Baiklah akan aku buktikan kalo ini palsu. (membuka game tersebut)
+Carissa (senyum): Eh tidak terjadi apa-apa.
+join layar_HP rightmost
+layar_HP: Selamat datang.
+Carissa (kaget): HEI! TUNGGU-AHHHHHHHH
+[wait time="0.3"]
+leave --All-- [animation="Instant Out"]
+[signal arg="cut_02"]

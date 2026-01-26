@@ -1,0 +1,21 @@
+join Carissa (Netral) leftmost [animation="Instant In"]
+Carissa (Netral): Apa kita berhasil?
+[wait time="1.0" hide_text="false"]
+join XANDER (kaget) rightmost [animation="Instant In"]
+XANDER (kaget): Aku tidak tahu
+[wait time="1.0" hide_text="false"]
+join Morana (marah) center [animation="Instant In"]
+Morana (marah): Berengsek kalian!!
+Morana (marah): Aku tidak menerima ini!!
+leave --All-- [animation="Instant Out"]
+Tiba-tiba saja terjadi guncangan hebat di ruangan itu, bersamaan dengan itu, ruangan pun mulai terasa menyempit.
+[wait time="1.5" hide_text="false"]
+join Morana (tersenyum) center [animation="Instant In"]
+Morana (tersenyum): HAHAHAHHA
+[wait time="1.5" hide_text="false"]
+Morana (marah): Rasakanlah akibat kalian menantangku!!
+[wait time="1.0" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+Sesaat Carissa dan Xander mulai panik
+[wait time="1.5" hide_text="false"]
+[signal arg="cut_in_02_clear"]

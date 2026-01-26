@@ -1,0 +1,85 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "Dialog_Box_Style",
+"suffix": ""
+},
+&"default_portrait": "Netral",
+&"description": "",
+&"display_name": "Carissa",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Netral": {
+"export_overrides": {
+"image": "\"res://assets/dummy/Cleo.png\""
+},
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"kaget": {
+"export_overrides": {
+"image": "\"res://assets/dummy/Cleo.png\""
+},
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"kaget right": {
+"export_overrides": {
+"image": "\"res://assets/dummy/Cleo.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"marah": {
+"export_overrides": {
+"image": "\"res://assets/dummy/Cleo.png\""
+},
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"sedih": {
+"export_overrides": {
+"image": "\"res://assets/dummy/Cleo.png\""
+},
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"senyum": {
+"export_overrides": {
+"image": "\"res://assets/dummy/Cleo.png\""
+},
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"takut": {
+"export_overrides": {
+"image": "\"res://assets/dummy/Cleo.png\""
+},
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+}
+},
+&"scale": 0.5
+}

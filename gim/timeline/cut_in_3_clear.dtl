@@ -1,0 +1,134 @@
+[background arg="res://assets/dummy/steven-kent-lomtong-anime-classroom-lo.jpg" fade="0.0"]
+join Morana (marah) center
+Morana (marah): Akh! Sialan... Kau pikir ini... sudah berakhir? Sshhh... l-lihat saja nanti...
+[wait time="1.5" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+Dalam sekejap, Morana tampak terserpih menjadi debu sebelum akhirnya benar-benar menghilang dari pandangan.
+[wait time="1.5" hide_text="false"]
+join Carissa leftmost
+Carissa (Netral): Fuuuh ... Xander, apa kita benar-benar berhasil mengalahkannya?
+[wait time="1.0" hide_text="false"]
+join XANDER (bingung) rightmost
+XANDER (bingung): Ya mungkin
+[wait time="0.7" hide_text="false"]
+XANDER (netral): Lagian juga dia sudah mengerahkan semua kekuatannya, mustahil dia bisa bangkit kembali
+Carissa (senyum): Syukurlah
+[wait time="2.0" hide_text="false"]
+Carissa (sedih): Hiks…
+[wait time="2.0" hide_text="false"]
+XANDER (bingung): Eh kau kenapa Carissa?
+Carissa (sedih): Aku. Hiks. Aku. hiks…
+[wait time="2.0" hide_text="false"]
+XANDER (uncomfortable): ...
+[wait time="2.0" hide_text="false"]
+Carissa (sedih): Aku ... aku tidak tahu harus membalasnya dengan apa. Huuu ... terima kasih Xander sudah membantuku sampai sini
+XANDER (uncomfortable): ...
+[wait time="2.0" hide_text="false"]
+XANDER (senyum): Sudahlah, aku juga bersyukur kau selamat dari tantangan ini
+XANDER (senyum): Itu sudah tugasku sebagai block yang tinggal di sini
+XANDER (netral): Aku tidak ingin lagi ada korban yang mati sia-sia
+Carissa (senyum): Kau adalah heroku xander
+[wait time="1.5" hide_text="false"]
+XANDER (malu): He-hero? Aneh aja kamu ini
+Carissa (senyum): Wkwkwkwk
+[wait time="2.0" hide_text="false"]
+XANDER (uncomfortable): ...
+[wait time="1.5" hide_text="false"]
+XANDER (senyum): Syukurlah kau sudah tertawa lagi
+Carissa (senyum): Ya, Sekali lagi Terimakasih Xander
+XANDER (netral): Hei Carissa liat itu, Ada cahaya di situ
+XANDER (netral): Mari kita hampiri
+Carissa (senyum): Ya..
+[wait time="2.0" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+Mereka bergegas berlari ke arah cahaya
+[wait time="1.5" hide_text="false"]
+join XANDER (senyum) rightmost
+XANDER (senyum): Carissa itu pintu keluarnya
+join Carissa (senyum) leftmost
+Carissa (senyum): Ya
+[wait time="1.5" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+Merekapun mengarah ke pintu dan bergegas untuk keluar dari ruangan\
+Namun, sebuah peristiwa tak terduga tiba-tiba terjadi.
+join XANDER (netral) rightmost
+XANDER (netral): Aw..
+[wait time="1.5" hide_text="false"]
+join Carissa (kaget) leftmost
+Carissa (kaget): Hei Xander apa yang terjadi!
+[wait time="1.0" hide_text="false"]
+XANDER (kaget): Aku tidak tahu
+[wait time="1.0" hide_text="false"]
+Carissa (kaget): Jangan bilang kau..
+[wait time="2.0" hide_text="false"]
+Carissa (kaget): tidak bisa keluar dari sini!!
+[wait time="2.0" hide_text="false"]
+XANDER (uncomfortable): Mungkin
+[wait time="1.5" hide_text="false"]
+Carissa (marah): Kenapa kau malah keliat tenang!
+XANDER (senyum): Mau bagaimana lagi aku tidak bisa keluar dari sini
+Carissa (Netral): Tapi aku ingin keluar bersama kamu Xander, kamu sudah menolongku sampai sini dan aku juga sudah janji kepada kamu untuk membawa kita untuk keluar bersama-sama
+[wait time="2.0" hide_text="false"]
+XANDER (senyum): Makasih ya Carissa sudah mau menolongku juga, Tapi aku tidak bisa
+[wait time="1.5" hide_text="false"]
+Carissa (sedih): Tapi…
+[wait time="2.0" hide_text="false"]
+XANDER (senyum): Pergilah Carrisa
+[wait time="1.5" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+Tanpa memedulikan apa pun, Carissa mendorong paksa Xander keluar. Egois.
+[wait time="2.0" hide_text="false"]
+join XANDER (uncomfortable) rightmost
+XANDER (uncomfortable): Carissa, percuma! Sudah kubilang aku tidak bisa keluar!
+[wait time="1.5" hide_text="false"]
+join Carissa (sedih) leftmost
+Carissa (sedih): Tapi… Aku tidak ingin hanya aku yang keluar dari sini
+[wait time="2.0" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+XANDER pun mulai menghindar dari dorongan Carissa
+join XANDER (netral) rightmost
+XANDER (netral): Cukup carissa. Pergilah dari sini sebelum kau terjebak juga
+[wait time="1.5" hide_text="false"]
+join Carissa (sedih) leftmost
+Carissa (sedih): Tapi kau akan sendiri di sini
+XANDER (netral): Carissa dengarkan aku! Aku di sini hanya ingin menyelamatkan mu dan aku juga bertujuan untuk memusnahkan Ai brengsek itu
+[wait time="2.0" hide_text="false"]
+XANDER (senyum): Jadi tidak apa-apa Carissa, kita impas kau juga sudah membantuku untuk mengalahkan AI itu
+[wait time="2.0" hide_text="false"]
+Carissa (sedih): Xander…
+[wait time="1.5" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+Xander pun mulai teriak
+[wait time="1.0" hide_text="false"]
+join XANDER (senyum) rightmost
+XANDER (senyum): CARISSAAA! AKU BERJANJI AKAN MENGHILANGKAN GAME INI DAN TIDAK BAKAL ADA KORBAN LAGI YANG AKAN MASUK KE GAME INI
+[wait time="2.0" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+Carissa pun tertawa melihat pernyataan dari Xander
+join Carissa (senyum) leftmost
+Carissa (senyum): Wkwkwk apa-apaan itu sekarang kau jadi terlihat seperti hero
+[wait time="1.5" hide_text="false"]
+join XANDER (malu) rightmost
+XANDER (malu): Brisik!
+[wait time="2.0" hide_text="false"]
+XANDER (senyum): Baiklah, kau harus cepat keluar
+[wait time="1.0" hide_text="false"]
+Carissa (senyum): Ya....
+[wait time="2.0" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+Carissa pun mulai berlari dan keluar dari ruangan itu
+join Carissa (senyum) leftmost
+Carissa (sedih): XANDER…
+[wait time="2.0" hide_text="false"]
+Carissa (senyum): TERIMAKASIH BANYAK DAN SELAMA TINGGAL
+[wait time="1.5" hide_text="false"]
+Carissa (senyum): AKU TIDAK AKAN MELUPAKAN MU.
+[wait time="1.5" hide_text="false"]
+leave --All-- [animation="Instant Out"]
+[background arg="res://assets/Green.png" fade="1.0"]
+Saat Carissa menyatakan perpisahan, Carissa melihat sekilas entitas asli Xander—sebuah wujud roh yang menyunggingkan senyum penuh kebanggaan.
+[wait time="3.0" hide_text="false"]
+join XANDER (senyum) center
+XANDER (senyum): Ya, selamat tinggal carissa
+[wait time="2.0" hide_text="false"]
+[signal arg="cut_in_03_clear"]
