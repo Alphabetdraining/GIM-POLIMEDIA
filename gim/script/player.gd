@@ -21,8 +21,8 @@ var teleport_cooldown_timer = 0.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var used_jumps = MAX_JUMPS
 
-const MIN_X = -262
-const MAX_X = 267
+const MIN_X = -870
+const MAX_X = 890
 
 var is_dead = false
 

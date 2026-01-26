@@ -6,7 +6,7 @@ signal game_over
 signal line_cleared(count: int)
 
 const ROW_COUNT = 20
-const COLUMN_COUNT = 10
+const COLUMN_COUNT = 20
 
 @onready var player = $"../Player"
 

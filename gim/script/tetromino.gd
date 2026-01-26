@@ -1,24 +1,51 @@
 extends Node2D
-
-class_name Tetromino 
+class_name Tetromino
 
 signal lock_tetromino(tetromino: Tetromino)
 
+# ================= GRID LIMIT =================
 var bounds = {
-	"min_x": -262,
-	"max_x": 267,
-	"max_y": 542
+	"min_x": -870,
+	"max_x": 890,
+	"max_y": 580
 }
+# ================= MOVE SMOOTH =================
+var target_position: Vector2
+@export var smooth_speed = 12.0
+# ================= STATE SYSTEM =================
+enum DropState {
+	FLOATING,
+	FALL_PREPARE,
+	ROTATING,
+	HARD_DROP,
+	NORMAL
+}
+
+var drop_state = DropState.FLOATING
+var state_timer = 0.0
+
+# ================= SETTINGS =================
+@export var float_time = 4.0
+@export var rotate_time = 2.0
+@export var rotate_interval = 0.2
+
 @export var follow_interval = 0.1
 var follow_timer_step = 0.0
 
+@export var fall_speed = 0.5
+@export var hard_drop_speed = 0.08
 
-var player
-@export var follow_player = true
-@export var follow_duration = 2.0 # detik mengikuti player
-var follow_timer = 0.0
+# ================= FLAGS =================
+var is_locked = false
 var auto_hard_dropped = false
 
+# ================= PLAYER FOLLOW =================
+var player
+@export var follow_player = true
+@export var follow_duration = 3.0
+var follow_timer = 0.0
+
+# ================= TETROMINO DATA =================
 var rotation_index = 0
 var wall_kicks
 var tetromino_data
@@ -26,23 +53,44 @@ var is_next_piece
 var tetromino_cells
 var pieces = []
 var other_tetrominos: Array[Tetromino] = []
-@export var hard_drop_speed = 0.02
+
+# ================= VISUAL FLOAT =================
+var float_wave = 0.0
+
+# ================= NODE =================
 @onready var timer = $Timer
 @onready var piece_scene = preload("res://Scenes/piece.tscn")
-func  _ready() -> void:
+
+# =================================================
+func _ready() -> void:
 	tetromino_cells = Shared.cells[tetromino_data.tetromino_type]
 	
+
+	is_locked = false
+	follow_timer = 0
+	auto_hard_dropped = false
+	state_timer = 0
+	drop_state = DropState.FLOATING
+
+	timer.stop() # disable classic gravity
+
 	for cell in tetromino_cells:
 		var piece = piece_scene.instantiate() as Piece
 		pieces.append(piece)
 		add_child(piece)
 		piece.set_texture(tetromino_data.piece_texture)
 		piece.position = cell * piece.get_size()
-	
+	var tile = pieces[0].get_size().x
+	bounds.min_x = - (Board.COLUMN_COUNT / 2) * tile
+	bounds.max_x = (Board.COLUMN_COUNT / 2) * tile
+	bounds.max_y = (Board.ROW_COUNT / 2) * tile
+	target_position = global_position
 	if is_next_piece == false:
 		position = tetromino_data.spawn_position
 		wall_kicks = Shared.wall_kicks_i if tetromino_data.tetromino_type == Shared.Tetromino.I else Shared.wall_kicks_jlostz
-		
+
+
+# ================= INPUT =================
 func _input(event):
 	if Input.is_action_just_pressed("left"):
 		move(Vector2.LEFT)
@@ -50,113 +98,154 @@ func _input(event):
 		move(Vector2.RIGHT)
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
-	#elif Input.is_action_just_pressed("hard_drop"):
-		#hard_drop()
 	elif Input.is_action_just_pressed("rotate_left"):
 		rotate_tetromino(-1)
 	elif Input.is_action_just_pressed("rotate_right"):
 		rotate_tetromino(1)
-func move(direction: Vector2)->bool:
-	var new_position = calculate_global_position(direction,global_position)
+
+
+# ================= GRID MOVE =================
+func move(direction: Vector2) -> bool:
+	var new_position = calculate_global_position(direction, target_position)
 	if new_position:
-		global_position = new_position
+		target_position = new_position
 		return true
 	return false
-func calculate_global_position(direction: Vector2, starting_global_position:Vector2):
-	#TODO check kolusi dengan balok lain
-	if is_colliding_with_other_tetromino(direction, starting_global_position):
+
+
+func calculate_global_position(direction: Vector2, start_pos: Vector2):
+	if is_colliding_with_other_tetromino(direction, start_pos):
 		return null
-	#todo kolui dengan tembok
-	if !is_within_game_bounds(direction, starting_global_position):
+	if !is_within_game_bounds(direction, start_pos):
 		return null
-	return starting_global_position + direction * pieces[0].get_size().x
-func is_within_game_bounds(direction: Vector2, starting_global_position):
+	return start_pos + direction * pieces[0].get_size().x
+
+func is_within_game_bounds(direction: Vector2, start_pos):
 	for piece in pieces:
-		var new_position = piece.position + starting_global_position + direction * piece.get_size()
-		if new_position.x < bounds.get("min_x") || new_position.x > bounds.get("max_x") || new_position.y >= bounds.get("max_y"):
+		var pos = piece.position + start_pos + direction * piece.get_size()
+		if pos.x < bounds.min_x or pos.x > bounds.max_x or pos.y >= bounds.max_y:
 			return false
 	return true
-func is_colliding_with_other_tetromino(direction:  Vector2, starting_global_position: Vector2):
+
+func is_colliding_with_other_tetromino(direction: Vector2, start_pos):
 	for tetromino in other_tetrominos:
-		var tetromino_pieces = tetromino.get_children().filter(func (c): return c is Piece)
-		for tetromino_piece in tetromino_pieces:
-			for piece in pieces:
-				if starting_global_position + piece.position + direction * piece.get_size().x == tetromino.global_position + tetromino_piece.position:
+		var others = tetromino.get_children().filter(func(c): return c is Piece)
+		for o in others:
+			for p in pieces:
+				var my_pos = start_pos + p.position + direction * p.get_size().x
+				var other_pos = tetromino.target_position + o.position
+
+				if my_pos == other_pos:
 					return true
 	return false
+
+
+
+# ================= ROTATION =================
 func rotate_tetromino(direction: int):
-	var  original_rotation_index = rotation_index
 	if tetromino_data.tetromino_type == Shared.Tetromino.O:
 		return
-	
+
+	var old = rotation_index
 	apply_rotation(direction)
-	rotation_index = wrap(rotation_index + direction,0,4) 
-	
+	rotation_index = wrap(rotation_index + direction, 0, 4)
+
 	if !test_wall_kicks(rotation_index, direction):
-		rotation_index = original_rotation_index
+		rotation_index = old
 		apply_rotation(-direction)
-	
-func test_wall_kicks(rotation_index: int, rotation_direction: int):
-	var wall_kick_index = get_wall_kick_index(rotation_index,rotation_direction)
+
+func test_wall_kicks(rot_i: int, dir: int):
+	var index = get_wall_kick_index(rot_i, dir)
 	for i in wall_kicks[0].size():
-		var translation = wall_kicks[wall_kick_index][i]
-		if move(translation):
+		if move(wall_kicks[index][i]):
 			return true
 	return false
 
-func get_wall_kick_index(rotation_index:int,rotation_direction):
-	var walk_kick_index = rotation_index * 2
-	if rotation_direction<0:
-		walk_kick_index -=1
-	return wrap(walk_kick_index, 0 , wall_kicks.size())
+func get_wall_kick_index(rot_i: int, dir: int):
+	var idx = rot_i * 2
+	if dir < 0:
+		idx -= 1
+	return wrap(idx, 0, wall_kicks.size())
 
-func apply_rotation(direction: int):
-	var rotation_matrix = Shared.clockwise_rotation_matrix if direction == 1 else Shared.counter_clockwise_rotation_matrix
-	
-	var tetromino_cells = Shared.cells[tetromino_data.tetromino_type]
-	
-	for i in tetromino_cells.size():
-		var cell =  tetromino_cells[i]
-		var x
-		var y
-		var coordinates = rotation_matrix[0] * cell.x + rotation_matrix[1] * cell.y
-		tetromino_cells[i] = coordinates
-	
+func apply_rotation(dir: int):
+	var mat = Shared.clockwise_rotation_matrix if dir == 1 else Shared.counter_clockwise_rotation_matrix
+	var cells = Shared.cells[tetromino_data.tetromino_type]
+
+	for i in cells.size():
+		cells[i] = mat[0] * cells[i].x + mat[1] * cells[i].y
+
 	for i in pieces.size():
-		var piece = pieces[i]
-		piece.position = tetromino_cells[i] * piece.get_size()
+		pieces[i].position = cells[i] * pieces[i].get_size()
+
+
+# ================= HARD DROP =================
 func hard_drop():
-	#ini blok turun cepat
+	if is_locked:
+		return
+
 	set_process_input(false)
 	while move(Vector2.DOWN):
 		await get_tree().create_timer(hard_drop_speed).timeout
 	lock()
+
+
+# ================= CINEMATIC STATE MACHINE =================
 func _physics_process(delta):
-	if is_next_piece:
+	if is_next_piece or is_locked:
 		return
-	
-	if follow_player and player and not auto_hard_dropped:
-		follow_timer_step += delta
-		follow_timer += delta
-		if follow_timer_step >= follow_interval:
-			follow_timer_step = 0
-			follow_player_logic(delta)
-			if follow_timer >= follow_duration:
-				auto_hard_dropped = true
-				hard_drop()
-		
+
+	state_timer += delta
+
+	match drop_state:
+
+		DropState.FLOATING:
+			if follow_player and player:
+				follow_player_logic(delta)
+
+			if state_timer >= float_time:
+				state_timer = 0
+				drop_state = DropState.FALL_PREPARE
+
+		DropState.FALL_PREPARE:
+			move(Vector2.DOWN)
+			state_timer = 0
+			drop_state = DropState.HARD_DROP
+
+		#DropState.ROTATING:
+			#if state_timer >= rotate_interval:
+				#state_timer = 0
+				#rotate_tetromino(1)
+				#rotate_time -= rotate_interval
+#
+			#if rotate_time <= 0:
+				#drop_state = DropState.HARD_DROP
+
+		DropState.HARD_DROP:
+			hard_drop()
+			drop_state = DropState.NORMAL
+
+
+# ================= VISUAL FLOAT (NO GRID DAMAGE) =================
+func _process(delta):
+	global_position = global_position.lerp(target_position, delta * smooth_speed)
+
+	if drop_state == DropState.FLOATING:
+		float_wave += delta * 2.0
+		position.y += sin(float_wave) * 0.2
+
+
+# ================= PLAYER FOLLOW =================
 func follow_player_logic(delta):
 	var dir = player.global_position.x - global_position.x
-	
 	if abs(dir) > 20:
-		var move_dir = sign(dir)
-		move(Vector2(move_dir, 0))
+		move(Vector2(sign(dir), 0))
 
+
+# ================= LOCK =================
 func lock():
-	timer.stop()
+	if is_locked:
+		return
+
+	is_locked = true
 	lock_tetromino.emit(self)
 	set_process_input(false)
-func _on_timer_timeout() -> void:
-	var should_lock = !move(Vector2.DOWN)
-	if should_lock:
-		lock()
