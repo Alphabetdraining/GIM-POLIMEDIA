@@ -283,7 +283,8 @@ collision_layer = 2
 script = ExtResource("1_x3wgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(0, -68)
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_81gkq")
 animation = &"idle_critical"
 autoplay = "idle"

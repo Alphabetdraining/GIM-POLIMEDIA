@@ -82,7 +82,7 @@ func _ready() -> void:
 		piece.position = cell * piece.get_size()
 	var tile = pieces[0].get_size().x
 	bounds.min_x = - (Board.COLUMN_COUNT / 2) * tile
-	bounds.max_x = (Board.COLUMN_COUNT / 2) * tile
+	bounds.max_x = (Board.COLUMN_COUNT / 2) * tile - tile
 	bounds.max_y = (Board.ROW_COUNT / 2) * tile
 	target_position = global_position
 	if is_next_piece == false:
@@ -133,9 +133,9 @@ func is_colliding_with_other_tetromino(direction: Vector2, start_pos):
 		for o in others:
 			for p in pieces:
 				var my_pos = start_pos + p.position + direction * p.get_size().x
-				var other_pos = tetromino.target_position + o.position
+				var other_pos = tetromino.global_position + o.position
 
-				if my_pos == other_pos:
+				if my_pos.distance_to(other_pos) < p.get_size().x * 0.5:
 					return true
 	return false
 
@@ -236,9 +236,29 @@ func _process(delta):
 
 # ================= PLAYER FOLLOW =================
 func follow_player_logic(delta):
-	var dir = player.global_position.x - global_position.x
-	if abs(dir) > 20:
-		move(Vector2(sign(dir), 0))
+	if not player:
+		return
+	
+	var player_x = player.global_position.x
+	var tile_size = pieces[0].get_size().x
+	var snapped_x = round(player_x / tile_size) * tile_size
+	
+	var leftmost = 0.0
+	var rightmost = 0.0
+	
+	for piece in pieces:
+		if piece.position.x < leftmost:
+			leftmost = piece.position.x
+		if piece.position.x > rightmost:
+			rightmost = piece.position.x
+	
+	var min_bound = bounds.min_x - leftmost
+	var max_bound = bounds.max_x - rightmost
+	
+	snapped_x = clamp(snapped_x, min_bound, max_bound)
+	
+	if abs(snapped_x - target_position.x) > tile_size * 0.5:
+		target_position.x = snapped_x
 
 
 # ================= LOCK =================

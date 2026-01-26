@@ -26,6 +26,10 @@ func _on_continue_button_down():
 	visible = false
 	get_tree().paused = false
 
+func _on_restart_button_down():
+	paused = false
+	get_tree().paused = false
+	get_tree().reload_current_scene()
 
 func _on_quit_button_down():
 	get_tree().quit()

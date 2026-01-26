@@ -61,6 +61,24 @@ offset_right = 300.0
 offset_bottom = 25.0
 color = Color(0.3, 0.3, 0.3, 0.5)
 
+[node name="WallLeft" type="StaticBody2D" parent="."]
+position = Vector2(-1120, 0)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_ground")
+rotation = 1.5708
+
+[node name="WallRight" type="StaticBody2D" parent="."]
+position = Vector2(896, 0)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_ground")
+rotation = 1.5708
+
 [node name="spawner" type="Node" parent="."]
 script = ExtResource("3_8gbba")
 powerup_scene = null

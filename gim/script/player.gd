@@ -3,8 +3,8 @@ extends CharacterBody2D
 signal hp_changed(new_hp)
 signal player_died
 
-const SPEED = 130.0
-const JUMP_VELOCITY = -300.0
+const SPEED = 500.0
+const JUMP_VELOCITY = -500.0
 const MAX_JUMPS = 2
 
 const MAX_HP = 3
@@ -21,8 +21,8 @@ var teleport_cooldown_timer = 0.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var used_jumps = MAX_JUMPS
 
-const MIN_X = -870
-const MAX_X = 890
+const MIN_X = -960
+const MAX_X = 960
 
 var is_dead = false
 
