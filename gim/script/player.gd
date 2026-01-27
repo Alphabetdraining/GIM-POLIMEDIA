@@ -26,6 +26,9 @@ const MAX_X = 960
 
 var is_dead = false
 
+var is_stunned = false
+var stun_timer = 0.0
+
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var collision_shape = $CollisionShape2D
 @onready var hit_detector = $HitDetector
@@ -33,6 +36,15 @@ var is_dead = false
 func _physics_process(delta):
 	if is_dead:
 		return
+
+	if is_stunned:
+		stun_timer -= delta
+		if stun_timer <= 0:
+			is_stunned = false
+		else:
+			velocity = Vector2.ZERO
+			move_and_slide()
+			return
 
 	if teleport_cooldown_timer > 0:
 		teleport_cooldown_timer -= delta
@@ -79,6 +91,11 @@ func _physics_process(delta):
 
 	move_and_slide()
 	global_position.x = clamp(global_position.x, MIN_X, MAX_X)
+
+func stun(duration := 1.5):
+	is_stunned = true
+	stun_timer = duration
+	velocity = Vector2.ZERO
 
 func teleport_to_safe_position():
 	var board = get_node_or_null("/root/Main/board")
@@ -174,9 +191,9 @@ func play_animation(base_anim: String):
 		3:
 			animated_sprite.play(base_anim)
 		2:
-			animated_sprite.play(base_anim + "_hurt")
+			animated_sprite.play(base_anim) #+ "_hurt")
 		1:
-			animated_sprite.play(base_anim + "_critical")
+			animated_sprite.play(base_anim) #+ "_critical")
 
 func _on_hit_detector_area_entered(area):
 	if area is Piece and not is_invulnerable:

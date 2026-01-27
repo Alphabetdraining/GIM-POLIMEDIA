@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://tjim5qlwttwy"]
+
+[ext_resource type="Script" uid="uid://cip81b3t8eyqo" path="res://script/flashbang_spawner.gd" id="1_k6bac"]
+[ext_resource type="PackedScene" uid="uid://c1twd3pmgtqu" path="res://Scenes/flashbang.tscn" id="2_reya4"]
+
+[node name="FlashbangSpawner" type="Node2D"]
+script = ExtResource("1_k6bac")
+
+[node name="Area2D" parent="." instance=ExtResource("2_reya4")]
