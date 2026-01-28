@@ -61,7 +61,7 @@ func fill_board_pieces():
 	for tetromino in tetrominos:
 		var tetromino_pieces = tetromino.get_children().filter(func (c): return c is Piece)
 		for piece in tetromino_pieces:
-			var row = roundi((piece.global_position.y + piece.get_size().y / 2.0) / piece.get_size().y + ROW_COUNT / 2.0)
+			var row  = (piece.global_position.y  + piece.get_size().y / 2) / piece.get_size().y + ROW_COUNT /2
 			board_pieces[row -1].append(piece)
 	return board_pieces
 	
