@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://0mskd7p2m2y"]
+
+[ext_resource type="Script" uid="uid://duavlng3jpiot" path="res://script/credit.gd" id="1_xknyl"]
+[ext_resource type="Script" uid="uid://dsa1afjqbbc2o" path="res://script/scroll_container.gd" id="2_5g4l2"]
+[ext_resource type="PackedScene" uid="uid://ck3rk0thun5ot" path="res://Scenes/fade_transition.tscn" id="3_k1f8w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qk3xv"]
+bg_color = Color(0.333333, 0.333333, 0.333333, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xknyl"]
+bg_color = Color(0.772549, 0.772549, 0.772549, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmpbm"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="CreditsScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xknyl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 246.0
+offset_right = 1501.0
+offset_bottom = 733.0
+scale = Vector2(1, 1.05)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("2_5g4l2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="TopSpacer" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 540)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "Who is this"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "lorem ipsum dolor silit amet sigger. Siggerinteiarntinrsietn aier ntienrasietniearp cflpckywpraintic fnipnawytnayntikerfnptnkwaietstait"
+fit_content = true
+autowrap_mode = 2
+
+[node name="BottomSpacer" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 540)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 889.0
+offset_top = 966.0
+offset_right = 1033.0
+offset_bottom = 1024.0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_qk3xv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xknyl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hmpbm")
+text = "Back"
+
+[node name="A" type="CanvasLayer" parent="."]
+
+[node name="FadeTransition" parent="A" instance=ExtResource("3_k1f8w")]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

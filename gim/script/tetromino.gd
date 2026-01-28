@@ -81,9 +81,9 @@ func _ready() -> void:
 		piece.set_texture(tetromino_data.piece_texture)
 		piece.position = cell * piece.get_size()
 	var tile = pieces[0].get_size().x
-	bounds.min_x = - (Board.COLUMN_COUNT / 2) * tile
-	bounds.max_x = (Board.COLUMN_COUNT / 2) * tile - tile
-	bounds.max_y = (Board.ROW_COUNT / 2) * tile
+	bounds.min_x = - (Board.COLUMN_COUNT / 2.0) * tile
+	bounds.max_x = (Board.COLUMN_COUNT / 2.0) * tile - tile
+	bounds.max_y = (Board.ROW_COUNT / 2.0) * tile
 	target_position = global_position
 	if is_next_piece == false:
 		position = tetromino_data.spawn_position
@@ -91,7 +91,7 @@ func _ready() -> void:
 
 
 # ================= INPUT =================
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("left"):
 		move(Vector2.LEFT)
 	elif Input.is_action_just_pressed("right"):
@@ -235,7 +235,7 @@ func _process(delta):
 
 
 # ================= PLAYER FOLLOW =================
-func follow_player_logic(delta):
+func follow_player_logic(_delta):
 	if not player:
 		return
 	

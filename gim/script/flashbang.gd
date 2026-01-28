@@ -11,7 +11,7 @@ func _physics_process(delta):
 		return
 	position.y += fall_speed * delta
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	if exploded:
 		return
 	explode()

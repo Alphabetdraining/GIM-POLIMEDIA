@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2pfsh08wg3b7"]
+[gd_scene load_steps=15 format=3 uid="uid://c2pfsh08wg3b7"]
 
 [ext_resource type="Texture2D" uid="uid://b7ornwlji6ale" path="res://assets/Border.png" id="1_bo1nx"]
+[ext_resource type="Script" uid="uid://cwg5y7ojii58m" path="res://Scenes/main.gd" id="1_fdnlq"]
 [ext_resource type="Texture2D" uid="uid://kkaot20dhx3p" path="res://assets/Grid.png" id="2_8gbba"]
 [ext_resource type="Script" uid="uid://b34yt6dsbbbnb" path="res://script/spawner.gd" id="3_8gbba"]
 [ext_resource type="Script" uid="uid://dmu3h5rosfrwx" path="res://script/board.gd" id="4_jjvhh"]
@@ -11,11 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://cgxyq0uttw7nx" path="res://assets/placeholder/Blue.png" id="9_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://tjim5qlwttwy" path="res://Scenes/flashbang_spawner.tscn" id="10_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://c1twd3pmgtqu" path="res://Scenes/flashbang.tscn" id="11_6iyac"]
+[ext_resource type="PackedScene" path="res://Scenes/circle_transition.tscn" id="13_jkdf5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(1921, 26)
 
 [node name="Main" type="Node"]
+script = ExtResource("1_fdnlq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
@@ -112,3 +115,7 @@ flashbang_scene = ExtResource("11_6iyac")
 spawn_area_min = Vector2(-1000, -950)
 spawn_area_max = Vector2(899, -950)
 spawn_interval = 1.0
+
+[node name="Transition" type="CanvasLayer" parent="."]
+
+[node name="CircleTransition" parent="Transition" instance=ExtResource("13_jkdf5")]
