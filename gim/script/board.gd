@@ -4,9 +4,11 @@ class_name Board
 signal tetromino_locked
 signal game_over
 signal line_cleared(count: int)
+const TILE_SIZE = 119
 
-const ROW_COUNT = 20
-const COLUMN_COUNT = 20
+var grid := []
+const ROW_COUNT = 16
+const COLUMN_COUNT = 16
 
 @onready var player = $"../Player"
 
@@ -14,7 +16,21 @@ var tetrominos: Array[Tetromino] = []
 var cleared_lines_count = 0
 @export var tetromino_scene : PackedScene  
 func _ready():
+	grid.resize(ROW_COUNT)
+	for y in ROW_COUNT:
+		grid[y] = []
+		grid[y].resize(COLUMN_COUNT)
 	await get_tree().process_frame 
+	
+func world_to_grid(pos: Vector2) -> Vector2i:
+	var x = int(round(pos.x / TILE_SIZE)) + COLUMN_COUNT / 2
+	var y = int(round(pos.y / TILE_SIZE)) + ROW_COUNT / 2
+	return Vector2i(x, y)
+
+func grid_to_world(grid_pos: Vector2i) -> Vector2:
+	var x = (grid_pos.x - COLUMN_COUNT / 2.0) * TILE_SIZE
+	var y = (grid_pos.y - ROW_COUNT / 2.0) * TILE_SIZE
+	return Vector2(x, y)
 
 func spawn_tetromino(type:Shared.Tetromino, is_next_piece, spawn_position):
 	var tetromino_data = Shared.data[type]
@@ -25,7 +41,10 @@ func spawn_tetromino(type:Shared.Tetromino, is_next_piece, spawn_position):
 	tetromino.player = player 
 
 	if is_next_piece == false:
-		tetromino.position = tetromino_data.spawn_position
+		var spawn_grid = Vector2i(COLUMN_COUNT / 2 - 1, 0)
+		tetromino.position = grid_to_world(spawn_grid)
+
+
 		tetromino.other_tetrominos = tetrominos
 		tetromino.lock_tetromino.connect(on_tetromino_locked)
 		add_child(tetromino)
@@ -42,10 +61,10 @@ func check_game_over():
 	for tetromino in tetrominos:
 		var pieces = tetromino.get_children().filter(func (c): return c is Piece)
 		for piece in pieces:
-			var y_location = piece.global_position.y 
-			if y_location == -400:
-				print("GAME OVER TRIGGERED")
+			var grid_pos = world_to_grid(piece.global_position)
+			if grid_pos.y <= 0:
 				game_over.emit()
+
 func clear_lines():
 	var board_pieces = fill_board_pieces()
 	var lines_cleared_this_time = clear_board_pieces(board_pieces)
@@ -61,8 +80,11 @@ func fill_board_pieces():
 	for tetromino in tetrominos:
 		var tetromino_pieces = tetromino.get_children().filter(func (c): return c is Piece)
 		for piece in tetromino_pieces:
-			var row  = (piece.global_position.y  + piece.get_size().y / 2) / piece.get_size().y + ROW_COUNT /2
-			board_pieces[row -1].append(piece)
+			var grid_pos = world_to_grid(piece.global_position)
+			if grid_pos.y >= 0 and grid_pos.y < ROW_COUNT:
+				board_pieces[grid_pos.y].append(piece)
+
+
 	return board_pieces
 	
 func clear_board_pieces(board_pieces):
@@ -88,6 +110,6 @@ func clear_row(row):
 func move_all_pieces_down(board_pieces, cleared_row):
 	for y in range(cleared_row - 1, -1, -1):
 		for piece in board_pieces[y]:
-			piece.position.y += piece.get_size().y
+			piece.position.y += TILE_SIZE
 			board_pieces[y + 1].append(piece)
 		board_pieces[y].clear()
