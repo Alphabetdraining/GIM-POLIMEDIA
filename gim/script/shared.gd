@@ -3,7 +3,6 @@ extends Node
 enum Tetromino{
 	I,O,J,L,S,Z,T
 }
-
 var cells = {
 	Tetromino.I: [Vector2(-1, 0), Vector2(0, 0), Vector2(1, 0)],
 #-------------------------------------------------------------------

@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cfuvkh4vj3uo5" path="res://assets/Yellow.png" id="2_l2hco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66160"]
-size = Vector2(96, 96)
+size = Vector2(120, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_platform"]
-size = Vector2(96, 96)
+size = Vector2(120, 120)
 
 [node name="Piece" type="Area2D"]
 collision_layer = 4
@@ -16,8 +16,10 @@ monitoring = false
 script = ExtResource("1_y70yu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+position = Vector2(-58, -60)
+scale = Vector2(0.62, 0.62)
 texture = ExtResource("2_l2hco")
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_66160")
