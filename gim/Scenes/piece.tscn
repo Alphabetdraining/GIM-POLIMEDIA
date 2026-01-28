@@ -12,6 +12,7 @@ size = Vector2(96, 96)
 [node name="Piece" type="Area2D"]
 collision_layer = 4
 collision_mask = 0
+monitoring = false
 script = ExtResource("1_y70yu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

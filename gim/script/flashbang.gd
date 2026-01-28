@@ -11,6 +11,7 @@ func _physics_process(delta):
 		return
 	position.y += fall_speed * delta
 
+@warning_ignore("unused_parameter")
 func _on_body_entered(body):
 	if exploded:
 		return

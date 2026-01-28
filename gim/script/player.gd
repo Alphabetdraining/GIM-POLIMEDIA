@@ -15,8 +15,14 @@ const INVULNERABLE_TIME = 1.5
 
 const POWERUP_2_ACTION = "powerup_2"
 
-const TELEPORT_COOLDOWN = 3.0
-var teleport_cooldown_timer = 0.0
+const DASH_SPEED = 900.0
+const DASH_TIME = 0.20
+const DASH_COOLDOWN = 3.0
+
+var dash_timer = 0.0
+var dash_cooldown_timer = 0.0
+var dash_direction = Vector2.ZERO
+var is_dashing = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var used_jumps = MAX_JUMPS
@@ -46,40 +52,45 @@ func _physics_process(delta):
 			move_and_slide()
 			return
 
-	if teleport_cooldown_timer > 0:
-		teleport_cooldown_timer -= delta
+	if dash_cooldown_timer > 0:
+		dash_cooldown_timer -= delta
 
-	if is_invulnerable:
-		invulnerable_timer -= delta
-		if invulnerable_timer <= 0:
-			is_invulnerable = false
-			modulate.a = 1.0
+	if is_dashing:
+		dash_timer -= delta
+		velocity = dash_direction * DASH_SPEED
+		if dash_timer <= 0:
+			is_dashing = false
+	else:
+		if is_invulnerable:
+			invulnerable_timer -= delta
+			if invulnerable_timer <= 0:
+				is_invulnerable = false
+				modulate.a = 1.0
+			else:
+				modulate.a = 0.5 if fmod(invulnerable_timer * 10, 2) < 1 else 1.0
+
+		if not is_on_floor():
+			velocity.y += gravity * delta
 		else:
-			modulate.a = 0.5 if fmod(invulnerable_timer * 10, 2) < 1 else 1.0
+			used_jumps = MAX_JUMPS
 
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	else:
-		used_jumps = MAX_JUMPS
+		if Input.is_action_just_pressed("jump") and used_jumps > 0:
+			velocity.y = JUMP_VELOCITY
+			used_jumps -= 1
 
-	if Input.is_action_just_pressed("jump") and used_jumps > 0:
-		velocity.y = JUMP_VELOCITY
-		used_jumps -= 1
+		var direction = Input.get_axis("move_left", "move_right")
+		if direction != 0:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	var direction = Input.get_axis("move_left", "move_right")
-	if direction != 0:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		if direction > 0:
+			animated_sprite.flip_h = false
+		elif direction < 0:
+			animated_sprite.flip_h = true
 
-	if direction > 0:
-		animated_sprite.flip_h = false
-	elif direction < 0:
-		animated_sprite.flip_h = true
-
-	if Input.is_action_just_pressed(POWERUP_2_ACTION) and teleport_cooldown_timer <= 0:
-		teleport_to_safe_position()
-		teleport_cooldown_timer = TELEPORT_COOLDOWN
+	if Input.is_action_just_pressed(POWERUP_2_ACTION) and not is_dashing and dash_cooldown_timer <= 0:
+		start_dash()
 
 	if is_on_floor():
 		if abs(velocity.x) < 1:
@@ -87,49 +98,40 @@ func _physics_process(delta):
 		else:
 			play_animation("run")
 	else:
-		play_animation("jump")
+		if animated_sprite.animation != "jump":
+			play_animation("jump")
 
 	move_and_slide()
 	global_position.x = clamp(global_position.x, MIN_X, MAX_X)
+
+func start_dash():
+	var x = Input.get_axis("move_left", "move_right")
+	var y = Input.get_axis("move_up", "move_down")
+
+	if y > 0:
+		y = 0
+
+	dash_direction = Vector2(x, y)
+
+	if dash_direction == Vector2.ZERO:
+		dash_direction = Vector2(-1, 0) if animated_sprite.flip_h else Vector2(1, 0)
+
+	dash_direction = dash_direction.normalized()
+
+	is_dashing = true
+	dash_timer = DASH_TIME
+	dash_cooldown_timer = DASH_COOLDOWN
+	velocity = Vector2.ZERO
 
 func stun(duration := 1.5):
 	is_stunned = true
 	stun_timer = duration
 	velocity = Vector2.ZERO
-
-func teleport_to_safe_position():
-	var board = get_node_or_null("/root/Main/board")
-	if not board:
-		return
-
-	var highest_block_y = get_highest_block_y()
-	var target_y = highest_block_y - 58
-	var target_pos = Vector2(global_position.x, target_y)
-
-	if is_position_safe(target_pos, board):
-		global_position = target_pos
-	else:
-		respawn_to_safe_position()
-
-func get_highest_block_y() -> float:
-	var board = get_node_or_null("/root/Main/board")
-	if not board:
-		return global_position.y
-
-	var highest_y = null
-
-	for tetromino in board.tetrominos:
-		var pieces = tetromino.get_children().filter(func(c): return c is Piece)
-		for piece in pieces:
-			var y = tetromino.global_position.y + piece.position.y
-			if highest_y == null or y < highest_y:
-				highest_y = y
-
-	if highest_y == null:
-		return global_position.y
-
-	return highest_y
-
+	
+func teleport_after_damage():
+	global_position.y -= 520
+	velocity = Vector2.ZERO
+	
 func take_damage(amount := 1):
 	if is_dead or is_invulnerable:
 		return
@@ -142,7 +144,7 @@ func take_damage(amount := 1):
 	if hp == 0:
 		die()
 	else:
-		respawn_to_safe_position()
+		teleport_after_damage()
 		is_invulnerable = true
 		invulnerable_timer = INVULNERABLE_TIME
 
@@ -156,44 +158,14 @@ func die():
 	Engine.time_scale = 1.0
 	get_tree().reload_current_scene()
 
-func respawn_to_safe_position():
-	var safe_positions = find_safe_positions()
-	if safe_positions.size() > 0:
-		global_position = safe_positions[0]
-	else:
-		global_position = Vector2(-16, 480)
-
-func find_safe_positions() -> Array:
-	var safe_positions = []
-	var board = get_node_or_null("/root/Main/board")
-	if not board:
-		return [Vector2(-16, 480)]
-	
-	for x in range(-4, 5):
-		for y in range(-9, 10):
-			var test_pos = Vector2(x * 58, y * 58)
-			if is_position_safe(test_pos, board):
-				safe_positions.append(test_pos)
-	
-	return safe_positions
-
-func is_position_safe(pos: Vector2, board) -> bool:
-	for tetromino in board.tetrominos:
-		var pieces = tetromino.get_children().filter(func (c): return c is Piece)
-		for piece in pieces:
-			var piece_pos = tetromino.global_position + piece.position
-			if pos.distance_to(piece_pos) < 30:
-				return false
-	return true
-
 func play_animation(base_anim: String):
 	match hp:
 		3:
 			animated_sprite.play(base_anim)
 		2:
-			animated_sprite.play(base_anim) #+ "_hurt")
+			animated_sprite.play(base_anim + "_hurt")
 		1:
-			animated_sprite.play(base_anim) #+ "_critical")
+			animated_sprite.play(base_anim + "_critical")
 
 func _on_hit_detector_area_entered(area):
 	if area is Piece and not is_invulnerable:
