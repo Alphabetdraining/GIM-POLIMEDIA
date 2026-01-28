@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://by3dfod1ww0xf"]
+[gd_scene format=3 uid="uid://c8udnuqa5tx5c"]
 
 [node name="cutscene_ingame1" type="Control"]
 layout_mode = 3

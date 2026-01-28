@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://70xyug53wjvd" path="res://Scenes/ui.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://Scenes/player.tscn" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://bt3gckli7ovql" path="res://Scenes/pausemenu.tscn" id="8_344ge"]
-[ext_resource type="PackedScene" uid="uid://tjim5qlwttwy" path="res://Scenes/flashbang_spawner.tscn" id="10_d1ilt"]
-[ext_resource type="Script" uid="uid://cq3ctoqq4q1lb" path="res://script/flashbang.gd" id="11_6iyac"]
+[ext_resource type="PackedScene" path="res://Scenes/flashbang_spawner.tscn" id="10_d1ilt"]
+[ext_resource type="Script" path="res://script/flashbang.gd" id="11_6iyac"]
 [ext_resource type="Texture2D" uid="uid://da56k12q634rt" path="res://assets/placeholder/fruit.png" id="12_fdnlq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
@@ -145,12 +145,6 @@ tetromino_scene = ExtResource("5_kry3j")
 [node name="Player" parent="." instance=ExtResource("7_6bp64")]
 position = Vector2(-2, 493)
 
-[node name="Menu" parent="." instance=ExtResource("8_344ge")]
-offset_left = -954.0
-offset_top = -847.0
-offset_right = -954.0
-offset_bottom = -847.0
-
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(17, 975)
 
@@ -160,3 +154,14 @@ flashbang_scene = SubResource("PackedScene_d1ilt")
 spawn_area_min = Vector2(-1000, -950)
 spawn_area_max = Vector2(899, -950)
 spawn_interval = 1.0
+
+[node name="Menu" parent="." instance=ExtResource("8_344ge")]
+top_level = true
+z_index = 100
+anchors_preset = -1
+anchor_left = -0.997
+anchor_top = -1.004
+offset_left = 0.240112
+offset_top = 0.320068
+offset_right = 1.0
+offset_bottom = -3.0
