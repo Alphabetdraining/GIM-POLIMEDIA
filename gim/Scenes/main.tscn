@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbfhs5wg7ctg0"]
+[gd_scene load_steps=13 format=3 uid="uid://c2pfsh08wg3b7"]
 
 [ext_resource type="Texture2D" uid="uid://dfp3ethqe2iy8" path="res://assets/In Game_Frame.png" id="1_d1ilt"]
 [ext_resource type="Texture2D" uid="uid://ch4hpuya3ab18" path="res://assets/In Game_Block frame.png" id="1_hptm8"]
@@ -77,17 +77,19 @@ tetromino_scene = SubResource("PackedScene_hptm8")
 [node name="Player" parent="." instance=ExtResource("7_6bp64")]
 position = Vector2(-2, 493)
 
-[node name="Menu" parent="." instance=ExtResource("8_344ge")]
-offset_left = -954.0
-offset_top = -847.0
-offset_right = -954.0
-offset_bottom = -847.0
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-87, -745)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("3_d1ilt")
+
+[node name="Menu" parent="." instance=ExtResource("8_344ge")]
+z_index = 100
+offset_left = -1971.0
+offset_top = -1086.0
+offset_right = -1971.0
+offset_bottom = -1086.0
+scale = Vector2(2.04, 2.04)
 
 [node name="Platform" type="StaticBody2D" parent="."]
 collision_mask = 0
