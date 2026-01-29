@@ -1,8 +1,10 @@
 extends Node2D
 
 @onready var fade_rect: ColorRect = $FadeLayer/FadeRect
+@export var music_menu: AudioStream
 
 func _ready() -> void:
+	AudioManager.stop_music()
 	
 	fade_rect.visible = true
 	fade_rect.modulate = Color(0, 0, 0, 1)

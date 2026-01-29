@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cm7g7ojjtsqsq"]
+[gd_scene load_steps=18 format=3 uid="uid://cm7g7ojjtsqsq"]
 
 [ext_resource type="Script" uid="uid://bx1cicd5npru5" path="res://script/main_menu.gd" id="1_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://dwpf554qevomh" path="res://assets/ui/main-menu/Main menu_Background.png" id="1_n45e2"]
 [ext_resource type="PackedScene" uid="uid://bsfygwd1xilaa" path="res://Scenes/fade_transition.tscn" id="2_48xlc"]
 [ext_resource type="Texture2D" uid="uid://xxrv0eu6joky" path="res://assets/ui/main-menu/Main menu_New Game Still.png" id="2_opfnp"]
+[ext_resource type="AudioStream" uid="uid://c378exdiyif2u" path="res://assets/BGM/Tense_ Piano (Main Menu).wav" id="2_wyh8j"]
 [ext_resource type="Texture2D" uid="uid://wewqbr7l55vt" path="res://assets/ui/main-menu/Main menu_New Game Press.png" id="3_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://uvr8403mkqgw" path="res://assets/ui/main-menu/Main menu_New Game Hover.png" id="4_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://cxw3xjpy6g1m2" path="res://assets/ui/main-menu/Main menu_Continue Still.png" id="6_m3bi6"]
@@ -19,6 +20,7 @@
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_m3bi6")
+music_menu = ExtResource("2_wyh8j")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 40.0

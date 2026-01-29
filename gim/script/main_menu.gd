@@ -1,11 +1,16 @@
 extends Node2D
 
 var button_type = null
+@export var music_menu: AudioStream
 
 func _ready() -> void:
 	$A/FadeTransition.show()
 	$A/FadeTransition/AnimationPlayer.play("Fade_out")
 
+	if music_menu:
+		await $A/FadeTransition/AnimationPlayer.animation_finished
+		AudioManager.play_music(music_menu)
+		
 func _on_new_game_pressed() -> void:
 	transition_and_change("res://Scenes/cutscene_1.tscn")
 
