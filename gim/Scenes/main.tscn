@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://c2pfsh08wg3b7"]
+[gd_scene load_steps=17 format=3 uid="uid://c2pfsh08wg3b7"]
 
-[ext_resource type="Texture2D" uid="uid://nltg8sgytdh0" path="res://assets/background/In Game_Background.png" id="1_6iyac"]
+[ext_resource type="AudioStream" uid="uid://bc72v3lsjwhct" path="res://assets/BGM/Chill_Deep (Gameplay 1 santai).mp3" id="1_6iyac"]
 [ext_resource type="Texture2D" uid="uid://dfp3ethqe2iy8" path="res://assets/In Game_Frame.png" id="1_d1ilt"]
 [ext_resource type="Texture2D" uid="uid://ch4hpuya3ab18" path="res://assets/In Game_Block frame.png" id="1_hptm8"]
+[ext_resource type="Texture2D" uid="uid://nltg8sgytdh0" path="res://assets/background/In Game_Background.png" id="2_6iyac"]
 [ext_resource type="Script" uid="uid://b34yt6dsbbbnb" path="res://script/spawner.gd" id="3_8gbba"]
 [ext_resource type="Texture2D" uid="uid://dtauko0aygyik" path="res://assets/In Game_Block background.png" id="3_d1ilt"]
 [ext_resource type="Script" uid="uid://dmu3h5rosfrwx" path="res://script/board.gd" id="4_jjvhh"]
@@ -55,7 +56,7 @@ zoom = Vector2(0.4, 0.4)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-103.667, 9.93724)
 scale = Vector2(2.51632, 2.46863)
-texture = ExtResource("1_6iyac")
+texture = ExtResource("2_6iyac")
 
 [node name="InGameFrame" type="Sprite2D" parent="Sprite2D"]
 texture = ExtResource("1_d1ilt")
