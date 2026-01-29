@@ -7,6 +7,7 @@ func play_music(new_stream: AudioStream):
 		return
 	
 	music_player.stream = new_stream
+	music_player.volume_db = -10.0
 	music_player.play()
 
 func stop_music():
