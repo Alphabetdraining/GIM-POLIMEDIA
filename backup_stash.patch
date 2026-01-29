@@ -1,0 +1,4050 @@
+diff --git a/gim/Scenes/cut_in_3_clear.tscn b/gim/Scenes/cut_in_3_clear.tscn
+new file mode 100644
+index 0000000..df45176
+--- /dev/null
++++ b/gim/Scenes/cut_in_3_clear.tscn
+@@ -0,0 +1,16 @@
++[gd_scene load_steps=2 format=3 uid="uid://byky46dvu861y"]
++
++[ext_resource type="Script" uid="uid://v65a6ra6bywe" path="res://script/cut_in_3_clear.gd" id="1_8nkyo"]
++
++[node name="cut_in_3_clear" type="Node2D"]
++script = ExtResource("1_8nkyo")
++
++[node name="FadeLayer" type="CanvasLayer" parent="."]
++layer = 100
++
++[node name="FadeRect" type="ColorRect" parent="FadeLayer"]
++process_mode = 3
++offset_right = 1920.0
++offset_bottom = 1080.0
++mouse_filter = 2
++color = Color(0, 0, 0, 1)
+diff --git a/gim/Scenes/cutscene_1.tscn b/gim/Scenes/cutscene_1.tscn
+index fd922e7..219050d 100644
+--- a/gim/Scenes/cutscene_1.tscn
++++ b/gim/Scenes/cutscene_1.tscn
+@@ -6,6 +6,7 @@
+ script = ExtResource("1_bry56")
+ 
+ [node name="FadeLayer" type="CanvasLayer" parent="."]
++layer = 100
+ 
+ [node name="FadeRect" type="ColorRect" parent="FadeLayer"]
+ offset_right = 1920.0
+diff --git a/gim/Scenes/cutscene_2.tscn b/gim/Scenes/cutscene_2.tscn
+index 5e4997c..c2a92b4 100644
+--- a/gim/Scenes/cutscene_2.tscn
++++ b/gim/Scenes/cutscene_2.tscn
+@@ -6,6 +6,7 @@
+ script = ExtResource("1_ph4n5")
+ 
+ [node name="FadeLayer" type="CanvasLayer" parent="."]
++layer = 100
+ 
+ [node name="FadeRect" type="ColorRect" parent="FadeLayer"]
+ offset_right = 1920.0
+diff --git a/gim/Scenes/cutscene_3.tscn b/gim/Scenes/cutscene_3.tscn
+index 4d8621e..1b1c530 100644
+--- a/gim/Scenes/cutscene_3.tscn
++++ b/gim/Scenes/cutscene_3.tscn
+@@ -6,6 +6,7 @@
+ script = ExtResource("1_567lm")
+ 
+ [node name="FadeLayer" type="CanvasLayer" parent="."]
++layer = 100
+ 
+ [node name="FadeRect" type="ColorRect" parent="FadeLayer"]
+ offset_right = 1920.0
+diff --git a/gim/Scenes/cutscene_4.tscn b/gim/Scenes/cutscene_4.tscn
+new file mode 100644
+index 0000000..a76355b
+--- /dev/null
++++ b/gim/Scenes/cutscene_4.tscn
+@@ -0,0 +1,6 @@
++[gd_scene load_steps=2 format=3 uid="uid://cx8xqsp1liews"]
++
++[ext_resource type="Script" uid="uid://syuyp5dk1xwt" path="res://script/cutscene_4.gd" id="1_hvxjt"]
++
++[node name="cutscene_4" type="Node2D"]
++script = ExtResource("1_hvxjt")
+diff --git a/gim/Scenes/cutscene_5.tscn b/gim/Scenes/cutscene_5.tscn
+new file mode 100644
+index 0000000..d538ad9
+--- /dev/null
++++ b/gim/Scenes/cutscene_5.tscn
+@@ -0,0 +1,17 @@
++[gd_scene load_steps=2 format=3 uid="uid://pi4cu4gvdusp"]
++
++[ext_resource type="Script" uid="uid://g550hvekkq72" path="res://script/cutscene_5.gd" id="1_knnh8"]
++
++[node name="cutscene_5" type="Node2D"]
++script = ExtResource("1_knnh8")
++
++[node name="FadeLayer" type="CanvasLayer" parent="."]
++process_mode = 3
++layer = 100
++
++[node name="FadeRect" type="ColorRect" parent="FadeLayer"]
++process_mode = 3
++offset_right = 1920.0
++offset_bottom = 1080.0
++mouse_filter = 2
++color = Color(0, 0, 0, 1)
+diff --git a/gim/Scenes/cutscene_6.tscn b/gim/Scenes/cutscene_6.tscn
+new file mode 100644
+index 0000000..e157c82
+--- /dev/null
++++ b/gim/Scenes/cutscene_6.tscn
+@@ -0,0 +1,16 @@
++[gd_scene load_steps=2 format=3 uid="uid://c2t4sa6hcq5dj"]
++
++[ext_resource type="Script" uid="uid://mt7x6ae2hdlv" path="res://script/cutscene_6.gd" id="1_8tql0"]
++
++[node name="cutscene_6" type="Node2D"]
++script = ExtResource("1_8tql0")
++
++[node name="FadeLayer" type="CanvasLayer" parent="."]
++layer = 100
++
++[node name="FadeRect" type="ColorRect" parent="FadeLayer"]
++process_mode = 3
++offset_right = 1920.0
++offset_bottom = 1080.0
++mouse_filter = 2
++color = Color(0, 0, 0, 1)
+diff --git a/gim/Scenes/cutscene_ingame_1.tscn b/gim/Scenes/cutscene_ingame_1.tscn
+index 8315c05..0a4b913 100644
+--- a/gim/Scenes/cutscene_ingame_1.tscn
++++ b/gim/Scenes/cutscene_ingame_1.tscn
+@@ -1,4 +1,4 @@
+-[gd_scene load_steps=0 format=3 uid="uid://by3dfod1ww0xf"]
++[gd_scene format=3 uid="uid://by3dfod1ww0xf"]
+ 
+ [node name="cutscene_ingame1" type="Control"]
+ layout_mode = 3
+diff --git a/gim/assets/Background/Background_Ruang gelap.png b/gim/assets/Background/Background_Ruang gelap.png
+new file mode 100644
+index 0000000..0c81b4b
+Binary files /dev/null and b/gim/assets/Background/Background_Ruang gelap.png differ
+diff --git a/gim/assets/Background/Background_Ruang gelap.png.import b/gim/assets/Background/Background_Ruang gelap.png.import
+new file mode 100644
+index 0000000..3c1e70e
+--- /dev/null
++++ b/gim/assets/Background/Background_Ruang gelap.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dxyqapi0uecw0"
++path="res://.godot/imported/Background_Ruang gelap.png-0444c8dfd5f07b4bd3c1c455545e6c7f.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/Background/Background_Ruang gelap.png"
++dest_files=["res://.godot/imported/Background_Ruang gelap.png-0444c8dfd5f07b4bd3c1c455545e6c7f.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/Background/Background_kamar.png b/gim/assets/Background/Background_kamar.png
+new file mode 100644
+index 0000000..5d64a9d
+Binary files /dev/null and b/gim/assets/Background/Background_kamar.png differ
+diff --git a/gim/assets/Background/Background_kamar.png.import b/gim/assets/Background/Background_kamar.png.import
+new file mode 100644
+index 0000000..1091800
+--- /dev/null
++++ b/gim/assets/Background/Background_kamar.png.import
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bmfc4hheqr2pa"
++path="res://.godot/imported/Background_kamar.png-0f6a05fee1f10a227c59a074f1459b43.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/Background/Background_kamar.png"
++dest_files=["res://.godot/imported/Background_kamar.png-0f6a05fee1f10a227c59a074f1459b43.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/Background/Background_kelas.png b/gim/assets/Background/Background_kelas.png
+new file mode 100644
+index 0000000..d819128
+Binary files /dev/null and b/gim/assets/Background/Background_kelas.png differ
+diff --git a/gim/assets/Background/Background_kelas.png.import b/gim/assets/Background/Background_kelas.png.import
+new file mode 100644
+index 0000000..26b8407
+--- /dev/null
++++ b/gim/assets/Background/Background_kelas.png.import
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dt7v7oh6nrx8v"
++path="res://.godot/imported/Background_kelas.png-c80829f3cb127e77bb340f79efce83e8.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/Background/Background_kelas.png"
++dest_files=["res://.godot/imported/Background_kelas.png-c80829f3cb127e77bb340f79efce83e8.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/Background/Background_ruangan gelap ada pintu.png b/gim/assets/Background/Background_ruangan gelap ada pintu.png
+new file mode 100644
+index 0000000..78a1737
+Binary files /dev/null and b/gim/assets/Background/Background_ruangan gelap ada pintu.png differ
+diff --git a/gim/assets/Background/Background_ruangan gelap ada pintu.png.import b/gim/assets/Background/Background_ruangan gelap ada pintu.png.import
+new file mode 100644
+index 0000000..d0563f0
+--- /dev/null
++++ b/gim/assets/Background/Background_ruangan gelap ada pintu.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://3mau82i51u1p"
++path="res://.godot/imported/Background_ruangan gelap ada pintu.png-0fff1fe04cc78bf369fc5136471645ae.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/Background/Background_ruangan gelap ada pintu.png"
++dest_files=["res://.godot/imported/Background_ruangan gelap ada pintu.png-0fff1fe04cc78bf369fc5136471645ae.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png
+new file mode 100644
+index 0000000..591d3ca
+Binary files /dev/null and b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png differ
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png.import b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png.import
+new file mode 100644
+index 0000000..4740409
+--- /dev/null
++++ b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://u2mp8mibxjkj"
++path="res://.godot/imported/Dialog_Xander(Cube) angry (1).png-3a650ceb462a97b7e6a003d789259728.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png"
++dest_files=["res://.godot/imported/Dialog_Xander(Cube) angry (1).png-3a650ceb462a97b7e6a003d789259728.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png
+new file mode 100644
+index 0000000..92aa6bd
+Binary files /dev/null and b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png differ
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png.import b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png.import
+new file mode 100644
+index 0000000..2d86027
+--- /dev/null
++++ b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://lhmv2dccldwl"
++path="res://.godot/imported/Dialog_Xander(Cube) confused (1).png-1c8b658d8728b3f8627275ceedca6338.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png"
++dest_files=["res://.godot/imported/Dialog_Xander(Cube) confused (1).png-1c8b658d8728b3f8627275ceedca6338.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png
+new file mode 100644
+index 0000000..2c23cd9
+Binary files /dev/null and b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png differ
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png.import b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png.import
+new file mode 100644
+index 0000000..9223620
+--- /dev/null
++++ b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://c8hqn1s6h251a"
++path="res://.godot/imported/Dialog_Xander(Cube) embarassed.png-522881880c8dde719806c4c3780d5377.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png"
++dest_files=["res://.godot/imported/Dialog_Xander(Cube) embarassed.png-522881880c8dde719806c4c3780d5377.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png
+new file mode 100644
+index 0000000..668061b
+Binary files /dev/null and b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png differ
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png.import b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png.import
+new file mode 100644
+index 0000000..5c6e11b
+--- /dev/null
++++ b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dbjlfe86kxc3p"
++path="res://.godot/imported/Dialog_Xander(Cube) netral 1 (1).png-f770c782d3fe2bd2eb2b1f72d233d6a9.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png"
++dest_files=["res://.godot/imported/Dialog_Xander(Cube) netral 1 (1).png-f770c782d3fe2bd2eb2b1f72d233d6a9.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png
+new file mode 100644
+index 0000000..ea5bceb
+Binary files /dev/null and b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png differ
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png.import b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png.import
+new file mode 100644
+index 0000000..de55ebe
+--- /dev/null
++++ b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://crvm8y8nhpsla"
++path="res://.godot/imported/Dialog_Xander(Cube) netral 2 (1).png-64209b7a82e4ff05ebe1083218a0f158.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png"
++dest_files=["res://.godot/imported/Dialog_Xander(Cube) netral 2 (1).png-64209b7a82e4ff05ebe1083218a0f158.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png
+new file mode 100644
+index 0000000..e841b3d
+Binary files /dev/null and b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png differ
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png.import b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png.import
+new file mode 100644
+index 0000000..32dbb68
+--- /dev/null
++++ b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://b75kultd0xu0j"
++path="res://.godot/imported/Dialog_Xander(Cube) scared (1).png-27135b4a9c681cba08421d3b07168466.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png"
++dest_files=["res://.godot/imported/Dialog_Xander(Cube) scared (1).png-27135b4a9c681cba08421d3b07168466.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png
+new file mode 100644
+index 0000000..09db883
+Binary files /dev/null and b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png differ
+diff --git a/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png.import b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png.import
+new file mode 100644
+index 0000000..e42ff82
+--- /dev/null
++++ b/gim/assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://qvxdeq8u1hv7"
++path="res://.godot/imported/Dialog_Xander(Cube) uncomfortable (1).png-de2933be88af6bdca38ba63d55eb672d.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png"
++dest_files=["res://.godot/imported/Dialog_Xander(Cube) uncomfortable (1).png-de2933be88af6bdca38ba63d55eb672d.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png
+new file mode 100644
+index 0000000..ac0e8d1
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png differ
+diff --git a/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png.import b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png.import
+new file mode 100644
+index 0000000..70da109
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dvaee0wimcce7"
++path="res://.godot/imported/Dialog_Carissa terkejut 1.png-81c449af363d1615ca8c4ffa59cd22f0.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png"
++dest_files=["res://.godot/imported/Dialog_Carissa terkejut 1.png-81c449af363d1615ca8c4ffa59cd22f0.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png
+new file mode 100644
+index 0000000..7acdff9
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png differ
+diff --git a/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png.import b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png.import
+new file mode 100644
+index 0000000..bb14f25
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://cmx2y5qc2f0yc"
++path="res://.godot/imported/Dialog_Carissa terkejut 2.png-9cf5921530fc91a7f5129ee19697bc6e.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png"
++dest_files=["res://.godot/imported/Dialog_Carissa terkejut 2.png-9cf5921530fc91a7f5129ee19697bc6e.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png
+new file mode 100644
+index 0000000..26ae99d
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png differ
+diff --git a/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png.import b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png.import
+new file mode 100644
+index 0000000..f68f69f
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bnyt0bs8obqu7"
++path="res://.godot/imported/Dialog_Carissa terkejut 3.png-f1109b167f534859265dfec106dc94d8.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png"
++dest_files=["res://.godot/imported/Dialog_Carissa terkejut 3.png-f1109b167f534859265dfec106dc94d8.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 1.png b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 1.png
+new file mode 100644
+index 0000000..b98de9c
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 1.png differ
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 1.png.import b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 1.png.import
+new file mode 100644
+index 0000000..0c22e5d
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 1.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bychx4g0n6me2"
++path="res://.godot/imported/Dialog_Carissa marah 1.png-ca9661f8c90bdcb886471593810ef8d2.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 1.png"
++dest_files=["res://.godot/imported/Dialog_Carissa marah 1.png-ca9661f8c90bdcb886471593810ef8d2.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 2.png b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 2.png
+new file mode 100644
+index 0000000..5cf3092
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 2.png differ
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 2.png.import b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 2.png.import
+new file mode 100644
+index 0000000..05ab8ec
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 2.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://cycrd7v6cj25b"
++path="res://.godot/imported/Dialog_Carissa marah 2.png-fcf046096ee480bd201f42099425d3b8.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 2.png"
++dest_files=["res://.godot/imported/Dialog_Carissa marah 2.png-fcf046096ee480bd201f42099425d3b8.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 3.png b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 3.png
+new file mode 100644
+index 0000000..25425a7
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 3.png differ
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 3.png.import b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 3.png.import
+new file mode 100644
+index 0000000..0a6d27d
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 3.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bkxopd8cioffk"
++path="res://.godot/imported/Dialog_Carissa marah 3.png-8d5be7c23dd5aeb2ce890341d0cbced3.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 3.png"
++dest_files=["res://.godot/imported/Dialog_Carissa marah 3.png-8d5be7c23dd5aeb2ce890341d0cbced3.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 4.png b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 4.png
+new file mode 100644
+index 0000000..dc21a4c
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 4.png differ
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 4.png.import b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 4.png.import
+new file mode 100644
+index 0000000..d4a017e
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 4.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://cx3qdvqgfaivl"
++path="res://.godot/imported/Dialog_Carissa marah 4.png-da8893f32014e2795c7023618ccc8741.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 4.png"
++dest_files=["res://.godot/imported/Dialog_Carissa marah 4.png-da8893f32014e2795c7023618ccc8741.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 5.png b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 5.png
+new file mode 100644
+index 0000000..137ad55
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 5.png differ
+diff --git a/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 5.png.import b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 5.png.import
+new file mode 100644
+index 0000000..abe10b1
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/marah/Dialog_Carissa marah 5.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bfid76oh6co7a"
++path="res://.godot/imported/Dialog_Carissa marah 5.png-e75d2a20115378b18341e4549256b8e9.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 5.png"
++dest_files=["res://.godot/imported/Dialog_Carissa marah 5.png-e75d2a20115378b18341e4549256b8e9.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png
+new file mode 100644
+index 0000000..be44d49
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png differ
+diff --git a/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png.import b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png.import
+new file mode 100644
+index 0000000..4238f17
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://b8x87hrnulut3"
++path="res://.godot/imported/Dialog_Carissa netral 1.png-b4be3edac569f05100bd389ebc7cd5df.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png"
++dest_files=["res://.godot/imported/Dialog_Carissa netral 1.png-b4be3edac569f05100bd389ebc7cd5df.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png
+new file mode 100644
+index 0000000..957edc5
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png differ
+diff --git a/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png.import b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png.import
+new file mode 100644
+index 0000000..b1cf857
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://crvwsf8msowea"
++path="res://.godot/imported/Dialog_Carissa netral 2.png-25986b37da76f9e961bed858822fb351.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png"
++dest_files=["res://.godot/imported/Dialog_Carissa netral 2.png-25986b37da76f9e961bed858822fb351.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 3.png b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 3.png
+new file mode 100644
+index 0000000..be7512b
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 3.png differ
+diff --git a/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 3.png.import b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 3.png.import
+new file mode 100644
+index 0000000..c2e4855
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/netral/Dialog_Carissa netral 3.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://h2r8iqcdfkqg"
++path="res://.godot/imported/Dialog_Carissa netral 3.png-dd65fb3f29aa668e2ee5eb831a17095f.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 3.png"
++dest_files=["res://.godot/imported/Dialog_Carissa netral 3.png-dd65fb3f29aa668e2ee5eb831a17095f.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png b/gim/assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png
+new file mode 100644
+index 0000000..1918116
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png differ
+diff --git a/gim/assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png.import b/gim/assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png.import
+new file mode 100644
+index 0000000..188aaa3
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bn2s2mknb21cb"
++path="res://.godot/imported/Dialog_Carissa pusing.png-6e2097a4e87526d3680736cc28550b6a.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png"
++dest_files=["res://.godot/imported/Dialog_Carissa pusing.png-6e2097a4e87526d3680736cc28550b6a.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png
+new file mode 100644
+index 0000000..61ba065
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png differ
+diff --git a/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png.import b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png.import
+new file mode 100644
+index 0000000..be375d1
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bxs0eyepnhnwx"
++path="res://.godot/imported/Dialog_Carissa sedih 1.png-128a825e4b36ae1d52d24fdf6966ccca.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png"
++dest_files=["res://.godot/imported/Dialog_Carissa sedih 1.png-128a825e4b36ae1d52d24fdf6966ccca.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 2.png b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 2.png
+new file mode 100644
+index 0000000..85dd055
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 2.png differ
+diff --git a/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 2.png.import b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 2.png.import
+new file mode 100644
+index 0000000..2907d49
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 2.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dhf8pl0qap3wq"
++path="res://.godot/imported/Dialog_Carissa sedih 2.png-e3e019f57263842d69ed1f098bfe5296.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 2.png"
++dest_files=["res://.godot/imported/Dialog_Carissa sedih 2.png-e3e019f57263842d69ed1f098bfe5296.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 3.png b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 3.png
+new file mode 100644
+index 0000000..f8eb76a
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 3.png differ
+diff --git a/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 3.png.import b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 3.png.import
+new file mode 100644
+index 0000000..bf45bd2
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 3.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dnoeb3jjv1ly5"
++path="res://.godot/imported/Dialog_Carissa sedih 3.png-49d3e7c91178d976eb052ed623eed7fe.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 3.png"
++dest_files=["res://.godot/imported/Dialog_Carissa sedih 3.png-49d3e7c91178d976eb052ed623eed7fe.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 5.png b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 5.png
+new file mode 100644
+index 0000000..a817338
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 5.png differ
+diff --git a/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 5.png.import b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 5.png.import
+new file mode 100644
+index 0000000..a7739a1
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 5.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://degdtjdfcil1"
++path="res://.godot/imported/Dialog_Carissa sedih 5.png-4279223672b8bae9a1794320ce98a850.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 5.png"
++dest_files=["res://.godot/imported/Dialog_Carissa sedih 5.png-4279223672b8bae9a1794320ce98a850.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/sekarat/Dialog_Carissa sekarat.png b/gim/assets/character_portrait/carissa/sekarat/Dialog_Carissa sekarat.png
+new file mode 100644
+index 0000000..1f9c19c
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/sekarat/Dialog_Carissa sekarat.png differ
+diff --git a/gim/assets/character_portrait/carissa/sekarat/Dialog_Carissa sekarat.png.import b/gim/assets/character_portrait/carissa/sekarat/Dialog_Carissa sekarat.png.import
+new file mode 100644
+index 0000000..ac63d3d
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/sekarat/Dialog_Carissa sekarat.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bchobftmj3g1b"
++path="res://.godot/imported/Dialog_Carissa sekarat.png-5ebb5db7cbc8dac46161acbe3d0ad464.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/sekarat/Dialog_Carissa sekarat.png"
++dest_files=["res://.godot/imported/Dialog_Carissa sekarat.png-5ebb5db7cbc8dac46161acbe3d0ad464.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png
+new file mode 100644
+index 0000000..33a7899
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png differ
+diff --git a/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png.import b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png.import
+new file mode 100644
+index 0000000..247717d
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://thypc10khhp4"
++path="res://.godot/imported/Dialog_Carissa senyum 1.png-27bd2a48b86e7bd79871caf78877a0cc.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png"
++dest_files=["res://.godot/imported/Dialog_Carissa senyum 1.png-27bd2a48b86e7bd79871caf78877a0cc.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png
+new file mode 100644
+index 0000000..2a28016
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png differ
+diff --git a/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png.import b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png.import
+new file mode 100644
+index 0000000..75803aa
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://kbws508emcry"
++path="res://.godot/imported/Dialog_Carissa senyum 2.png-83ddaeb7410d33784cc8bf0b94545828.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png"
++dest_files=["res://.godot/imported/Dialog_Carissa senyum 2.png-83ddaeb7410d33784cc8bf0b94545828.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 3.png b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 3.png
+new file mode 100644
+index 0000000..ccd9da9
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 3.png differ
+diff --git a/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 3.png.import b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 3.png.import
+new file mode 100644
+index 0000000..afffa5e
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 3.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://c2wkaih7qk3rc"
++path="res://.godot/imported/Dialog_Carissa senyum 3.png-007aa5300b6b04b9dc35b96a0213da39.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 3.png"
++dest_files=["res://.godot/imported/Dialog_Carissa senyum 3.png-007aa5300b6b04b9dc35b96a0213da39.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png
+new file mode 100644
+index 0000000..27c178e
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png differ
+diff --git a/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png.import b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png.import
+new file mode 100644
+index 0000000..9c9807a
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dtimvj4rwjnyh"
++path="res://.godot/imported/Dialog_Carissa takut 1.png-9b7d64012c9b8def026a2f833519ca88.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png"
++dest_files=["res://.godot/imported/Dialog_Carissa takut 1.png-9b7d64012c9b8def026a2f833519ca88.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 2.png b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 2.png
+new file mode 100644
+index 0000000..869d60b
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 2.png differ
+diff --git a/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 2.png.import b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 2.png.import
+new file mode 100644
+index 0000000..a93b04d
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 2.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://ydf4sgtjlrb"
++path="res://.godot/imported/Dialog_Carissa takut 2.png-a559aaaa16a884cfc737bc2910ad74d1.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/takut/Dialog_Carissa takut 2.png"
++dest_files=["res://.godot/imported/Dialog_Carissa takut 2.png-a559aaaa16a884cfc737bc2910ad74d1.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 3.png b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 3.png
+new file mode 100644
+index 0000000..cb73c76
+Binary files /dev/null and b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 3.png differ
+diff --git a/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 3.png.import b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 3.png.import
+new file mode 100644
+index 0000000..2ce577e
+--- /dev/null
++++ b/gim/assets/character_portrait/carissa/takut/Dialog_Carissa takut 3.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://c37fyfww5f537"
++path="res://.godot/imported/Dialog_Carissa takut 3.png-73bfb231792a2439fecb0b8c5756c60b.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/carissa/takut/Dialog_Carissa takut 3.png"
++dest_files=["res://.godot/imported/Dialog_Carissa takut 3.png-73bfb231792a2439fecb0b8c5756c60b.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/morana/Dialog_Morana marah.png b/gim/assets/character_portrait/morana/Dialog_Morana marah.png
+new file mode 100644
+index 0000000..9e92d7a
+Binary files /dev/null and b/gim/assets/character_portrait/morana/Dialog_Morana marah.png differ
+diff --git a/gim/assets/character_portrait/morana/Dialog_Morana marah.png.import b/gim/assets/character_portrait/morana/Dialog_Morana marah.png.import
+new file mode 100644
+index 0000000..070e5e4
+--- /dev/null
++++ b/gim/assets/character_portrait/morana/Dialog_Morana marah.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dcwoaebf6atfm"
++path="res://.godot/imported/Dialog_Morana marah.png-aa9a7035dcb0434b7d1130a81150c248.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/morana/Dialog_Morana marah.png"
++dest_files=["res://.godot/imported/Dialog_Morana marah.png-aa9a7035dcb0434b7d1130a81150c248.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/morana/Dialog_Morana netral.png b/gim/assets/character_portrait/morana/Dialog_Morana netral.png
+new file mode 100644
+index 0000000..20fa9fa
+Binary files /dev/null and b/gim/assets/character_portrait/morana/Dialog_Morana netral.png differ
+diff --git a/gim/assets/character_portrait/morana/Dialog_Morana netral.png.import b/gim/assets/character_portrait/morana/Dialog_Morana netral.png.import
+new file mode 100644
+index 0000000..030ddad
+--- /dev/null
++++ b/gim/assets/character_portrait/morana/Dialog_Morana netral.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://bv2eeb7l1xt88"
++path="res://.godot/imported/Dialog_Morana netral.png-db6ffd09abebb32532730cdf7f22ee1b.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/morana/Dialog_Morana netral.png"
++dest_files=["res://.godot/imported/Dialog_Morana netral.png-db6ffd09abebb32532730cdf7f22ee1b.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/morana/Dialog_Morana senyum jahat.png b/gim/assets/character_portrait/morana/Dialog_Morana senyum jahat.png
+new file mode 100644
+index 0000000..b4feb02
+Binary files /dev/null and b/gim/assets/character_portrait/morana/Dialog_Morana senyum jahat.png differ
+diff --git a/gim/assets/character_portrait/morana/Dialog_Morana senyum jahat.png.import b/gim/assets/character_portrait/morana/Dialog_Morana senyum jahat.png.import
+new file mode 100644
+index 0000000..15d69dc
+--- /dev/null
++++ b/gim/assets/character_portrait/morana/Dialog_Morana senyum jahat.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dsrrclcwbqwmq"
++path="res://.godot/imported/Dialog_Morana senyum jahat.png-62a75f6dbcfc04e7fa0b24354811f8a7.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/morana/Dialog_Morana senyum jahat.png"
++dest_files=["res://.godot/imported/Dialog_Morana senyum jahat.png-62a75f6dbcfc04e7fa0b24354811f8a7.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/character_portrait/morana/Dialog_Morana terkejut.png b/gim/assets/character_portrait/morana/Dialog_Morana terkejut.png
+new file mode 100644
+index 0000000..41602a1
+Binary files /dev/null and b/gim/assets/character_portrait/morana/Dialog_Morana terkejut.png differ
+diff --git a/gim/assets/character_portrait/morana/Dialog_Morana terkejut.png.import b/gim/assets/character_portrait/morana/Dialog_Morana terkejut.png.import
+new file mode 100644
+index 0000000..4c68bc9
+--- /dev/null
++++ b/gim/assets/character_portrait/morana/Dialog_Morana terkejut.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://yhf04ps3xa2j"
++path="res://.godot/imported/Dialog_Morana terkejut.png-bafdd05008ad357c4cf4e124f367417d.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/character_portrait/morana/Dialog_Morana terkejut.png"
++dest_files=["res://.godot/imported/Dialog_Morana terkejut.png-bafdd05008ad357c4cf4e124f367417d.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/dialog_UI/Dialog_Dialog box.png b/gim/assets/dialog_UI/Dialog_Dialog box.png
+new file mode 100644
+index 0000000..ccb0f9f
+Binary files /dev/null and b/gim/assets/dialog_UI/Dialog_Dialog box.png differ
+diff --git a/gim/assets/dialog_UI/Dialog_Dialog box.png.import b/gim/assets/dialog_UI/Dialog_Dialog box.png.import
+new file mode 100644
+index 0000000..85b6c33
+--- /dev/null
++++ b/gim/assets/dialog_UI/Dialog_Dialog box.png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://cc1ie43hk4v1v"
++path="res://.godot/imported/Dialog_Dialog box.png-5bc1958b37a0c3178c934b5e01cde828.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/dialog_UI/Dialog_Dialog box.png"
++dest_files=["res://.godot/imported/Dialog_Dialog box.png-5bc1958b37a0c3178c934b5e01cde828.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/dialog_UI/Dialog_Next button (1).png b/gim/assets/dialog_UI/Dialog_Next button (1).png
+new file mode 100644
+index 0000000..fbf9153
+Binary files /dev/null and b/gim/assets/dialog_UI/Dialog_Next button (1).png differ
+diff --git a/gim/assets/dialog_UI/Dialog_Next button (1).png.import b/gim/assets/dialog_UI/Dialog_Next button (1).png.import
+new file mode 100644
+index 0000000..65cd9b1
+--- /dev/null
++++ b/gim/assets/dialog_UI/Dialog_Next button (1).png.import	
+@@ -0,0 +1,34 @@
++[remap]
++
++importer="texture"
++type="CompressedTexture2D"
++uid="uid://dq8ypnu02i5o2"
++path="res://.godot/imported/Dialog_Next button (1).png-356d06b5409a257cd99deca734d3a2ee.ctex"
++metadata={
++"vram_texture": false
++}
++
++[deps]
++
++source_file="res://assets/dialog_UI/Dialog_Next button (1).png"
++dest_files=["res://.godot/imported/Dialog_Next button (1).png-356d06b5409a257cd99deca734d3a2ee.ctex"]
++
++[params]
++
++compress/mode=0
++compress/high_quality=false
++compress/lossy_quality=0.7
++compress/hdr_compression=1
++compress/normal_map=0
++compress/channel_pack=0
++mipmaps/generate=false
++mipmaps/limit=-1
++roughness/mode=0
++roughness/src_normal=""
++process/fix_alpha_border=true
++process/premult_alpha=false
++process/normal_map_invert_y=false
++process/hdr_as_srgb=false
++process/hdr_clamp_exposure=false
++process/size_limit=0
++detect_3d/compress_to=1
+diff --git a/gim/assets/dialog_UI/new_style_box_texture.tres b/gim/assets/dialog_UI/new_style_box_texture.tres
+new file mode 100644
+index 0000000..841c6cb
+--- /dev/null
++++ b/gim/assets/dialog_UI/new_style_box_texture.tres
+@@ -0,0 +1,13 @@
++[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://decemsihih7tf"]
++
++[ext_resource type="Texture2D" uid="uid://cc1ie43hk4v1v" path="res://assets/dialog_UI/Dialog_Dialog box.png" id="1_tdw8r"]
++
++[resource]
++texture = ExtResource("1_tdw8r")
++expand_margin_left = 15.0
++expand_margin_top = 70.0
++expand_margin_right = 15.0
++expand_margin_bottom = 8.0
++axis_stretch_horizontal = 2
++axis_stretch_vertical = 2
++region_rect = Rect2(60, 666.374, 1782.84, 361.626)
+diff --git a/gim/assets/font/Font_Teks dialog & Nama char.ttf b/gim/assets/font/Font_Teks dialog & Nama char.ttf
+new file mode 100644
+index 0000000..e381a70
+Binary files /dev/null and b/gim/assets/font/Font_Teks dialog & Nama char.ttf differ
+diff --git a/gim/assets/font/Font_Teks dialog & Nama char.ttf.import b/gim/assets/font/Font_Teks dialog & Nama char.ttf.import
+new file mode 100644
+index 0000000..48e1a63
+--- /dev/null
++++ b/gim/assets/font/Font_Teks dialog & Nama char.ttf.import	
+@@ -0,0 +1,35 @@
++[remap]
++
++importer="font_data_dynamic"
++type="FontFile"
++uid="uid://prbs8tq05e65"
++path="res://.godot/imported/Font_Teks dialog & Nama char.ttf-4288c4a0d1f1c11b6759c860b3e260c5.fontdata"
++
++[deps]
++
++source_file="res://assets/font/Font_Teks dialog & Nama char.ttf"
++dest_files=["res://.godot/imported/Font_Teks dialog & Nama char.ttf-4288c4a0d1f1c11b6759c860b3e260c5.fontdata"]
++
++[params]
++
++Rendering=null
++antialiasing=1
++generate_mipmaps=false
++disable_embedded_bitmaps=true
++multichannel_signed_distance_field=false
++msdf_pixel_range=8
++msdf_size=48
++allow_system_fallback=true
++force_autohinter=false
++hinting=1
++subpixel_positioning=4
++keep_rounding_remainders=true
++oversampling=0.0
++Fallbacks=null
++fallbacks=[]
++Compress=null
++compress=true
++preload=[]
++language_support={}
++script_support={}
++opentype_features={}
+diff --git a/gim/assets/song/Song 3.mp3 b/gim/assets/song/Song 3.mp3
+new file mode 100644
+index 0000000..0ddad49
+Binary files /dev/null and b/gim/assets/song/Song 3.mp3 differ
+diff --git a/gim/assets/song/Song 3.mp3.import b/gim/assets/song/Song 3.mp3.import
+new file mode 100644
+index 0000000..4860847
+--- /dev/null
++++ b/gim/assets/song/Song 3.mp3.import	
+@@ -0,0 +1,19 @@
++[remap]
++
++importer="mp3"
++type="AudioStreamMP3"
++uid="uid://b2dt1q8ahhwgf"
++path="res://.godot/imported/Song 3.mp3-0b3fecde2769edaf3c6da600eb99700e.mp3str"
++
++[deps]
++
++source_file="res://assets/song/Song 3.mp3"
++dest_files=["res://.godot/imported/Song 3.mp3-0b3fecde2769edaf3c6da600eb99700e.mp3str"]
++
++[params]
++
++loop=false
++loop_offset=0
++bpm=0
++beat_count=0
++bar_beats=4
+diff --git a/gim/assets/song/Song 6.mp3 b/gim/assets/song/Song 6.mp3
+new file mode 100644
+index 0000000..40b2a3c
+Binary files /dev/null and b/gim/assets/song/Song 6.mp3 differ
+diff --git a/gim/assets/song/Song 6.mp3.import b/gim/assets/song/Song 6.mp3.import
+new file mode 100644
+index 0000000..b91ca74
+--- /dev/null
++++ b/gim/assets/song/Song 6.mp3.import	
+@@ -0,0 +1,19 @@
++[remap]
++
++importer="mp3"
++type="AudioStreamMP3"
++uid="uid://c8ec2ffe4ihxl"
++path="res://.godot/imported/Song 6.mp3-8bd3a295f624dc27927bf0516f8b53a0.mp3str"
++
++[deps]
++
++source_file="res://assets/song/Song 6.mp3"
++dest_files=["res://.godot/imported/Song 6.mp3-8bd3a295f624dc27927bf0516f8b53a0.mp3str"]
++
++[params]
++
++loop=false
++loop_offset=0
++bpm=0
++beat_count=0
++bar_beats=4
+diff --git a/gim/assets/song/Tense_Normal (Dialogue Non chill).wav b/gim/assets/song/Tense_Normal (Dialogue Non chill).wav
+new file mode 100644
+index 0000000..0afd18e
+Binary files /dev/null and b/gim/assets/song/Tense_Normal (Dialogue Non chill).wav differ
+diff --git a/gim/assets/song/Tense_Normal (Dialogue Non chill).wav.import b/gim/assets/song/Tense_Normal (Dialogue Non chill).wav.import
+new file mode 100644
+index 0000000..f5c251f
+--- /dev/null
++++ b/gim/assets/song/Tense_Normal (Dialogue Non chill).wav.import	
+@@ -0,0 +1,24 @@
++[remap]
++
++importer="wav"
++type="AudioStreamWAV"
++uid="uid://d215gesaxlg8f"
++path="res://.godot/imported/Tense_Normal (Dialogue Non chill).wav-9dd543064dd392708e99789a4a516d9d.sample"
++
++[deps]
++
++source_file="res://assets/song/Tense_Normal (Dialogue Non chill).wav"
++dest_files=["res://.godot/imported/Tense_Normal (Dialogue Non chill).wav-9dd543064dd392708e99789a4a516d9d.sample"]
++
++[params]
++
++force/8_bit=false
++force/mono=false
++force/max_rate=false
++force/max_rate_hz=44100
++edit/trim=false
++edit/normalize=false
++edit/loop_mode=0
++edit/loop_begin=0
++edit/loop_end=-1
++compress/mode=2
+diff --git a/gim/character/Carissa.dch b/gim/character/Carissa.dch
+index 0288556..7a3ccbe 100644
+--- a/gim/character/Carissa.dch
++++ b/gim/character/Carissa.dch
+@@ -10,76 +10,311 @@
+ "style": "Dialog_Box_Style",
+ "suffix": ""
+ },
+-&"default_portrait": "Netral",
++&"default_portrait": "side/Netral_1",
+ &"description": "",
+ &"display_name": "Carissa",
+ &"mirror": false,
+ &"nicknames": [""],
+-&"offset": Vector2(0, 0),
++&"offset": Vector2(100, 800),
+ &"portraits": {
+-"Netral": {
++"center/kaget_01": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Cleo.png\""
++"image": "\"res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png\""
+ },
+-"mirror": true,
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1.0,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"center/kaget_02": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"center/kaget_03": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"center/netral_01": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"center/netral_02": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"center/pusing": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"center/sedih_1_duplicated": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"center/senyum_01": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"center/senyum_02": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/Netral_1": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1.0,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/kaget_1": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 1.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/kaget_2": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 2.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/kaget_3": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/kaget/Dialog_Carissa terkejut 3.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/kecil": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png\""
++},
++"ignore_char_scale": true,
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 0.01,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/marah_1": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 1.png\""
++},
++"mirror": false,
+ "offset": Vector2(0, 0),
+ "scale": 1.0,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"kaget": {
++"side/marah_2": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Cleo.png\""
++"image": "\"res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 2.png\""
+ },
+-"mirror": true,
++"mirror": false,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"kaget right": {
++"side/marah_3": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 3.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1.0,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/marah_4": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Cleo.png\""
++"image": "\"res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 4.png\""
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"marah": {
++"side/marah_5": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Cleo.png\""
++"image": "\"res://assets/character_portrait/carissa/marah/Dialog_Carissa marah 5.png\""
+ },
+-"mirror": true,
++"mirror": false,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"sedih": {
++"side/netral_2": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Cleo.png\""
++"image": "\"res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 2.png\""
+ },
+-"mirror": true,
++"mirror": false,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"senyum": {
++"side/netral_3": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Cleo.png\""
++"image": "\"res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 3.png\""
+ },
+-"mirror": true,
++"mirror": false,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"takut": {
++"side/pusing": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Cleo.png\""
++"image": "\"res://assets/character_portrait/carissa/pusing/Dialog_Carissa pusing.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/sedih_1": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 1.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"mirror": true,
++"side/sedih_2": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 2.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/sedih_3": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 3.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/sedih_5": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/sedih/Dialog_Carissa sedih 5.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/sekarat": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/sekarat/Dialog_Carissa sekarat.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/senyum_1": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 1.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/senyum_2": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 2.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/senyum_3": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/senyum/Dialog_Carissa senyum 3.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/takut_1": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/takut_2": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/takut/Dialog_Carissa takut 2.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"side/takut_3": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/takut/Dialog_Carissa takut 3.png\""
++},
++"mirror": false,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ }
+ },
+-&"scale": 0.5
++&"scale": 1.65
+ }
+\ No newline at end of file
+diff --git a/gim/character/Morana.dch b/gim/character/Morana.dch
+index 36da2fe..3ec0de5 100644
+--- a/gim/character/Morana.dch
++++ b/gim/character/Morana.dch
+@@ -15,29 +15,38 @@
+ &"display_name": "Morana",
+ &"mirror": false,
+ &"nicknames": [""],
+-&"offset": Vector2(0, 0),
++&"offset": Vector2(100, 170),
+ &"portraits": {
+ "marah": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Jenny.png\""
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana marah.png\""
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+-"scale": 1,
++"scale": 1.0,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+ "marah left": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Jenny.png\""
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana marah.png\""
+ },
+ "mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
++"marah_duplicated": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana marah.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
+ "terkejut": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Jenny.png\""
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana terkejut.png\""
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+@@ -46,7 +55,7 @@
+ },
+ "tersenyum": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Jenny.png\""
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana senyum jahat.png\""
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+@@ -55,7 +64,7 @@
+ },
+ "tersenyum jahat": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Jenny.png\""
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana senyum jahat.png\""
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+@@ -64,13 +73,22 @@
+ },
+ "tersenyum left": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Jenny.png\""
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana senyum jahat.png\""
+ },
+ "mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"tersenyum_duplicated": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana senyum jahat.png\""
++},
++"mirror": false,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ }
+ },
+-&"scale": 0.5
++&"scale": 0.8
+ }
+\ No newline at end of file
+diff --git a/gim/character/XANDER.dch b/gim/character/XANDER.dch
+index 0658ccf..d155e12 100644
+--- a/gim/character/XANDER.dch
++++ b/gim/character/XANDER.dch
+@@ -10,76 +10,131 @@
+ "style": "",
+ "suffix": ""
+ },
+-&"default_portrait": "netral",
++&"default_portrait": "bingung",
+ &"description": "",
+ &"display_name": "XANDER",
+ &"mirror": false,
+ &"nicknames": [""],
+-&"offset": Vector2(0, 0),
++&"offset": Vector2(100, 0),
+ &"portraits": {
+ "bingung": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+-"scale": 1,
++"scale": 1.0,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"kaget": {
++"kaget_1": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
++"kecil": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png\""
++},
++"ignore_char_scale": true,
++"mirror": true,
++"offset": Vector2(0, 0),
++"scale": 0.01,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
+ "malu": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1.0,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+ "marah": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png\""
++},
++"mirror": true,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"netral_1": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"netral": {
++"netral_1_center": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png\""
++},
++"mirror": true,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"netral_2": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
++"netral_2_center": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png\""
++},
++"mirror": true,
++"offset": Vector2(-100, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
+ "senyum": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png\""
++},
++"mirror": true,
++"offset": Vector2(0, 0),
++"scale": 1.0,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"senyum_duplicated": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png\""
++},
++"mirror": true,
++"offset": Vector2(-100, 0),
++"scale": 1.0,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+-"mirror": false,
++"takut": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png\""
++},
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+ "uncomfortable": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+-"scale": 1,
++"scale": 1.0,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ }
+ },
+-&"scale": 0.5
++&"scale": 0.75
+ }
+\ No newline at end of file
+diff --git a/gim/character/carissa_inner.dch b/gim/character/carissa_inner.dch
+new file mode 100644
+index 0000000..2ff689d
+--- /dev/null
++++ b/gim/character/carissa_inner.dch
+@@ -0,0 +1,31 @@
++{
++"@path": "res://addons/dialogic/Resources/character.gd",
++"@subpath": NodePath(""),
++&"_translation_id": "",
++&"color": Color(1, 1, 1, 1),
++&"custom_info": {
++"prefix": "",
++"sound_mood_default": "",
++"sound_moods": {},
++"style": "",
++"suffix": ""
++},
++&"default_portrait": "def",
++&"description": "",
++&"display_name": "Carissa (SUARA HATI)",
++&"mirror": false,
++&"nicknames": [""],
++&"offset": Vector2(100, 800),
++&"portraits": {
++"def": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/carissa/takut/Dialog_Carissa takut 1.png\""
++},
++"mirror": false,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++}
++},
++&"scale": 1.65
++}
+\ No newline at end of file
+diff --git a/gim/character/carissa_inner.dch.uid b/gim/character/carissa_inner.dch.uid
+new file mode 100644
+index 0000000..e5e7307
+--- /dev/null
++++ b/gim/character/carissa_inner.dch.uid
+@@ -0,0 +1 @@
++uid://cfpp6o0jncd4v
+diff --git a/gim/character/cube.dch b/gim/character/cube.dch
+index be7be43..e3881af 100644
+--- a/gim/character/cube.dch
++++ b/gim/character/cube.dch
+@@ -10,58 +10,85 @@
+ "style": "",
+ "suffix": ""
+ },
+-&"default_portrait": "New portrait",
++&"default_portrait": "netral_1",
+ &"description": "",
+-&"display_name": "cube",
++&"display_name": "Cube",
+ &"mirror": false,
+ &"nicknames": [""],
+-&"offset": Vector2(0, 0),
++&"offset": Vector2(100, 0),
+ &"portraits": {
+-"New portrait": {
++"confused": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) confused (1).png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+ "left": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png\""
+ },
+-"mirror": true,
++"mirror": false,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+ "malu": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) embarassed.png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+ "marah": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) angry (1).png\""
+ },
+-"mirror": false,
++"mirror": true,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"netral_1": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 1 (1).png\""
++},
++"mirror": true,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"netral_2": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) netral 2 (1).png\""
++},
++"mirror": true,
++"offset": Vector2(0, 0),
++"scale": 1,
++"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
++},
++"takut": {
++"export_overrides": {
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) scared (1).png\""
++},
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ },
+ "uncomfortable": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/Xander_cube/Dialog_Xander(Cube) uncomfortable (1).png\""
+ },
+-"mirror": false,
++"mirror": true,
+ "offset": Vector2(0, 0),
+ "scale": 1,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ }
+ },
+-&"scale": 0.5
++&"scale": 0.65
+ }
+\ No newline at end of file
+diff --git a/gim/character/layar_HP.dch b/gim/character/layar_HP.dch
+index 9b9503e..7680993 100644
+--- a/gim/character/layar_HP.dch
++++ b/gim/character/layar_HP.dch
+@@ -12,7 +12,7 @@
+ },
+ &"default_portrait": "blank",
+ &"description": "",
+-&"display_name": "layar_HP",
++&"display_name": "Layar HP",
+ &"mirror": false,
+ &"nicknames": [""],
+ &"offset": Vector2(0, 0),
+@@ -23,7 +23,7 @@
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+-"scale": 1,
++"scale": 0.01,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ }
+ },
+diff --git a/gim/character/tanuki.dch b/gim/character/tanuki.dch
+index f21e1d5..fd005d4 100644
+--- a/gim/character/tanuki.dch
++++ b/gim/character/tanuki.dch
+@@ -12,20 +12,20 @@
+ },
+ &"default_portrait": "tanuki",
+ &"description": "",
+-&"display_name": "tanuki",
++&"display_name": "Tanuki",
+ &"mirror": false,
+ &"nicknames": [""],
+-&"offset": Vector2(0, 0),
++&"offset": Vector2(100, 170),
+ &"portraits": {
+ "tanuki": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Jenny.png\""
++"image": "\"res://assets/character_portrait/morana/Dialog_Morana netral.png\""
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+-"scale": 1,
++"scale": 1.0,
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ }
+ },
+-&"scale": 0.5
++&"scale": 0.8
+ }
+\ No newline at end of file
+diff --git a/gim/character/teman_1.dch b/gim/character/teman_1.dch
+index af9282f..17cd40a 100644
+--- a/gim/character/teman_1.dch
++++ b/gim/character/teman_1.dch
+@@ -12,14 +12,14 @@
+ },
+ &"default_portrait": "New portrait",
+ &"description": "",
+-&"display_name": "teman_1",
++&"display_name": "Teman 1",
+ &"mirror": false,
+ &"nicknames": [""],
+-&"offset": Vector2(0, 0),
++&"offset": Vector2(100, 800),
+ &"portraits": {
+ "New portrait": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Jenny.png\""
++"image": "\"res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png\""
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+@@ -27,5 +27,5 @@
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ }
+ },
+-&"scale": 0.5
++&"scale": 1.65
+ }
+\ No newline at end of file
+diff --git a/gim/character/teman_2.dch b/gim/character/teman_2.dch
+index 59753ab..7c3bc0e 100644
+--- a/gim/character/teman_2.dch
++++ b/gim/character/teman_2.dch
+@@ -12,14 +12,14 @@
+ },
+ &"default_portrait": "New portrait",
+ &"description": "",
+-&"display_name": "teman_2",
++&"display_name": "Teman 2",
+ &"mirror": false,
+ &"nicknames": [""],
+-&"offset": Vector2(0, 0),
++&"offset": Vector2(100, 800),
+ &"portraits": {
+ "New portrait": {
+ "export_overrides": {
+-"image": "\"res://assets/dummy/Margie.png\""
++"image": "\"res://assets/character_portrait/carissa/netral/Dialog_Carissa netral 1.png\""
+ },
+ "mirror": false,
+ "offset": Vector2(0, 0),
+@@ -27,5 +27,5 @@
+ "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+ }
+ },
+-&"scale": 0.5
++&"scale": 1.65
+ }
+\ No newline at end of file
+diff --git a/gim/project.godot b/gim/project.godot
+index 11c105f..d4c63c6 100644
+--- a/gim/project.godot
++++ b/gim/project.godot
+@@ -26,6 +26,7 @@ directories/dch_directory={
+ "Carissa": "res://character/Carissa.dch",
+ "Morana": "res://character/Morana.dch",
+ "XANDER": "res://character/XANDER.dch",
++"carissa_inner": "res://character/carissa_inner.dch",
+ "cube": "res://character/cube.dch",
+ "layar_HP": "res://character/layar_HP.dch",
+ "tanda tanya": "res://character/tanda tanya.dch",
+@@ -49,11 +50,52 @@ directories/dtl_directory={
+ glossary/default_case_sensitive=true
+ layout/style_list=["res://style/Dialog_Box_Style.tres"]
+ layout/default_style="res://style/Dialog_Box_Style.tres"
++extensions_folder="res://addons/dialogic_additions"
++text/letter_speed=0.01
++text/initial_text_reveal_skippable=true
++text/text_reveal_skip_delay=0.1
++text/advance_delay=0.1
++text/autoadvance_per_character_delay=0.1
++text/autoadvance_ignored_characters_enabled=true
++animations/join_default_length=0.5
++animations/join_default_wait=true
++animations/leave_default_length=0.5
++animations/leave_default_wait=true
++animations/cross_fade_default_length=0.5
++choices/autofocus_first=true
++choices/delay=0.2
++choices/reveal_delay=0
++choices/reveal_by_input=false
++save/autosave_delay=60.0
++save/encryption_on_exports_only=true
++text/autopauses={}
++audio/channel_defaults={
++"": {
++"audio_bus": "",
++"fade_length": 0.0,
++"loop": false,
++"volume": 0.0
++},
++"music": {
++"audio_bus": "",
++"fade_length": 0.0,
++"loop": true,
++"volume": 0.0
++},
++"new_channel_name": {
++"audio_bus": "",
++"fade_length": 0.0,
++"loop": true,
++"volume": 0.0
++}
++}
++variables={}
+ 
+ [display]
+ 
+ window/size/viewport_width=1920
+ window/size/viewport_height=1080
++window/stretch/mode="canvas_items"
+ 
+ [dotnet]
+ 
+diff --git a/gim/script/cut_in_3_clear.gd b/gim/script/cut_in_3_clear.gd
+new file mode 100644
+index 0000000..fb25b2d
+--- /dev/null
++++ b/gim/script/cut_in_3_clear.gd
+@@ -0,0 +1,39 @@
++extends Node2D
++
++@onready var fade_rect: ColorRect = $FadeLayer/FadeRect
++
++func _ready() -> void:
++	
++	fade_rect.visible = true
++	fade_rect.modulate = Color(0, 0, 0, 1)
++	await get_tree().process_frame
++	Dialogic.signal_event.connect(_on_signal)
++	fade_in()
++	Dialogic.start("cut_in_3_clear")
++
++
++func fade_in(duration := 2.5):
++	var tween := create_tween()
++	tween.tween_property(fade_rect, "modulate:a", 0.0, duration)
++
++
++func fade_out(duration := 2.5):
++	fade_rect.visible = true
++	var tween := create_tween()
++	tween.tween_property(fade_rect, "modulate:a", 1.0, duration)
++
++
++func _on_signal(signal_passed_in):
++	match signal_passed_in:
++		"cut_in_03_clear":
++			Dialogic.end_timeline()
++			Dialogic.clear()
++
++			
++			fade_out()
++			await get_tree().create_timer(1.5).timeout
++
++			
++			get_tree().change_scene_to_file(
++				"res://Scenes/cutscene_5.tscn"
++			)
+diff --git a/gim/script/cut_in_3_clear.gd.uid b/gim/script/cut_in_3_clear.gd.uid
+new file mode 100644
+index 0000000..3b09e61
+--- /dev/null
++++ b/gim/script/cut_in_3_clear.gd.uid
+@@ -0,0 +1 @@
++uid://v65a6ra6bywe
+diff --git a/gim/script/cutscene_1.gd b/gim/script/cutscene_1.gd
+index fee1e8c..7fd37e8 100644
+--- a/gim/script/cutscene_1.gd
++++ b/gim/script/cutscene_1.gd
+@@ -12,12 +12,12 @@ func _ready() -> void:
+ 	Dialogic.start("cut_1")
+ 
+ 
+-func fade_in(duration := 1.5):
++func fade_in(duration := 2.5):
+ 	var tween := create_tween()
+ 	tween.tween_property(fade_rect, "modulate:a", 0.0, duration)
+ 
+ 
+-func fade_out(duration := 1.5):
++func fade_out(duration := 2.5):
+ 	fade_rect.visible = true
+ 	var tween := create_tween()
+ 	tween.tween_property(fade_rect, "modulate:a", 1.0, duration)
+@@ -29,11 +29,9 @@ func _on_signal(signal_passed_in):
+ 			Dialogic.end_timeline()
+ 			Dialogic.clear()
+ 
+-			# FADE OUT
+ 			fade_out()
+-			await get_tree().create_timer(0.6).timeout
++			await get_tree().create_timer(1.5).timeout
+ 
+-			# PINDAH SCENE
+ 			get_tree().change_scene_to_file(
+ 				"res://Scenes/cutscene_2.tscn"
+ 			)
+diff --git a/gim/script/cutscene_2.gd b/gim/script/cutscene_2.gd
+index 118505d..ff7b405 100644
+--- a/gim/script/cutscene_2.gd
++++ b/gim/script/cutscene_2.gd
+@@ -12,12 +12,12 @@ func _ready() -> void:
+ 	Dialogic.start("cut_2")
+ 
+ 
+-func fade_in(duration := 1.5):
++func fade_in(duration := 2.5):
+ 	var tween := create_tween()
+ 	tween.tween_property(fade_rect, "modulate:a", 0.0, duration)
+ 
+ 
+-func fade_out(duration := 1.5):
++func fade_out(duration := 2.5):
+ 	fade_rect.visible = true
+ 	var tween := create_tween()
+ 	tween.tween_property(fade_rect, "modulate:a", 1.0, duration)
+@@ -31,7 +31,7 @@ func _on_signal(signal_passed_in):
+ 
+ 			
+ 			fade_out()
+-			await get_tree().create_timer(0.6).timeout
++			await get_tree().create_timer(1.5).timeout
+ 
+ 			
+ 			get_tree().change_scene_to_file(
+diff --git a/gim/script/cutscene_3.gd b/gim/script/cutscene_3.gd
+index a6f650a..f884be7 100644
+--- a/gim/script/cutscene_3.gd
++++ b/gim/script/cutscene_3.gd
+@@ -12,12 +12,12 @@ func _ready() -> void:
+ 	Dialogic.start("cut_3")
+ 
+ 
+-func fade_in(duration := 1.5):
++func fade_in(duration := 2.5):
+ 	var tween := create_tween()
+ 	tween.tween_property(fade_rect, "modulate:a", 0.0, duration)
+ 
+ 
+-func fade_out(duration := 1.5):
++func fade_out(duration := 2.5):
+ 	fade_rect.visible = true
+ 	var tween := create_tween()
+ 	tween.tween_property(fade_rect, "modulate:a", 1.0, duration)
+@@ -31,9 +31,9 @@ func _on_signal(signal_passed_in):
+ 
+ 			
+ 			fade_out()
+-			await get_tree().create_timer(0.6).timeout
++			await get_tree().create_timer(1.5).timeout
+ 
+ 			
+ 			get_tree().change_scene_to_file(
+-				""
++				"res://Scenes/main.tscn"
+ 			)
+diff --git a/gim/script/cutscene_4.gd b/gim/script/cutscene_4.gd
+new file mode 100644
+index 0000000..8edfb7d
+--- /dev/null
++++ b/gim/script/cutscene_4.gd
+@@ -0,0 +1,39 @@
++extends Node2D
++
++@onready var fade_rect: ColorRect = $FadeLayer/FadeRect
++
++func _ready() -> void:
++	
++	fade_rect.visible = true
++	fade_rect.modulate = Color(0, 0, 0, 1)
++	await get_tree().process_frame
++	Dialogic.signal_event.connect(_on_signal)
++	fade_in()
++	Dialogic.start("cut 4")
++
++
++func fade_in(duration := 2.5):
++	var tween := create_tween()
++	tween.tween_property(fade_rect, "modulate:a", 0.0, duration)
++
++
++func fade_out(duration := 2.5):
++	fade_rect.visible = true
++	var tween := create_tween()
++	tween.tween_property(fade_rect, "modulate:a", 1.0, duration)
++
++
++func _on_signal(signal_passed_in):
++	match signal_passed_in:
++		"cut_04":
++			Dialogic.end_timeline()
++			Dialogic.clear()
++
++			
++			fade_out()
++			await get_tree().create_timer(1.5).timeout
++
++			
++			get_tree().change_scene_to_file(
++				"res://Scenes/main.tscn"
++			)
+diff --git a/gim/script/cutscene_4.gd.uid b/gim/script/cutscene_4.gd.uid
+new file mode 100644
+index 0000000..aea582f
+--- /dev/null
++++ b/gim/script/cutscene_4.gd.uid
+@@ -0,0 +1 @@
++uid://syuyp5dk1xwt
+diff --git a/gim/script/cutscene_5.gd b/gim/script/cutscene_5.gd
+new file mode 100644
+index 0000000..83b74c9
+--- /dev/null
++++ b/gim/script/cutscene_5.gd
+@@ -0,0 +1,39 @@
++extends Node2D
++
++@onready var fade_rect: ColorRect = $FadeLayer/FadeRect
++
++func _ready() -> void:
++	
++	fade_rect.visible = true
++	fade_rect.modulate = Color(0, 0, 0, 1)
++	await get_tree().process_frame
++	Dialogic.signal_event.connect(_on_signal)
++	fade_in()
++	Dialogic.start("cut 5")
++
++
++func fade_in(duration := 2.5):
++	var tween := create_tween()
++	tween.tween_property(fade_rect, "modulate:a", 0.0, duration)
++
++
++func fade_out(duration := 2.5):
++	fade_rect.visible = true
++	var tween := create_tween()
++	tween.tween_property(fade_rect, "modulate:a", 1.0, duration)
++
++
++func _on_signal(signal_passed_in):
++	match signal_passed_in:
++		"cut_05":
++			Dialogic.end_timeline()
++			Dialogic.clear()
++
++			
++			fade_out()
++			await get_tree().create_timer(1.5).timeout
++
++			
++			get_tree().change_scene_to_file(
++				"res://Scenes/cutscene_6.tscn"
++			)
+diff --git a/gim/script/cutscene_5.gd.uid b/gim/script/cutscene_5.gd.uid
+new file mode 100644
+index 0000000..ee585f0
+--- /dev/null
++++ b/gim/script/cutscene_5.gd.uid
+@@ -0,0 +1 @@
++uid://g550hvekkq72
+diff --git a/gim/script/cutscene_6.gd b/gim/script/cutscene_6.gd
+new file mode 100644
+index 0000000..6745381
+--- /dev/null
++++ b/gim/script/cutscene_6.gd
+@@ -0,0 +1,39 @@
++extends Node2D
++
++@onready var fade_rect: ColorRect = $FadeLayer/FadeRect
++
++func _ready() -> void:
++	
++	fade_rect.visible = true
++	fade_rect.modulate = Color(0, 0, 0, 1)
++	await get_tree().process_frame
++	Dialogic.signal_event.connect(_on_signal)
++	fade_in()
++	Dialogic.start("cut 6")
++
++
++func fade_in(duration := 2.5):
++	var tween := create_tween()
++	tween.tween_property(fade_rect, "modulate:a", 0.0, duration)
++
++
++func fade_out(duration := 2.5):
++	fade_rect.visible = true
++	var tween := create_tween()
++	tween.tween_property(fade_rect, "modulate:a", 1.0, duration)
++
++
++func _on_signal(signal_passed_in):
++	match signal_passed_in:
++		"cut_06":
++			Dialogic.end_timeline()
++			Dialogic.clear()
++
++			
++			fade_out()
++			await get_tree().create_timer(1.5).timeout
++
++			
++			get_tree().change_scene_to_file(
++				"res://Scenes/main.tscn"
++			)
+diff --git a/gim/script/cutscene_6.gd.uid b/gim/script/cutscene_6.gd.uid
+new file mode 100644
+index 0000000..c0b3abd
+--- /dev/null
++++ b/gim/script/cutscene_6.gd.uid
+@@ -0,0 +1 @@
++uid://mt7x6ae2hdlv
+diff --git a/gim/style/Dialog_Box_Style.tres b/gim/style/Dialog_Box_Style.tres
+index ad7e2d3..59f3a2f 100644
+--- a/gim/style/Dialog_Box_Style.tres
++++ b/gim/style/Dialog_Box_Style.tres
+@@ -16,6 +16,8 @@
+ script = ExtResource("2_gh2t8")
+ scene = ExtResource("1_ryia3")
+ overrides = {
++"follow_viewport": "true",
++"global_font": "\"res://assets/font/Font_Teks dialog & Nama char.ttf\"",
+ "global_font_size": "30.0"
+ }
+ 
+@@ -38,13 +40,22 @@ overrides = {}
+ script = ExtResource("2_gh2t8")
+ scene = ExtResource("6_0vnuv")
+ overrides = {
+-"box_color_custom": "Color(0, 0, 0, 0.647059)",
++"box_color_custom": "Color(1, 1, 1, 0.745098)",
+ "box_color_use_global": "false",
+-"box_margin_bottom": "0.0",
+-"box_size": "Vector2(1950, 200)",
+-"name_label_box_offset": "Vector2(7, -22)",
++"box_margin_bottom": "30.0",
++"box_panel": "\"res://assets/dialog_UI/new_style_box_texture.tres\"",
++"box_size": "Vector2(1770, 200)",
++"name_label_box_modulate": "Color(0, 0, 0, 0)",
++"name_label_box_offset": "Vector2(10, -20)",
++"name_label_box_use_global_color": "false",
++"name_label_custom_color": "Color(0, 0, 0, 1)",
+ "name_label_custom_font_size": "40.0",
+-"name_label_use_global_font_size": "false"
++"name_label_use_global_color": "false",
++"name_label_use_global_font_size": "false",
++"next_indicator_size": "Vector2(50, 50)",
++"next_indicator_texture": "\"res://assets/dialog_UI/Dialog_Next button (1).png\"",
++"text_custom_color": "Color(0, 0, 0, 1)",
++"text_use_global_color": "false"
+ }
+ 
+ [sub_resource type="Resource" id="Resource_lguu1"]
+diff --git a/gim/timeline/cut 4.dtl b/gim/timeline/cut 4.dtl
+index c198eec..229fe7a 100644
+--- a/gim/timeline/cut 4.dtl	
++++ b/gim/timeline/cut 4.dtl	
+@@ -1,63 +1,92 @@
++[background arg="res://assets/Background/Background_Ruang gelap.png" fade="0.0"]
+ Setelah menyelesaikan tantangan pertama CARISSA dan cube pun terlempar ke ruangan yang gelap
+ [wait time="0.5" hide_text="false"]
+-join Carissa (sedih) leftmost
+-Carissa (sedih): Aw.. Ruangan apa ini, Gelap sekali
+-join cube (New portrait) rightmost
+-cube (New portrait): Sepertinya kita masih terjebak di dalam game ini
+-Carissa (senyum): Tuan Cube kamu hebat banget sudah ngebantu aku dalam tantangan tadi
++join Carissa (side/pusing) leftmost
++Carissa (side/pusing): Aw..
++[wait time="2.0" hide_text="false"]
++Carissa (side/takut_2): Ruangan apa ini, Gelap sekali
++join cube (netral_1) right
++cube (netral_1): Sepertinya kita masih terjebak di dalam game ini
++Carissa (side/senyum_2): Tuan Cube kamu hebat banget sudah ngebantu aku dalam tantangan tadi
+ cube (malu): Yaa sama-sama.
+-Carissa (Netral): Tuan Cube kenapa muka kamu malah seperti itu
+-cube (uncomfortable): Ah tidak apa-apa, karna sejauh ini hanya kamu yang berhasil menyelesaikan tantangan dari AI sialan itu
+-Carissa (senyum): Serius?
+-[wait time="0.5" hide_text="false"]
+-cube (New portrait): Ya..
++Carissa (side/netral_3): Tuan cube aku penasaran banget, aku ingin bertanya
++[wait time="1.5" hide_text="false"]
++cube (netral_1): Ya, kau mau menanyakan apa?
++Carissa (side/netral_3): Tuan cube aku penasaran darimana asal kekuatan mu berada dan kenapa kau sadar kau mempunyai kekuatan untuk menyerang morana?
++[wait time="2.0" hide_text="false"]
++cube (netral_2): Oh soal itu ya
+ [wait time="0.5"]
+-Carissa (Netral): Tuan cube aku ingin bertanya, asal kamu dari mana? Dan kenapa kamu menolongku
+-cube (New portrait): Oh tentang itu yaa, apakah kamu akan percaya pada ku?
+-Carissa (senyum): Tentu saja tuan cube
++cube (netral_2): Kekuatan ini aku dapatkan ketika aku menjadi cube, aku tidak tahu kenapa aku mempunyai kekuatan
++[wait time="2.0" hide_text="false"]
++cube (netral_2): Dan aku menyadari aku mendapatkan kekuatan ketika aku ingin menolong korban yang terjebak dalam game ini
++[wait time="2.0" hide_text="false"]
++Carissa (side/netral_3): Tuan cube kenapa tidak menggunakan kekuatanmu untuk mengembalikan korban game ini ke dunia aslinya?
++[wait time="1.5" hide_text="false"]
++cube (uncomfortable): Ya kau benar. Tapi sayangnya itu tidak bisa ku lakukan, kalo sekalinya bisapun juga di sini sudah tidak ada korban yang menderita lagi.
++[wait time="1.5" hide_text="false"]
++cube (netral_1): ...
++[wait time="2.5" hide_text="false"]
++Carissa (side/netral_3): Tuan Cube kenapa muka kamu malah seperti itu
++cube (uncomfortable): Ah tidak apa-apa, aku hanya senang saja, karna sejauh ini hanya kamu yang berhasil menyelesaikan tantangan dari AI sialan itu
++[wait time="2.0" hide_text="false"]
++Carissa (side/kaget_2): Serius?
++[wait time="1.5" hide_text="false"]
++cube (netral_1): Ya..
++[wait time="1.5" hide_text="false"]
++Carissa (side/netral_3): Tuan cube aku masih punya pertanyaan lagi
++[wait time="1.5" hide_text="false"]
++cube (netral_1): Tanyakan saja, kalau aku bisa menjawabnya akan ku jawab
++Carissa (side/netral_3): Tuan cube aku ingin bertanya, asal kamu dari mana? Dan kenapa kamu menolongku
++[wait time="2.0" hide_text="false"]
++cube (netral_2): Oh tentang itu yaa, apakah kamu akan percaya pada ku?
++Carissa (side/senyum_2): Tentu saja tuan cube
++[wait time="1.5" hide_text="false"]
+ cube (marah): Bisakah kamu tidak memanggilku tuan cube!!
+-Carissa (senyum): Ya karena kamu cube
+-cube (New portrait): Tidak salah juga sih..
+-[wait time="0.5" hide_text="false"]
+-Carissa (senyum): Jadi aku bisa manggil kamu siapa?
+-[wait time="0.5" hide_text="false"]
++[wait time="1.0" hide_text="false"]
++Carissa (side/netral_3): Ya karena kamu cube
++cube (uncomfortable): Tidak salah juga sih..
++Carissa (side/senyum_1): Jadi aku bisa manggil kamu siapa?
+ leave cube [animation="Instant Out"]
+-join XANDER rightmost [animation="Instant In"]
+-XANDER: Yaa karena kita belom berkenalan jadi pekenalkan nama ku Xander aku cube yang bertujuan untuk menyelamatkan orang yang terjebak dalam dunia ini
+-update Carissa (Netral)
+-Carissa (senyum): Xander! Nama ku Carissa, makasih sudah membantu ku
++join XANDER (netral_1) right [animation="Instant In"]
++XANDER (netral_1): Yaa karena kita belum berkenalan jadi perkenalkan nama ku Xander aku cube yang bertujuan untuk menyelamatkan orang yang terjebak dalam dunia ini
++Carissa (side/senyum_1): Xander ya!
++[wait time="1.5" hide_text="false"]
++Carissa (side/senyum_2): Perkenalkan nama ku Carissa, makasih sudah membantu ku
++[wait time="1.5" hide_text="false"]
+ XANDER (malu): Ya bukan masalah besar
+-Carissa (Netral): Jadi Xander, jawablah pertanyaan ku. Dari mana asalmu dan kenapa kamu menolongku?
++Carissa (side/netral_3): Jadi Xander, jawablah pertanyaan ku. Dari mana asalmu dan kenapa kamu menolongku?
+ XANDER (uncomfortable): Yaaa aku kan tadi sudah bilang tujuan ku untuk membantu orang yang terjebak dalam game ini, dan asal ku seperti dunia kau juga, aku adalah manusia sebelumnya.
+-Carissa (kaget): Tidak mungkin!
+-XANDER (netral): Ya kau pasti terkejut, aku juga seperti mu sebelumnya
+-leave --All--
++[wait time="2.0" hide_text="false"]
++Carissa (side/kaget_1): Tidak mungkin!
++XANDER (netral_1): Ya kau pasti terkejut, aku juga seperti mu sebelumnya
++leave --All-- [animation="Instant Out"]
+ Xander mulai menceritakan masa lalunya yang terjebak dalam game ini
+-join XANDER center
+-XANDER: Pada waktu itu aku melihat social media di komputer ku dan aku menghabiskan waktu dan merasa bosan, sesaat aku menemukan web yang merujuk ke game ini karena aku bosan jadi aku menginstal game ini dan ingin mencobanya, terkejut tiba-tiba aku tertarik ke dalam game ini dan di sambut oleh AI bodoh itu.
++join XANDER (netral_2_center) center
++XANDER (netral_2_center): Pada waktu itu aku melihat social media di komputer ku dan aku menghabiskan waktu dan merasa bosan, sesaat aku menemukan web yang merujuk ke game ini karena aku bosan jadi aku menginstal game ini dan ingin mencobanya, terkejut tiba-tiba aku tertarik ke dalam game ini dan di sambut oleh AI bodoh itu.
+ [wait time="1.5" hide_text="false"]
+-XANDER: Aku mencoba bertahan hidup dari block block yang berjatuhan tetapi aku gagal, aku tertimpa oleh block-block itu dan tanpa sadar pandanganku terasa hampa  aku tidak melihat apa-pun yang ada di sekitar.
++XANDER (netral_1_center): Aku mencoba bertahan hidup dari block block yang berjatuhan tetapi aku gagal, aku tertimpa oleh block-block itu dan tanpa sadar pandanganku terasa hampa  aku tidak melihat apa-pun yang ada di sekitar.
+ [wait time="1.5" hide_text="false"]
+-XANDER: Aku terbangun kembali ke dalam dunia game ini tetapi tanpa sadar tubuhku berubah menjadi cube, aku melihat korban selanjutnya dan aku berusaha menolong mereka tetapi aku gagal.
++XANDER (netral_2_center): Aku terbangun kembali ke dalam dunia game ini tetapi tanpa sadar tubuhku berubah menjadi cube, aku melihat korban selanjutnya dan aku berusaha menolong mereka tetapi aku gagal.
+ [wait time="1.5" hide_text="false"]
+-XANDER: Suasana kembali hampa kegagalan yang ku dapat membuatku merasa tidak berguna, tetapi aku kembali lagi dan bertemu dengan kamu dan akhirnya aku berhasil menyelamatkan mu tetapi aku tidak  tahu bagaimana keluar dalam game ini
++XANDER (netral_1_center): Suasana kembali hampa kegagalan yang ku dapat membuatku merasa tidak berguna, tetapi aku kembali lagi dan bertemu dengan kamu dan akhirnya aku berhasil menyelamatkan mu tetapi aku tidak  tahu bagaimana keluar dalam game ini
++[wait time="1.5" hide_text="false"]
++update XANDER (netral_1) right [move_time="0.3" move_trans="linear"]
++join Carissa (side/sedih_3) leftmost [animation="Slide In Up"]
++Carissa (side/sedih_3): XA-XANDER AKU TERHARU BANGETT
+ [wait time="1.5" hide_text="false"]
+-update XANDER rightmost
+-join Carissa (sedih) leftmost [animation="Slide In Up"]
+-Carissa (sedih): XA-XANDER AKU TERHARU BANGETT
+-[wait time="0.5" hide_text="false"]
+ XANDER (malu): Ga usah segitunya, itu emang tugasku
+-Carissa (sedih): Tapi kau sudah seperti hero di pandangan ku
+-Carissa (senyum): Terimakasih ya Xander
+-[wait time="1.0" hide_text="false"]
++Carissa (side/sedih_3): Tapi kau sudah seperti hero di pandangan ku
++Carissa (side/senyum_3): Terimakasih ya Xander
++[wait time="1.5" hide_text="false"]
+ XANDER (malu): Iya sama-sama
+-[wait time="1.0" hide_text="false"]
+-Carissa (senyum): Aku janji akan membantu mu keluar dari sini
+-XANDER (netral): Ta-Tapii
+-Carissa (senyum): Kita akan nyari jalan keluarnya
++[wait time="1.5" hide_text="false"]
++Carissa (side/senyum_2): Aku janji akan membantu mu keluar dari sini
++XANDER (netral_1): Ta-Tapii
++Carissa (side/senyum_1): Kita akan nyari jalan keluarnya
+ XANDER (uncomfortable): (menghela nafas) aku tidak di dengar yaaa, ya sudahlah
+-[wait time="1.0" hide_text="false"]
+-leave --All--
++[wait time="1.5" hide_text="false"]
++update Carissa (side/kaget_3) [animation="Instant Out"]
++update XANDER (takut)
+ Alarm berbunyi yang membuat Xander dan Carissa terkejut\
+ Seketika lampu menyala dan memperlihatkan ruangan yang sama seperti sebelumnya tetapi.
+ [wait time="1.5" hide_text="false"]
+diff --git a/gim/timeline/cut 5.dtl b/gim/timeline/cut 5.dtl
+index b1dae91..48021c4 100644
+--- a/gim/timeline/cut 5.dtl	
++++ b/gim/timeline/cut 5.dtl	
+@@ -1,7 +1,9 @@
++[background arg="res://assets/Background/Background_kamar.png" fade="0.0"]
++audio music "res://assets/song/Song 3.mp3" [fade="1.0"]
+ Carissa baru tersadar sepenuhnya setelah kembali dari dunia game. Ia terbaring lemas di kamarnya, sementara waktu sudah merayap menuju malam.
+ [wait time="2.0" hide_text="false"]
+-join Carissa (sedih) center
+-Carissa (sedih): Akhirnya aku bisa keluar..
+-Carissa (sedih): Tapi Xander...
++join Carissa (center/sedih_1_duplicated) center
++Carissa (center/sedih_1_duplicated): Akhirnya aku bisa keluar..
++Carissa (center/sedih_1_duplicated): Tapi Xander...
+ [wait time="2.0" hide_text="false"]
+ [signal arg="cut_05"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut 6.dtl b/gim/timeline/cut 6.dtl
+index 15ab929..9061b98 100644
+--- a/gim/timeline/cut 6.dtl	
++++ b/gim/timeline/cut 6.dtl	
+@@ -1,3 +1,4 @@
++[background arg="res://assets/Background/Background_Ruang gelap.png" fade="0.0"]
+ Tidak Ada Informasi Tentang Keberadaan Xander serta Informasi The Falling Order, Seperti Menghilang, Tidak Pernah Diciptakan, Tidak Satupun Orang Yang Mengetahui, Sepertinya Xander Menempatkan Janjinya, Tetapi Apa Yang Terjadi Dengannya?
+ [wait time="5.0" hide_text="false"]
+ [signal arg="cut_06"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut_1.dtl b/gim/timeline/cut_1.dtl
+index 912601b..a38b643 100644
+--- a/gim/timeline/cut_1.dtl
++++ b/gim/timeline/cut_1.dtl
+@@ -1,17 +1,21 @@
++audio music "res://assets/song/Song 3.mp3" [fade="1.0" volume="0.0" loop="true"]
++[background arg="res://assets/Background/Background_kelas.png" fade="0.0"]
+ Suatu Hari di dalam kelas X di sekolah XX saat jam istirahat Carissa dan kedua temannya sedang membicarakan game dari website yang aneh
+-join teman_1 rightmost [animation="Instant In"]
++join teman_1 right [animation="Instant In"]
+ teman_1: Eh, Kalian tau ga, Ada game yang bisa membuat pemainnya masuk ke dalam game nya loh.
+-join Carissa leftmost
+-Carissa: Serius? Tidak mungkin ada game seperti itu, pasti cuman hoax dari social media.
++join Carissa (side/takut_2) leftmost
++Carissa (side/takut_2): Serius? Tidak mungkin ada game seperti itu, pasti cuman hoax dari social media.
+ leave teman_1
+-join teman_2 rightmost
++join teman_2 right
+ teman_2: Oh kalo boleh tau nama game nya apa? Aku penasaran banget dengan game nya.
+ leave teman_2
+-join teman_1 rightmost
++join teman_1 right
+ teman_1: Nama game nya yang aku liat itu namanya The Falling Order (nama sementara).
+-Carissa: (SUARA HATI) The Falling Order ya, Aku takut banget itu bakalan terjadi tapi aku penasaran banget.
++join carissa_inner leftmost [animation="Instant In" length="0.0"]
++carissa_inner: The Falling Order ya, Aku takut banget itu bakalan terjadi tapi aku penasaran banget.
+ [wait time="0.3" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ Alarm berbunyi menandakan pelajaran kembali di mulai.
+ [wait time="0.4" hide_text="false"]
++audio music "res://assets/song/Song 3.mp3" [fade="1.0" volume="-80.0"]
+ [signal arg="cut_01"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut_2.dtl b/gim/timeline/cut_2.dtl
+index e48cad3..b259dff 100644
+--- a/gim/timeline/cut_2.dtl
++++ b/gim/timeline/cut_2.dtl
+@@ -1,17 +1,22 @@
++audio music "res://assets/song/Song 3.mp3" [fade="1.0" volume="0.0"]
++[background arg="res://assets/Background/Background_kamar.png" fade="0.0"]
+ Setelah sepulang sekolah CARISSA cepat cepat masuk kedalam kamarnya dan merasa penasaran dangan game yang dibicarakan saat dikelas
+-join Carissa center [animation="Instant In"]
+-Carissa (marah): Ahhhhhhhhh, Kenapa aku malah penasaran dengan game nyaaa, tapi aku takut itu beneran terjadi.
+-Carissa (senyum): Oke, Mungkin aku coba download game nya aku takut aku mati penasaran.
++join Carissa (center/pusing) center [animation="Instant In"]
++Carissa (center/pusing): Ahhhhhhhhh, Kenapa aku malah penasaran dengan game nyaaa, tapi aku takut itu beneran terjadi.
++Carissa (center/senyum_02): Oke, Mungkin aku coba download game nya aku takut aku mati penasaran.
+ Lalu karena Carissa sangat penasaran ia pun menginstal gamenya
+ [wait time="0.3" hide_text="false"]
+-Carissa (Netral): Sip aku sudah mendownload nya, Akan ku buktikan kalo game itu hanyalah hoax dari Social media.
++Carissa (center/netral_01): Sip aku sudah mendownload nya, Akan ku buktikan kalo game itu hanyalah hoax dari Social media.
+ Setelah Selesai menginstal
++audio music "res://assets/song/Song 3.mp3" [fade="1.0" volume="-80.0"]
+ [wait time="0.3" hide_text="false"]
+-Carissa (senyum): Baiklah akan aku buktikan kalo ini palsu. (membuka game tersebut)
+-Carissa (senyum): Eh tidak terjadi apa-apa.
++Carissa (center/senyum_01): Baiklah akan aku buktikan kalo ini palsu. (membuka game tersebut)
++Carissa (center/kaget_01): Eh tidak terjadi apa-apa.
+ join layar_HP rightmost
++audio music "res://assets/song/Tense_Normal (Dialogue Non chill).wav" [fade="1.0" volume="0.0"]
+ layar_HP: Selamat datang.
+-Carissa (kaget): HEI! TUNGGU-AHHHHHHHH
+-[wait time="0.3"]
++[wait time="1.5" hide_text="false"]
++Carissa (center/kaget_02): HEI! TUNGGU-AHHHHHHHH
++[wait time="1.5" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ [signal arg="cut_02"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut_3.dtl b/gim/timeline/cut_3.dtl
+index 8e7fee6..56a9a8c 100644
+--- a/gim/timeline/cut_3.dtl
++++ b/gim/timeline/cut_3.dtl
+@@ -1,17 +1,18 @@
+-[background fade="0.0"]
++audio music "res://assets/song/Tense_Normal (Dialogue Non chill).wav" [fade="1.0" volume="0.0" loop="true"]
++[background arg="res://assets/Background/Background_Ruang gelap.png" fade="0.0"]
+ Pada akhirnya Carissa pun terhisap di dalam game tersebut dan terjebak didalam game, kondisi Carissa terjatuh dan berbaring lemas
+-join Carissa (Netral) center [animation="Slide In Up"]
+-Carissa (Netral): Aw.. Ruangan apa ini?
++join Carissa (center/netral_02) center [animation="Slide In Up"]
++Carissa (center/netral_02): Aw.. Ruangan apa ini?
+ [wait time="0.4" hide_text="false"]
+-Carissa (takut): EHHHHHHH APAAA APA AKU MASUK KE DALAM GAME NYAA
++Carissa (center/kaget_03): EHHHHHHH APAAA APA AKU MASUK KE DALAM GAME NYAA
+ leave --All-- [animation="Instant Out"]
+ Suara lampu yang menyala dan menerangi ruangan dan sambutan oleh
+ [wait time="0.3" hide_text="false"]
+-join tanuki rightmost
++join tanuki right
+ tanuki: Selamat datang di dunia The Falling Order
+-join Carissa (kaget) leftmost
+-Carissa (kaget): Su-su-su suara apa itu???
++join Carissa (side/takut_3) leftmost
++Carissa (side/takut_3): Su-su-su suara apa itu???
+ leave tanuki [animation="Instant Out"]
+-join Morana (tersenyum) rightmost [animation="Instant In"]
++join Morana (tersenyum) right [animation="Instant In"]
+ Morana (tersenyum): Oh tidak perlu takut nona kecil, perkenalkan namaku Morana, Ai di Game ini
+ [signal arg="cut_03"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut_in_1.dtl b/gim/timeline/cut_in_1.dtl
+index 6a6f14a..747b06e 100644
+--- a/gim/timeline/cut_in_1.dtl
++++ b/gim/timeline/cut_in_1.dtl
+@@ -1,81 +1,54 @@
+ Setelah memasuki dunia game tersebut, Carissa harus menuntaskan segala tantangan yang tersedia.
+-join Morana (tersenyum) rightmost
++join Morana (tersenyum) right
+ Morana (tersenyum): Baiklah nona kecil kita mulai tantangannya
+-join Carissa (kaget) leftmost
+-Carissa (kaget): A-apa Ta-tantangan?
++join Carissa (side/takut_1) leftmost
++Carissa (side/takut_1): A-apa Ta-tantangan?
+ Morana (tersenyum jahat): Yaa tantangan penghibur\
+ HAHAHAHAHAHA
+ leave --All--
+ Block mulai terjatuh membuat Carissa semangkin panik dan takut
+-join Morana (tersenyum jahat) rightmost
++join Morana (tersenyum jahat) right
+ Morana (tersenyum jahat): Ayoo hibur aku, selesaikan stage ini HAHAHAAHAAAA
+-join Carissa (kaget) leftmost
+-Carissa (kaget): A-A-Apa yang harus ku lakukan
++join Carissa (side/takut_2) leftmost
++Carissa (side/takut_2): A-A-Apa yang harus ku lakukan
+ Morana (tersenyum jahat): Hindari blok itu dan membuat mu selamat. HAHAHA Selamat berjuang (suara yang mulai redup)
+ leave --All--
+ Carissa mulai bertindak dan menghindari block yang terjatuh, Tetapi tanpa sadar ada block yang sudah di atas kepala nya
+-join Carissa (kaget) center
+-Carissa (kaget): TIDAKKKK!!!!
++join Carissa (center/kaget_02) center
++Carissa (center/kaget_02): TIDAKKKK!!!!
+ leave --All--
+ Cahaya biru terang muncul entah dari mana asalnya yang membuat block yang terjatuh sebelumnya menjadi hilang
+-join Carissa (kaget) leftmost
+-Carissa (kaget): Apa itu?
+-join Morana (terkejut) rightmost
++join Carissa (side/kaget_1) leftmost
++Carissa (side/kaget_1): Apa itu?
++join Morana (terkejut) right
+ Morana (terkejut): Aghh Brengsekkk kau lagi ternyataaaa
+ leave --All--
+ Cahaya terang itu berubah menjadi cube seukuran kepala manusia yang mengambang, cube itu menghampiri Carissa
+-join cube rightmost
+-cube: Mulai Sekarang ikuti arahanku!
+-join Carissa (sedih) leftmost
+-Carissa (sedih): Kamu siapa?
++join cube (netral_1) right
++cube (netral_1): Mulai Sekarang ikuti arahanku!
++join Carissa (side/sedih_3) leftmost
++Carissa (side/sedih_3): Kamu siapa?
+ cube: Sekarang bukan waktu yang tepat untuk perkenalan, ikuti saja kata-kataku kamu akan selamat
+-Carissa (sedih): BA-BAIKLAH..
+-leave cube
+-join Morana (marah) rightmost
+-Morana (marah): Sialan, Kubus Bodoh, Kau merusak kesenanganku
+-leave Morana
+-join cube rightmost
+-cube: Pergerakan balok diatur oleh Morana, saat cakar masih menggenggam balok Morana akan selalu menggerakannya ke arah mu
+-leave --All--
+-Morana mulai menggerakan cakar diatas yang mencengkram Balok, lalu mengarahkan ke arah CARISSA
+-join Morana (tersenyum jahat) rightmost
+-Morana (tersenyum jahat): Hahaha.. Matikau!
+-join Carissa (kaget) leftmost
+-Carissa (kaget): Ahh aku harus gimana..
+-leave Morana
+-join cube rightmost
+-cube: Bergeraklah kearah Kiri(A) atau Kanan(D) untuk menghindari Balok
+-[signal arg="check_move"]
+-Carissa (kaget): ...
+-[wait time="0.4" hide_text="false"]
+-cube: Baguss, kau juga bisa lompat (SPACE) untuk ke balok yang lebih tinggi
+-[signal arg="check_jump"]
+-cube: Bagus sekali
+-Carissa (sedih): Sampai kapan ini selesai..
+-cube: Bantu aku mengumpulkan energy dengan membuat garis horizontal penuh dengan balok, itu otomatis menghilang blok tersebut dan memberikanku Energy yang cukup untuk menyerang morana
+-cube: Aku akan menyerang Morana dan memberimu powerup acak, aku pikir Morana perlu 10 hit untuk nonaktif
+-Carissa (sedih): Baiklah aku akan mencobanya..
+-[signal arg="check_energy"]
+-Carissa (senyum): Kamu berhasil menyerang Morana.. \
+-tuan kubus
+-cube: TUAN KUBUS???
+-leave cube
+-join Morana rightmost
+-Morana (marah): Sialan kau kubuss jelek, sakit tau!
++Carissa (side/sedih_3): BA-BAIKLAH..
++
+ leave Carissa
+-join cube (left) leftmost
+-cube (left): Kau bisa merasakan sakit, tapi tidak ada empati didalam dirimu, ironi sekali itu
+-Morana (marah): Berisik sekali kau kubus jelek
+-leave --All--
+-Balok vertical penuh dipaling samping kanan dan kiri muncul, balok itu berbeda dari balok sebelumnya
+-join cube (New portrait) rightmost
+-cube (New portrait): Ohiya semakin Morana terkena hit dan marah, ia akan membuat vertikal balok yang mengurangi pergerakanmu
+-join Carissa (Netral) leftmost
+-Carissa: ...
+-[wait time="0.4" hide_text="false"]
+-cube (New portrait): Aku juga punya cadangan energy untuk menghidupkanmu kembali 3 kali, cobalah untuk tidak tertimpa balok
+-cube: Berjuanglah!!
+-Carissa (senyum): BAIKLAH TUAN KUBUS terimasih panduan mu
+-[wait time="0.4" hide_text="false"]
+-leave --All--
++cube (netral_1): Pergerakan balok diatur oleh Morana, saat cakar masih menggenggam balok Morana akan selalu menggerakannya ke arah mu
++[wait time="2.0" hide_text="false"]
++cube (netral_2): Bergeraklah ke arah kiri(A) atau kanan(D) untuk menghindari blok
++[wait time="2.0" hide_text="false"]
++cube (netral_1): Dan kau bisa melompat(SPACE), untuk ke balok yang lebih tinggi
++[wait time="2.0" hide_text="false"]
++cube (netral_2): Untuk menyerang morana aku harus mengumpulkan energy dengan membuat garis horizontal penuh dengan balok, itu akan otomatis menghilangkan blok dan memberikanku energi yang cukup untuk menyerang morana
++[wait time="3.0" hide_text="false"]
++cube (netral_1): Dan aku bisa merotasi blok dan membantu ngedash
++[wait time="2.0" hide_text="false"]
++cube (netral_2): Setelah semua itu, kau butuh 10 serangan untuk menonaktifkan morana
++[wait time="2.0" hide_text="false"]
++cube (netral_1): Kau menyerang morana dan membuat dia kesal, ia akan membuat vertikal balok yang mengurangi pergerakanmu
++[wait time="2.0" hide_text="false"]
++cube (netral_2): Ketika kau tertimpa block aku bisa menghidupkan mu 3 kali, cobalah untuk tidak tertimpa block
++[wait time="2.0" hide_text="false"]
++cube (netral_2): Berjuanglah!!
++[wait time="1.5" hide_text="false"]
++Carissa (side/senyum_2): BAIKLAH TUAN KUBUS terimasih panduan mu
+ [signal arg="cut_in_01"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut_in_2.dtl b/gim/timeline/cut_in_2.dtl
+index adb1814..002f29a 100644
+--- a/gim/timeline/cut_in_2.dtl
++++ b/gim/timeline/cut_in_2.dtl
+@@ -1,23 +1,23 @@
+ Suara dari ruangan tetris yang terdapat Speaker yang menunjukan hitungan waktu mundur
+-join Carissa (kaget) leftmost
+-join XANDER rightmost
+-Carissa (kaget): Apa kita balik ke ruangan sebelumnya?
+-XANDER (kaget): Mungkin saja
++join Carissa (side/kaget_3) leftmost
++Carissa (side/kaget_3): Apa kita balik ke ruangan sebelumnya?
++join XANDER (takut) right
++XANDER (takut): Mungkin saja
+ [wait time="1.0" hide_text="false"]
+ join "tanda tanya" center
+ "tanda tanya": 10...9...8..
+ [wait time="3.0" hide_text="false"]
+-Carissa (Netral): Xander Suara apa itu?
++Carissa (side/takut_3): Xander Suara apa itu?
+ leave --All-- [animation="Instant Out"]
+ Xander pun kebingungan mendengar hitungan mundur itu
+ [wait time="0.7" hide_text="false"]
+ join "tanda tanya" center [animation="Instant In"]
+-join Carissa leftmost [animation="Instant In"]
+-join XANDER rightmost [animation="Instant In"]
++join Carissa (side/takut_3) leftmost [animation="Instant In"]
++join XANDER (bingung) right [animation="Instant In"]
+ "tanda tanya": 7...6...5..
+ [wait time="3.0" hide_text="false"]
+-XANDER (netral): Aku tidak tahu tapi kita harus berjaga-jaga
+-Carissa (senyum): Ya!
++XANDER (netral_1): Aku tidak tahu tapi kita harus berjaga-jaga
++Carissa (side/senyum_3): Ya!
+ [wait time="1.5" hide_text="false"]
+ "tanda tanya": 4...3...2...1
+ [wait time="4.0" hide_text="false"]
+@@ -25,34 +25,34 @@ leave --All-- [animation="Instant Out"]
+ Suara itu berhenti setelah angka 1 disebut, menandakan penghitungan mundur telah selesai.
+ join Morana (tersenyum left) leftmost [animation="Instant In"]
+ Morana (tersenyum left): HAHAHAHAHAHAHA, Aku kembali kelinci kelinci ku
+-join XANDER (netral) rightmost [animation="Instant In"]
+-XANDER: Suara ini!! Jangan-jangan!!
++join XANDER (netral_1) right [animation="Instant In"]
++XANDER (netral_1): Suara ini!! Jangan-jangan!!
+ [wait time="0.8" hide_text="false"]
+ Morana (tersenyum left): Ya kau benar, aku belum kalah cube jelek
+ XANDER (marah): MAU KAU APA BRENGSEKKKK
+ [wait time="1.5" hide_text="false"]
+ Morana (tersenyum left): HAHAHAHA mau aku apa? Mau aku kalian menghiburku dan mati disini
+ leave XANDER [animation="Instant Out"]
+-join Carissa (kaget right) rightmost [animation="Instant In"]
+-Carissa (kaget right): Jahat sekali, dia mempermainkan kita seperti kelinci
++join Carissa (side/kaget_2) right [animation="Instant In"]
++Carissa (side/kaget_1): Jahat sekali, dia mempermainkan kita seperti kelinci
+ [wait time="0.6" hide_text="false"]
+ Morana (marah left): Tidak usah banyak bicara, Sekarang matilah dengan block ini
+ [wait time="0.5" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ [signal arg="morana_new_attack"]
+-join Carissa (kaget) leftmost [animation="Instant In"]
+-Carissa (kaget): Apa itu barusan
+-join XANDER (kaget) rightmost
+-XANDER (kaget): Aku pun tidak tahu
++join Carissa (side/kaget_2) leftmost [animation="Instant In"]
++Carissa (side/kaget_2): Apa itu barusan
++join XANDER (takut) right
++XANDER (takut): Aku pun tidak tahu
+ leave --All-- [animation="Instant Out"]
+-join Morana (tersenyum) rightmost [animation="Instant In"]
++join Morana (tersenyum) right [animation="Instant In"]
+ Morana (tersenyum): HAHAHAHA rasakan itu, itu adalah lighning strike yang membuat kalian terkena stun dan tidak bisa bergerak dan bom ini untuk membuat kali cepat mati.
+ [wait time="1.5" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+-join XANDER (kaget) rightmost
+-XANDER (kaget): Mustahil dia kembali dengan kekuatan terbaru!!
+-XANDER (netral): Pokoknya kita harus berhati-hati dan fokus
+-join Carissa (Netral) leftmost
+-Carissa (Netral): Yaa!!
++join XANDER (takut) right
++XANDER (takut): Mustahil dia kembali dengan kekuatan terbaru!!
++XANDER (netral_2): Pokoknya kita harus berhati-hati dan fokus
++join Carissa (side/takut_1) leftmost
++Carissa (side/takut_1): Yaa!!
+ [wait time="1.5" hide_text="false"]
+ [signal arg="cut_in_02"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut_in_2_clear.dtl b/gim/timeline/cut_in_2_clear.dtl
+index ccba5ba..d541d22 100644
+--- a/gim/timeline/cut_in_2_clear.dtl
++++ b/gim/timeline/cut_in_2_clear.dtl
+@@ -1,21 +1,23 @@
+-join Carissa (Netral) leftmost [animation="Instant In"]
+-Carissa (Netral): Apa kita berhasil?
++join Carissa (side/takut_1) leftmost [animation="Instant In"]
++Carissa (side/takut_1): Apa kita berhasil?
+ [wait time="1.0" hide_text="false"]
+-join XANDER (kaget) rightmost [animation="Instant In"]
+-XANDER (kaget): Aku tidak tahu
++join XANDER (bingung) right [animation="Instant In"]
++XANDER (takut): Aku tidak tahu
+ [wait time="1.0" hide_text="false"]
+-join Morana (marah) center [animation="Instant In"]
+-Morana (marah): Berengsek kalian!!
+-Morana (marah): Aku tidak menerima ini!!
+ leave --All-- [animation="Instant Out"]
++join Morana (marah_duplicated) center [animation="Instant In"]
++Morana (marah_duplicated): Berengsek kalian!!
++Morana (marah_duplicated): Aku tidak menerima ini!!
+ Tiba-tiba saja terjadi guncangan hebat di ruangan itu, bersamaan dengan itu, ruangan pun mulai terasa menyempit.
+ [wait time="1.5" hide_text="false"]
+-join Morana (tersenyum) center [animation="Instant In"]
+-Morana (tersenyum): HAHAHAHHA
++Morana (tersenyum_duplicated): HAHAHAHHA
+ [wait time="1.5" hide_text="false"]
+-Morana (marah): Rasakanlah akibat kalian menantangku!!
++Morana (marah_duplicated): Rasakanlah akibat kalian menantangku!!
+ [wait time="1.0" hide_text="false"]
+-leave --All-- [animation="Instant Out"]
++leave Morana [animation="Instant Out"]
++join Carissa (side/kaget_3) leftmost [animation="Instant In"]
++join XANDER (takut) right [animation="Instant In"]
+ Sesaat Carissa dan Xander mulai panik
+ [wait time="1.5" hide_text="false"]
++leave --All-- [animation="Instant Out"]
+ [signal arg="cut_in_02_clear"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut_in_3.dtl b/gim/timeline/cut_in_3.dtl
+index 8623eab..414e8d0 100644
+--- a/gim/timeline/cut_in_3.dtl
++++ b/gim/timeline/cut_in_3.dtl
+@@ -1,16 +1,21 @@
+ Ruangan tetris yang menjadi sempit
+ [wait time="1.5" hide_text="false"]
+-<Empty Text Event>
+-join Carissa (kaget) leftmost
+-Carissa (kaget): Xander ruangannya…
+-join XANDER (netral) rightmost
+-XANDER (netral): Ya kau benar, ruangan ini mulai menyempit
+-join Morana (tersenyum) center
+-Morana (tersenyum): Hahaha matilah kau
++join Carissa (side/kaget_2) leftmost
++Carissa (side/kaget_2): Xander ruangannya…
++join XANDER (netral_1) right
++XANDER (netral_1): Ya kau benar, ruangan ini mulai menyempit
++leave Carissa [animation="Instant Out"]
++leave XANDER [animation="Instant Out"]
++join Morana (tersenyum_duplicated) center
++Morana (tersenyum_duplicated): Hahaha matilah kau
+ [wait time="1.5" hide_text="false"]
++leave Morana
++join XANDER (marah) right
+ XANDER (marah): Tch dia tidak kapok-kapok
+-XANDER (netral): Carissa kita harus bergegas mengalahkan dia
++XANDER (netral_1): Carissa kita harus bergegas mengalahkan dia
+ [wait time="0.7" hide_text="false"]
+-Carissa (marah): YA
++join Carissa (side/marah_5) leftmost
++Carissa (side/marah_5): YA
+ [wait time="1.3" hide_text="false"]
++leave --All-- [animation="Instant Out"]
+ [signal arg="cut_in_03"]
+\ No newline at end of file
+diff --git a/gim/timeline/cut_in_3_clear.dtl b/gim/timeline/cut_in_3_clear.dtl
+index 9391564..4f77f3f 100644
+--- a/gim/timeline/cut_in_3_clear.dtl
++++ b/gim/timeline/cut_in_3_clear.dtl
+@@ -1,134 +1,135 @@
+-[background arg="res://assets/dummy/steven-kent-lomtong-anime-classroom-lo.jpg" fade="0.0"]
+-join Morana (marah) center
+-Morana (marah): Akh! Sialan... Kau pikir ini... sudah berakhir? Sshhh... l-lihat saja nanti...
++[background arg="res://assets/Background/Background_Ruang gelap.png" fade="0.0"]
++join Morana (marah_duplicated) center
++Morana (marah_duplicated): Akh! Sialan... Kau pikir ini... sudah berakhir? Sshhh... l-lihat saja nanti...
+ [wait time="1.5" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ Dalam sekejap, Morana tampak terserpih menjadi debu sebelum akhirnya benar-benar menghilang dari pandangan.
+ [wait time="1.5" hide_text="false"]
+-join Carissa leftmost
+-Carissa (Netral): Fuuuh ... Xander, apa kita benar-benar berhasil mengalahkannya?
++join Carissa (side/netral_3) leftmost
++Carissa (side/netral_3): Fuuuh ... Xander, apa kita benar-benar berhasil mengalahkannya?
+ [wait time="1.0" hide_text="false"]
+-join XANDER (bingung) rightmost
++join XANDER (bingung) right
+ XANDER (bingung): Ya mungkin
+ [wait time="0.7" hide_text="false"]
+-XANDER (netral): Lagian juga dia sudah mengerahkan semua kekuatannya, mustahil dia bisa bangkit kembali
+-Carissa (senyum): Syukurlah
++XANDER (netral_1): Lagian juga dia sudah mengerahkan semua kekuatannya, mustahil dia bisa bangkit kembali
++Carissa (side/senyum_2): Syukurlah
+ [wait time="2.0" hide_text="false"]
+-Carissa (sedih): Hiks…
++Carissa (side/sedih_3): Hiks…
+ [wait time="2.0" hide_text="false"]
+ XANDER (bingung): Eh kau kenapa Carissa?
+-Carissa (sedih): Aku. Hiks. Aku. hiks…
++Carissa (side/sedih_3): Aku. Hiks. Aku. hiks…
+ [wait time="2.0" hide_text="false"]
+ XANDER (uncomfortable): ...
+ [wait time="2.0" hide_text="false"]
+-Carissa (sedih): Aku ... aku tidak tahu harus membalasnya dengan apa. Huuu ... terima kasih Xander sudah membantuku sampai sini
++Carissa (side/sedih_3): Aku ... aku tidak tahu harus membalasnya dengan apa. Huuu ... terima kasih Xander sudah membantuku sampai sini
+ XANDER (uncomfortable): ...
+ [wait time="2.0" hide_text="false"]
+ XANDER (senyum): Sudahlah, aku juga bersyukur kau selamat dari tantangan ini
+ XANDER (senyum): Itu sudah tugasku sebagai block yang tinggal di sini
+-XANDER (netral): Aku tidak ingin lagi ada korban yang mati sia-sia
+-Carissa (senyum): Kau adalah heroku xander
++XANDER (netral_1): Aku tidak ingin lagi ada korban yang mati sia-sia
++Carissa (side/senyum_3): Kau adalah heroku xander
+ [wait time="1.5" hide_text="false"]
+ XANDER (malu): He-hero? Aneh aja kamu ini
+-Carissa (senyum): Wkwkwkwk
++Carissa (side/senyum_2): Wkwkwkwk
+ [wait time="2.0" hide_text="false"]
+ XANDER (uncomfortable): ...
+ [wait time="1.5" hide_text="false"]
+ XANDER (senyum): Syukurlah kau sudah tertawa lagi
+-Carissa (senyum): Ya, Sekali lagi Terimakasih Xander
+-XANDER (netral): Hei Carissa liat itu, Ada cahaya di situ
+-XANDER (netral): Mari kita hampiri
+-Carissa (senyum): Ya..
++Carissa (side/senyum_3): Ya, Sekali lagi Terimakasih Xander
++update Carissa (side/kecil)
++[background arg="res://assets/Background/Background_ruangan gelap ada pintu.png" fade="1.0"]
++XANDER (kecil): Hei Carissa liat itu, Ada cahaya di situ
++XANDER (kecil): Mari kita hampiri
++Carissa (side/kecil): Ya..
+ [wait time="2.0" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ Mereka bergegas berlari ke arah cahaya
+ [wait time="1.5" hide_text="false"]
+-join XANDER (senyum) rightmost
+-XANDER (senyum): Carissa itu pintu keluarnya
+-join Carissa (senyum) leftmost
+-Carissa (senyum): Ya
++join XANDER (kecil) right
++XANDER (kecil): Carissa itu pintu keluarnya
++join Carissa (side/kecil) leftmost
++Carissa (side/kecil): Ya
+ [wait time="1.5" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ Merekapun mengarah ke pintu dan bergegas untuk keluar dari ruangan\
+ Namun, sebuah peristiwa tak terduga tiba-tiba terjadi.
+-join XANDER (netral) rightmost
+-XANDER (netral): Aw..
++join XANDER (netral_1) right
++XANDER (netral_1): Aw..
+ [wait time="1.5" hide_text="false"]
+-join Carissa (kaget) leftmost
+-Carissa (kaget): Hei Xander apa yang terjadi!
++join Carissa (side/kaget_3) leftmost
++Carissa (side/kaget_3): Hei Xander apa yang terjadi!
+ [wait time="1.0" hide_text="false"]
+-XANDER (kaget): Aku tidak tahu
++XANDER (bingung): Aku tidak tahu
+ [wait time="1.0" hide_text="false"]
+-Carissa (kaget): Jangan bilang kau..
++Carissa (side/takut_2): Jangan bilang kau..
+ [wait time="2.0" hide_text="false"]
+-Carissa (kaget): tidak bisa keluar dari sini!!
++Carissa (side/takut_2): tidak bisa keluar dari sini!!
+ [wait time="2.0" hide_text="false"]
+ XANDER (uncomfortable): Mungkin
+ [wait time="1.5" hide_text="false"]
+-Carissa (marah): Kenapa kau malah keliat tenang!
++Carissa (side/marah_3): Kenapa kau malah keliat tenang!
+ XANDER (senyum): Mau bagaimana lagi aku tidak bisa keluar dari sini
+-Carissa (Netral): Tapi aku ingin keluar bersama kamu Xander, kamu sudah menolongku sampai sini dan aku juga sudah janji kepada kamu untuk membawa kita untuk keluar bersama-sama
++Carissa (side/netral_3): Tapi aku ingin keluar bersama kamu Xander, kamu sudah menolongku sampai sini dan aku juga sudah janji kepada kamu untuk membawa kita untuk keluar bersama-sama
+ [wait time="2.0" hide_text="false"]
+ XANDER (senyum): Makasih ya Carissa sudah mau menolongku juga, Tapi aku tidak bisa
+ [wait time="1.5" hide_text="false"]
+-Carissa (sedih): Tapi…
++Carissa (side/sedih_3): Tapi…
+ [wait time="2.0" hide_text="false"]
+ XANDER (senyum): Pergilah Carrisa
+ [wait time="1.5" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ Tanpa memedulikan apa pun, Carissa mendorong paksa Xander keluar. Egois.
+ [wait time="2.0" hide_text="false"]
+-join XANDER (uncomfortable) rightmost
++join XANDER (uncomfortable) right
+ XANDER (uncomfortable): Carissa, percuma! Sudah kubilang aku tidak bisa keluar!
+ [wait time="1.5" hide_text="false"]
+-join Carissa (sedih) leftmost
+-Carissa (sedih): Tapi… Aku tidak ingin hanya aku yang keluar dari sini
++join Carissa (side/sedih_3) leftmost
++Carissa (side/sedih_3): Tapi… Aku tidak ingin hanya aku yang keluar dari sini
+ [wait time="2.0" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ XANDER pun mulai menghindar dari dorongan Carissa
+-join XANDER (netral) rightmost
+-XANDER (netral): Cukup carissa. Pergilah dari sini sebelum kau terjebak juga
++join XANDER (netral_1) right
++XANDER (netral_1): Cukup carissa. Pergilah dari sini sebelum kau terjebak juga
+ [wait time="1.5" hide_text="false"]
+-join Carissa (sedih) leftmost
+-Carissa (sedih): Tapi kau akan sendiri di sini
+-XANDER (netral): Carissa dengarkan aku! Aku di sini hanya ingin menyelamatkan mu dan aku juga bertujuan untuk memusnahkan Ai brengsek itu
++join Carissa (side/sedih_3) leftmost
++Carissa (side/sedih_3): Tapi kau akan sendiri di sini
++XANDER (netral_1): Carissa dengarkan aku! Aku di sini hanya ingin menyelamatkan mu dan aku juga bertujuan untuk memusnahkan Ai brengsek itu
+ [wait time="2.0" hide_text="false"]
+ XANDER (senyum): Jadi tidak apa-apa Carissa, kita impas kau juga sudah membantuku untuk mengalahkan AI itu
+ [wait time="2.0" hide_text="false"]
+-Carissa (sedih): Xander…
++Carissa (side/sedih_3): Xander…
+ [wait time="1.5" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ Xander pun mulai teriak
+ [wait time="1.0" hide_text="false"]
+-join XANDER (senyum) rightmost
++join XANDER (senyum) right
+ XANDER (senyum): CARISSAAA! AKU BERJANJI AKAN MENGHILANGKAN GAME INI DAN TIDAK BAKAL ADA KORBAN LAGI YANG AKAN MASUK KE GAME INI
+ [wait time="2.0" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ Carissa pun tertawa melihat pernyataan dari Xander
+-join Carissa (senyum) leftmost
+-Carissa (senyum): Wkwkwk apa-apaan itu sekarang kau jadi terlihat seperti hero
++join Carissa (side/senyum_2) leftmost
++Carissa (side/senyum_2): Wkwkwk apa-apaan itu sekarang kau jadi terlihat seperti hero
+ [wait time="1.5" hide_text="false"]
+-join XANDER (malu) rightmost
++join XANDER (malu) right
+ XANDER (malu): Brisik!
+ [wait time="2.0" hide_text="false"]
+ XANDER (senyum): Baiklah, kau harus cepat keluar
+ [wait time="1.0" hide_text="false"]
+-Carissa (senyum): Ya....
++Carissa (side/senyum_3): Ya....
+ [wait time="2.0" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+ Carissa pun mulai berlari dan keluar dari ruangan itu
+-join Carissa (senyum) leftmost
+-Carissa (sedih): XANDER…
++join Carissa (side/senyum_2) leftmost
++Carissa (side/senyum_2): XANDER…
+ [wait time="2.0" hide_text="false"]
+-Carissa (senyum): TERIMAKASIH BANYAK DAN SELAMA TINGGAL
++Carissa (side/senyum_2): TERIMAKASIH BANYAK DAN SELAMAT TINGGAL
+ [wait time="1.5" hide_text="false"]
+-Carissa (senyum): AKU TIDAK AKAN MELUPAKAN MU.
++Carissa (side/senyum_2): AKU TIDAK AKAN MELUPAKAN MU.
+ [wait time="1.5" hide_text="false"]
+ leave --All-- [animation="Instant Out"]
+-[background arg="res://assets/Green.png" fade="1.0"]
+ Saat Carissa menyatakan perpisahan, Carissa melihat sekilas entitas asli Xander—sebuah wujud roh yang menyunggingkan senyum penuh kebanggaan.
+ [wait time="3.0" hide_text="false"]
+-join XANDER (senyum) center
+-XANDER (senyum): Ya, selamat tinggal carissa
++join XANDER (senyum_duplicated) center
++XANDER (senyum_duplicated): Ya, selamat tinggal carissa
+ [wait time="2.0" hide_text="false"]
+ [signal arg="cut_in_03_clear"]
+\ No newline at end of file

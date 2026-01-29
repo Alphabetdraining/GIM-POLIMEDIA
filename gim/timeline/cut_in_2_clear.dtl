@@ -1,5 +1,5 @@
-join Carissa (Netral) leftmost [animation="Instant In"]
-Carissa (Netral): Apa kita berhasil?
+join Carissa (side/netral_1) leftmost [animation="Instant In"]
+Carissa (side/netral_1): Apa kita berhasil?
 [wait time="1.0" hide_text="false"]
 join XANDER (kaget) rightmost [animation="Instant In"]
 XANDER (kaget): Aku tidak tahu

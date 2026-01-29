@@ -1,3 +1,5 @@
+audio music "res://assets/backsound/Song 3.mp3" [fade="1.0" volume="0.0"]
+[background arg="res://assets/background/Background_kelas.png" fade="0.0"]
 Suatu Hari di dalam kelas X di sekolah XX saat jam istirahat Carissa dan kedua temannya sedang membicarakan game dari website yang aneh
 join teman_1 rightmost [animation="Instant In"]
 teman_1: Eh, Kalian tau ga, Ada game yang bisa membuat pemainnya masuk ke dalam game nya loh.

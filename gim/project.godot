@@ -49,6 +49,7 @@ directories/dtl_directory={
 glossary/default_case_sensitive=true
 layout/style_list=["res://style/Dialog_Box_Style.tres"]
 layout/default_style="res://style/Dialog_Box_Style.tres"
+variables={}
 
 [display]
 

@@ -1,7 +1,9 @@
+audio music "res://assets/backsound/Song 3.mp3" [fade="1.0" volume="0.0"]
+[background arg="res://assets/background/Background_kamar.png" fade="0.0"]
 Carissa baru tersadar sepenuhnya setelah kembali dari dunia game. Ia terbaring lemas di kamarnya, sementara waktu sudah merayap menuju malam.
 [wait time="2.0" hide_text="false"]
-join Carissa (sedih) center
-Carissa (sedih): Akhirnya aku bisa keluar..
-Carissa (sedih): Tapi Xander...
+join Carissa (side/sedih_1) center
+Carissa (side/sedih_1): Akhirnya aku bisa keluar..
+Carissa (side/sedih_1): Tapi Xander...
 [wait time="2.0" hide_text="false"]
 [signal arg="cut_05"]

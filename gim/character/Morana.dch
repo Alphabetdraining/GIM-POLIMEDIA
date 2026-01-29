@@ -15,11 +15,11 @@
 &"display_name": "Morana",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(0, 0),
+&"offset": Vector2(100, 0),
 &"portraits": {
 "marah": {
 "export_overrides": {
-"image": "\"res://assets/dummy/Jenny.png\""
+"image": "\"res://assets/character portrait/morana/Dialog_Morana marah.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -28,7 +28,7 @@
 },
 "marah left": {
 "export_overrides": {
-"image": "\"res://assets/dummy/Jenny.png\""
+"image": "\"res://assets/character portrait/morana/Dialog_Morana marah.png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -37,7 +37,7 @@
 },
 "terkejut": {
 "export_overrides": {
-"image": "\"res://assets/dummy/Jenny.png\""
+"image": "\"res://assets/character portrait/morana/Dialog_Morana terkejut.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -46,7 +46,7 @@
 },
 "tersenyum": {
 "export_overrides": {
-"image": "\"res://assets/dummy/Jenny.png\""
+"image": "\"res://assets/character portrait/morana/Dialog_Morana senyum jahat.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -55,7 +55,7 @@
 },
 "tersenyum jahat": {
 "export_overrides": {
-"image": "\"res://assets/dummy/Jenny.png\""
+"image": "\"res://assets/character portrait/morana/Dialog_Morana senyum jahat.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -64,7 +64,7 @@
 },
 "tersenyum left": {
 "export_overrides": {
-"image": "\"res://assets/dummy/Jenny.png\""
+"image": "\"res://assets/character portrait/morana/Dialog_Morana senyum jahat.png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -72,5 +72,5 @@
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 }
 },
-&"scale": 0.5
+&"scale": 0.6
 }

@@ -1,35 +1,35 @@
 Setelah memasuki dunia game tersebut, Carissa harus menuntaskan segala tantangan yang tersedia.
 join Morana (tersenyum) rightmost
 Morana (tersenyum): Baiklah nona kecil kita mulai tantangannya
-join Carissa (kaget) leftmost
-Carissa (kaget): A-apa Ta-tantangan?
+join Carissa (side/kaget_1) leftmost
+Carissa (side/kaget_1): A-apa Ta-tantangan?
 Morana (tersenyum jahat): Yaa tantangan penghibur\
 HAHAHAHAHAHA
 leave --All--
 Block mulai terjatuh membuat Carissa semangkin panik dan takut
 join Morana (tersenyum jahat) rightmost
 Morana (tersenyum jahat): Ayoo hibur aku, selesaikan stage ini HAHAHAAHAAAA
-join Carissa (kaget) leftmost
-Carissa (kaget): A-A-Apa yang harus ku lakukan
+join Carissa (side/kaget_1) leftmost
+Carissa (side/kaget_1): A-A-Apa yang harus ku lakukan
 Morana (tersenyum jahat): Hindari blok itu dan membuat mu selamat. HAHAHA Selamat berjuang (suara yang mulai redup)
 leave --All--
 Carissa mulai bertindak dan menghindari block yang terjatuh, Tetapi tanpa sadar ada block yang sudah di atas kepala nya
-join Carissa (kaget) center
-Carissa (kaget): TIDAKKKK!!!!
+join Carissa (side/kaget_1) center
+Carissa (side/kaget_1): TIDAKKKK!!!!
 leave --All--
 Cahaya biru terang muncul entah dari mana asalnya yang membuat block yang terjatuh sebelumnya menjadi hilang
-join Carissa (kaget) leftmost
-Carissa (kaget): Apa itu?
+join Carissa (side/kaget_1) leftmost
+Carissa (side/kaget_1): Apa itu?
 join Morana (terkejut) rightmost
 Morana (terkejut): Aghh Brengsekkk kau lagi ternyataaaa
 leave --All--
 Cahaya terang itu berubah menjadi cube seukuran kepala manusia yang mengambang, cube itu menghampiri Carissa
 join cube rightmost
 cube: Mulai Sekarang ikuti arahanku!
-join Carissa (sedih) leftmost
-Carissa (sedih): Kamu siapa?
+join Carissa (side/sedih_1) leftmost
+Carissa (side/sedih_1): Kamu siapa?
 cube: Sekarang bukan waktu yang tepat untuk perkenalan, ikuti saja kata-kataku kamu akan selamat
-Carissa (sedih): BA-BAIKLAH..
+Carissa (side/sedih_1): BA-BAIKLAH..
 leave cube
 join Morana (marah) rightmost
 Morana (marah): Sialan, Kubus Bodoh, Kau merusak kesenanganku
@@ -40,23 +40,23 @@ leave --All--
 Morana mulai menggerakan cakar diatas yang mencengkram Balok, lalu mengarahkan ke arah CARISSA
 join Morana (tersenyum jahat) rightmost
 Morana (tersenyum jahat): Hahaha.. Matikau!
-join Carissa (kaget) leftmost
-Carissa (kaget): Ahh aku harus gimana..
+join Carissa (side/kaget_1) leftmost
+Carissa (side/kaget_1): Ahh aku harus gimana..
 leave Morana
 join cube rightmost
 cube: Bergeraklah kearah Kiri(A) atau Kanan(D) untuk menghindari Balok
 [signal arg="check_move"]
-Carissa (kaget): ...
+Carissa (side/kaget_1): ...
 [wait time="0.4" hide_text="false"]
 cube: Baguss, kau juga bisa lompat (SPACE) untuk ke balok yang lebih tinggi
 [signal arg="check_jump"]
 cube: Bagus sekali
-Carissa (sedih): Sampai kapan ini selesai..
+Carissa (side/sedih_1): Sampai kapan ini selesai..
 cube: Bantu aku mengumpulkan energy dengan membuat garis horizontal penuh dengan balok, itu otomatis menghilang blok tersebut dan memberikanku Energy yang cukup untuk menyerang morana
 cube: Aku akan menyerang Morana dan memberimu powerup acak, aku pikir Morana perlu 10 hit untuk nonaktif
-Carissa (sedih): Baiklah aku akan mencobanya..
+Carissa (side/sedih_1): Baiklah aku akan mencobanya..
 [signal arg="check_energy"]
-Carissa (senyum): Kamu berhasil menyerang Morana.. \
+Carissa (side/senyum_1): Kamu berhasil menyerang Morana.. \
 tuan kubus
 cube: TUAN KUBUS???
 leave cube
@@ -70,12 +70,12 @@ leave --All--
 Balok vertical penuh dipaling samping kanan dan kiri muncul, balok itu berbeda dari balok sebelumnya
 join cube (New portrait) rightmost
 cube (New portrait): Ohiya semakin Morana terkena hit dan marah, ia akan membuat vertikal balok yang mengurangi pergerakanmu
-join Carissa (Netral) leftmost
+join Carissa (side/netral_1) leftmost
 Carissa: ...
 [wait time="0.4" hide_text="false"]
 cube (New portrait): Aku juga punya cadangan energy untuk menghidupkanmu kembali 3 kali, cobalah untuk tidak tertimpa balok
 cube: Berjuanglah!!
-Carissa (senyum): BAIKLAH TUAN KUBUS terimasih panduan mu
+Carissa (side/senyum_1): BAIKLAH TUAN KUBUS terimasih panduan mu
 [wait time="0.4" hide_text="false"]
 leave --All--
 [signal arg="cut_in_01"]

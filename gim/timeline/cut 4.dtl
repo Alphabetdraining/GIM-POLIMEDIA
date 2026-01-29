@@ -1,35 +1,35 @@
 Setelah menyelesaikan tantangan pertama CARISSA dan cube pun terlempar ke ruangan yang gelap
 [wait time="0.5" hide_text="false"]
-join Carissa (sedih) leftmost
-Carissa (sedih): Aw.. Ruangan apa ini, Gelap sekali
+join Carissa (side/sedih_1) leftmost
+Carissa (side/sedih_1): Aw.. Ruangan apa ini, Gelap sekali
 join cube (New portrait) rightmost
 cube (New portrait): Sepertinya kita masih terjebak di dalam game ini
-Carissa (senyum): Tuan Cube kamu hebat banget sudah ngebantu aku dalam tantangan tadi
+Carissa (side/senyum_1): Tuan Cube kamu hebat banget sudah ngebantu aku dalam tantangan tadi
 cube (malu): Yaa sama-sama.
-Carissa (Netral): Tuan Cube kenapa muka kamu malah seperti itu
+Carissa (side/netral_1): Tuan Cube kenapa muka kamu malah seperti itu
 cube (uncomfortable): Ah tidak apa-apa, karna sejauh ini hanya kamu yang berhasil menyelesaikan tantangan dari AI sialan itu
-Carissa (senyum): Serius?
+Carissa (side/senyum_1): Serius?
 [wait time="0.5" hide_text="false"]
 cube (New portrait): Ya..
 [wait time="0.5"]
-Carissa (Netral): Tuan cube aku ingin bertanya, asal kamu dari mana? Dan kenapa kamu menolongku
+Carissa (side/netral_1): Tuan cube aku ingin bertanya, asal kamu dari mana? Dan kenapa kamu menolongku
 cube (New portrait): Oh tentang itu yaa, apakah kamu akan percaya pada ku?
-Carissa (senyum): Tentu saja tuan cube
+Carissa (side/senyum_1): Tentu saja tuan cube
 cube (marah): Bisakah kamu tidak memanggilku tuan cube!!
-Carissa (senyum): Ya karena kamu cube
+Carissa (side/senyum_1): Ya karena kamu cube
 cube (New portrait): Tidak salah juga sih..
 [wait time="0.5" hide_text="false"]
-Carissa (senyum): Jadi aku bisa manggil kamu siapa?
+Carissa (side/senyum_1): Jadi aku bisa manggil kamu siapa?
 [wait time="0.5" hide_text="false"]
 leave cube [animation="Instant Out"]
 join XANDER rightmost [animation="Instant In"]
 XANDER: Yaa karena kita belom berkenalan jadi pekenalkan nama ku Xander aku cube yang bertujuan untuk menyelamatkan orang yang terjebak dalam dunia ini
-update Carissa (Netral)
-Carissa (senyum): Xander! Nama ku Carissa, makasih sudah membantu ku
+update Carissa (side/netral_1)
+Carissa (side/senyum_1): Xander! Nama ku Carissa, makasih sudah membantu ku
 XANDER (malu): Ya bukan masalah besar
-Carissa (Netral): Jadi Xander, jawablah pertanyaan ku. Dari mana asalmu dan kenapa kamu menolongku?
+Carissa (side/netral_1): Jadi Xander, jawablah pertanyaan ku. Dari mana asalmu dan kenapa kamu menolongku?
 XANDER (uncomfortable): Yaaa aku kan tadi sudah bilang tujuan ku untuk membantu orang yang terjebak dalam game ini, dan asal ku seperti dunia kau juga, aku adalah manusia sebelumnya.
-Carissa (kaget): Tidak mungkin!
+Carissa (side/kaget_1): Tidak mungkin!
 XANDER (netral): Ya kau pasti terkejut, aku juga seperti mu sebelumnya
 leave --All--
 Xander mulai menceritakan masa lalunya yang terjebak dalam game ini
@@ -43,18 +43,18 @@ XANDER: Aku terbangun kembali ke dalam dunia game ini tetapi tanpa sadar tubuhku
 XANDER: Suasana kembali hampa kegagalan yang ku dapat membuatku merasa tidak berguna, tetapi aku kembali lagi dan bertemu dengan kamu dan akhirnya aku berhasil menyelamatkan mu tetapi aku tidak  tahu bagaimana keluar dalam game ini
 [wait time="1.5" hide_text="false"]
 update XANDER rightmost
-join Carissa (sedih) leftmost [animation="Slide In Up"]
-Carissa (sedih): XA-XANDER AKU TERHARU BANGETT
+join Carissa (side/sedih_1) leftmost [animation="Slide In Up"]
+Carissa (side/sedih_1): XA-XANDER AKU TERHARU BANGETT
 [wait time="0.5" hide_text="false"]
 XANDER (malu): Ga usah segitunya, itu emang tugasku
-Carissa (sedih): Tapi kau sudah seperti hero di pandangan ku
-Carissa (senyum): Terimakasih ya Xander
+Carissa (side/sedih_1): Tapi kau sudah seperti hero di pandangan ku
+Carissa (side/senyum_1): Terimakasih ya Xander
 [wait time="1.0" hide_text="false"]
 XANDER (malu): Iya sama-sama
 [wait time="1.0" hide_text="false"]
-Carissa (senyum): Aku janji akan membantu mu keluar dari sini
+Carissa (side/senyum_1): Aku janji akan membantu mu keluar dari sini
 XANDER (netral): Ta-Tapii
-Carissa (senyum): Kita akan nyari jalan keluarnya
+Carissa (side/senyum_1): Kita akan nyari jalan keluarnya
 XANDER (uncomfortable): (menghela nafas) aku tidak di dengar yaaa, ya sudahlah
 [wait time="1.0" hide_text="false"]
 leave --All--
