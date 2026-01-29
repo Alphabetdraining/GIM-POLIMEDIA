@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://bt3gckli7ovql"]
+[gd_scene load_steps=12 format=3 uid="uid://bt3gckli7ovql"]
 
-[ext_resource type="Script" uid="uid://m76vvefavj52" path="res://script/pausemenu.gd" id="1_y06jj"]
 [ext_resource type="Texture2D" uid="uid://dg7lrjqdme3qr" path="res://assets/ui/Pause_Background.png" id="2_kd4mq"]
 [ext_resource type="Texture2D" uid="uid://f70jhqga2msq" path="res://assets/ui/Pause_Continue Still.png" id="3_6chnl"]
 [ext_resource type="Script" uid="uid://cwri278i0lmcj" path="res://script/pause.gd" id="3_xg2ux"]
@@ -22,21 +21,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_y06jj")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
+[node name="Pause" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+script = ExtResource("3_xg2ux")
+
+[node name="TextureRect" type="TextureRect" parent="Pause"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_kd4mq")
-
-[node name="Pause" type="CanvasLayer" parent="."]
-layer = 3
-visible = false
-script = ExtResource("3_xg2ux")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Pause"]
 anchors_preset = 8
@@ -69,6 +66,6 @@ texture_normal = ExtResource("8_64rkf")
 texture_pressed = ExtResource("9_vxac7")
 texture_hover = ExtResource("10_klqpn")
 
-[connection signal="button_down" from="Pause/VBoxContainer/Continue" to="." method="_on_continue_button_down"]
-[connection signal="pressed" from="Pause/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
-[connection signal="button_down" from="Pause/VBoxContainer/Quit" to="." method="_on_quit_button_down"]
+[connection signal="pressed" from="Pause/VBoxContainer/Continue" to="Pause" method="_on_continue_pressed"]
+[connection signal="pressed" from="Pause/VBoxContainer/Main Menu" to="Pause" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Pause/VBoxContainer/Quit" to="Pause" method="_on_quit_pressed"]

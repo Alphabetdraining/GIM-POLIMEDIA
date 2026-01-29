@@ -13,6 +13,9 @@
 
 [sub_resource type="GDScript" id="GDScript_d1ilt"]
 script/source = "extends Node
+
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 "
 
 [sub_resource type="PackedScene" id="PackedScene_hptm8"]
@@ -86,12 +89,11 @@ tetromino_scene = SubResource("PackedScene_hptm8")
 position = Vector2(-2, 493)
 
 [node name="Menu" parent="." instance=ExtResource("8_344ge")]
-visible = false
 z_index = 100
-offset_left = -1971.0
-offset_top = -1086.0
-offset_right = -1971.0
-offset_bottom = -1086.0
+offset_left = -2533.0
+offset_top = -1338.0
+offset_right = -2084.0
+offset_bottom = -1098.0
 scale = Vector2(2.04, 2.04)
 
 [node name="Platform" type="StaticBody2D" parent="."]

@@ -19,22 +19,19 @@ func _process(delta: float) -> void:
 			visible = false
 			get_tree().paused = false
 
-func _on_continue_button_down():
+func _on_main_menu_pressed() -> void:
+	paused = false
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+
+
+func _on_continue_pressed() -> void:
 	#click.play()
 	#await click.finished
 	paused = false
 	visible = false
 	get_tree().paused = false
 
-func _on_restart_button_down():
-	paused = false
-	get_tree().paused = false
-	get_tree().reload_current_scene()
 
-func _on_quit_button_down():
+func _on_quit_pressed() -> void:
 	get_tree().quit()
-
-func _on_main_menu_pressed() -> void:
-	paused = false
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
