@@ -75,4 +75,5 @@ texture_pressed = ExtResource("9_vxac7")
 texture_hover = ExtResource("10_klqpn")
 
 [connection signal="button_down" from="VBoxContainer/Continue" to="." method="_on_continue_button_down"]
+[connection signal="pressed" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
 [connection signal="button_down" from="VBoxContainer/Quit" to="." method="_on_quit_button_down"]

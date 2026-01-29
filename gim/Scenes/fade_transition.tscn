@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://drvw4pr1k7ivc"]
+[gd_scene load_steps=5 format=3 uid="uid://bsfygwd1xilaa"]
 
 [sub_resource type="Animation" id="Animation_fxt24"]
 resource_name = "Fade_in"

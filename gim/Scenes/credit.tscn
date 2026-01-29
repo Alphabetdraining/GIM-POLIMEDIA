@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://obll5mu3qnmn"]
+
+[ext_resource type="Script" uid="uid://duavlng3jpiot" path="res://script/credit.gd" id="1_xknyl"]
+[ext_resource type="Script" uid="uid://dsa1afjqbbc2o" path="res://script/scroll_container.gd" id="2_5g4l2"]
+[ext_resource type="Texture2D" uid="uid://5ts6t4o4j3eb" path="res://assets/credit/Credit_Background.png" id="2_qb0r7"]
+[ext_resource type="PackedScene" uid="uid://bsfygwd1xilaa" path="res://Scenes/fade_transition.tscn" id="3_5g4l2"]
+[ext_resource type="Texture2D" uid="uid://cbq6at6hcetih" path="res://assets/ui/main-menu/Main menu_Title.png" id="3_d2lxo"]
+[ext_resource type="Texture2D" uid="uid://bas842j2kh1ru" path="res://assets/credit/Credit_Subtitle.png" id="4_v4k34"]
+[ext_resource type="FontFile" uid="uid://ocqlkvyg53oj" path="res://assets/font/Font_Credit.TTF" id="6_721br"]
+
+[node name="CreditsScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xknyl")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_qb0r7")
+stretch_mode = 6
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_right = 1705.0
+offset_bottom = 341.0
+texture = ExtResource("3_d2lxo")
+
+[node name="Credit" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 687.0
+offset_top = 377.0
+offset_right = 1187.0
+offset_bottom = 637.0
+texture = ExtResource("4_v4k34")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 572.0
+offset_right = 1485.0
+offset_bottom = 1045.0
+scale = Vector2(1, 1.05)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("2_5g4l2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="TopSpacer" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 666)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_721br")
+theme_override_font_sizes/font_size = 66
+text = "Who is this!
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("6_721br")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "- Game Designer  -
+Gyat Purwasatia
+Aldy Rayhan Afrians
+
+- Audio Art  -
+Muhammad Jihaadul Guslan
+
+- Visual Art  -
+Cheryl Citra Lvarissa Y.N.
+Siti Asya Nurindah Khalila
+Messias Maisie
+M. Dimas Surya Saputra
+Farrel Andika
+Dyan Permana Putra
+
+- Programmer  -
+Rizky
+Aira Dzaky Ikhwan
+Toni Sudarsono
+Nabil Marzuq Amirulzufar
+Randi Adam
+Nabil Rizky"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomSpacer" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 540)
+layout_mode = 2
+
+[node name="A" type="CanvasLayer" parent="."]
+
+[node name="FadeTransition" parent="A" instance=ExtResource("3_5g4l2")]
