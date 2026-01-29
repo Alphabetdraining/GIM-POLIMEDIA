@@ -15,7 +15,7 @@
 &"display_name": "XANDER",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(100, 0),
+&"offset": Vector2(100, -75),
 &"portraits": {
 "bingung": {
 "export_overrides": {
@@ -23,7 +23,17 @@
 },
 "mirror": true,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 1.0,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"human": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/xander/Ending scene_Xander.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, 800),
+"scale": 1.65,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 },
 "kaget": {
@@ -33,6 +43,15 @@
 "mirror": true,
 "offset": Vector2(0, 0),
 "scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"kecil": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 2 (1).png\""
+},
+"mirror": true,
+"offset": Vector2(-100, 0),
+"scale": 0.01,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 },
 "malu": {
@@ -68,6 +87,24 @@
 },
 "mirror": true,
 "offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"netral_2_duplicated": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 2 (1).png\""
+},
+"mirror": true,
+"offset": Vector2(-100, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"netral_duplicated": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 1 (1).png\""
+},
+"mirror": true,
+"offset": Vector2(-100, 0),
 "scale": 1,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 },

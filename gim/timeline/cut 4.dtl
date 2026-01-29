@@ -1,58 +1,72 @@
+[background arg="res://assets/background/Background_Ruang gelap.png" fade="0.0"]
 Setelah menyelesaikan tantangan pertama CARISSA dan cube pun terlempar ke ruangan yang gelap
 [wait time="0.5" hide_text="false"]
-join Carissa (side/sedih_1) leftmost
-Carissa (side/sedih_1): Aw.. Ruangan apa ini, Gelap sekali
-join cube (New portrait) rightmost
+join Carissa (side/pusing_duplicated) leftmost
+Carissa (side/pusing_duplicated): Aw.....
+Carissa (side/takut_2): Ruangan apa ini, Gelap sekali
+join cube (New portrait) right
 cube (New portrait): Sepertinya kita masih terjebak di dalam game ini
-Carissa (side/senyum_1): Tuan Cube kamu hebat banget sudah ngebantu aku dalam tantangan tadi
+Carissa (side/senyum_2): Tuan Cube kamu hebat banget sudah ngebantu aku dalam tantangan tadi
 cube (malu): Yaa sama-sama.
-Carissa (side/netral_1): Tuan Cube kenapa muka kamu malah seperti itu
-cube (uncomfortable): Ah tidak apa-apa, karna sejauh ini hanya kamu yang berhasil menyelesaikan tantangan dari AI sialan itu
-Carissa (side/senyum_1): Serius?
+Carissa (side/Netral_3): Tuan cube aku penasaran banget, aku ingin bertanya
+cube (New portrait_duplicated): Ya, kau mau menanyakan apa?
+Carissa (side/Netral_3): Tuan cube aku penasaran darimana asal kekuatan mu berada dan kenapa kau sadar kau mempunyai kekuatan untuk menyerang morana?
 [wait time="0.5" hide_text="false"]
-cube (New portrait): Ya..
+cube (New portrait): Oh soal itu ya
 [wait time="0.5"]
-Carissa (side/netral_1): Tuan cube aku ingin bertanya, asal kamu dari mana? Dan kenapa kamu menolongku
-cube (New portrait): Oh tentang itu yaa, apakah kamu akan percaya pada ku?
-Carissa (side/senyum_1): Tentu saja tuan cube
-cube (marah): Bisakah kamu tidak memanggilku tuan cube!!
-Carissa (side/senyum_1): Ya karena kamu cube
-cube (New portrait): Tidak salah juga sih..
+cube (New portrait_duplicated): Kekuatan ini aku dapatkan ketika aku menjadi cube, aku tidak tahu kenapa aku mempunyai kekuatan
+cube (New portrait): Dan aku menyadari aku mendapatkan kekuatan ketika aku ingin menolong korban yang terjebak dalam game ini
+Carissa (side/Netral_3): Tuan cube kenapa tidak menggunakan kekuatanmu untuk mengembalikan korban game ini ke dunia aslinya?
+cube (uncomfortable): Ya kau benar. Tapi sayangnya itu tidak bisa ku lakukan, kalo sekalinya bisapun juga di sini sudah tidak ada korban yang menderita lagi.
+cube (New portrait): ...
+Carissa (side/Netral_3): Tuan Cube kenapa muka kamu malah seperti itu
 [wait time="0.5" hide_text="false"]
+cube (uncomfortable): Ah tidak apa-apa, aku hanya senang saja, karna sejauh ini hanya kamu yang berhasil menyelesaikan tantangan dari AI sialan itu
+Carissa (side/kaget_2): Serius?
+cube (New portrait_duplicated): ya...
+Carissa (side/Netral_3): Tuan cube aku masih punya pertanyaan lagi
+cube (New portrait): Tanyakan saja, kalau aku bisa menjawabnya akan ku jawab
+Carissa (side/Netral_3): Tuan cube aku ingin bertanya, asal kamu dari mana? Dan kenapa kamu menolongku
+cube (New portrait_duplicated): Oh tentang itu yaa, apakah kamu akan percaya pada ku?
+Carissa (side/senyum_2): Tentu saja tuan cube
+cube (marah): Bisakah kamu tidak memanggilku tuan cube!!
+Carissa (side/Netral_3): Ya karena kamu cube
+cube (uncomfortable): Tidak salah juga sih..
 Carissa (side/senyum_1): Jadi aku bisa manggil kamu siapa?
 [wait time="0.5" hide_text="false"]
 leave cube [animation="Instant Out"]
-join XANDER rightmost [animation="Instant In"]
-XANDER: Yaa karena kita belom berkenalan jadi pekenalkan nama ku Xander aku cube yang bertujuan untuk menyelamatkan orang yang terjebak dalam dunia ini
-update Carissa (side/netral_1)
-Carissa (side/senyum_1): Xander! Nama ku Carissa, makasih sudah membantu ku
+join XANDER (netral) right [animation="Instant In"]
+XANDER (netral): Yaa karena kita belom berkenalan jadi pekenalkan nama ku Xander aku cube yang bertujuan untuk menyelamatkan orang yang terjebak dalam dunia ini
+update Carissa (side/senyum_1)
+Carissa (side/senyum_1): Xander ya!
+Carissa (side/senyum_1): Perkenalkan nama ku Carissa, makasih sudah membantu ku
 XANDER (malu): Ya bukan masalah besar
-Carissa (side/netral_1): Jadi Xander, jawablah pertanyaan ku. Dari mana asalmu dan kenapa kamu menolongku?
+Carissa (side/Netral_3): Jadi Xander, jawablah pertanyaan ku. Dari mana asalmu dan kenapa kamu menolongku?
 XANDER (uncomfortable): Yaaa aku kan tadi sudah bilang tujuan ku untuk membantu orang yang terjebak dalam game ini, dan asal ku seperti dunia kau juga, aku adalah manusia sebelumnya.
 Carissa (side/kaget_1): Tidak mungkin!
-XANDER (netral): Ya kau pasti terkejut, aku juga seperti mu sebelumnya
+XANDER (netral_2): Ya kau pasti terkejut, aku juga seperti mu sebelumnya
 leave --All--
 Xander mulai menceritakan masa lalunya yang terjebak dalam game ini
-join XANDER center
-XANDER: Pada waktu itu aku melihat social media di komputer ku dan aku menghabiskan waktu dan merasa bosan, sesaat aku menemukan web yang merujuk ke game ini karena aku bosan jadi aku menginstal game ini dan ingin mencobanya, terkejut tiba-tiba aku tertarik ke dalam game ini dan di sambut oleh AI bodoh itu.
+join XANDER (netral_duplicated) center
+XANDER (netral_duplicated): Pada waktu itu aku melihat social media di komputer ku dan aku menghabiskan waktu dan merasa bosan, sesaat aku menemukan web yang merujuk ke game ini karena aku bosan jadi aku menginstal game ini dan ingin mencobanya, terkejut tiba-tiba aku tertarik ke dalam game ini dan di sambut oleh AI bodoh itu.
 [wait time="1.5" hide_text="false"]
-XANDER: Aku mencoba bertahan hidup dari block block yang berjatuhan tetapi aku gagal, aku tertimpa oleh block-block itu dan tanpa sadar pandanganku terasa hampa  aku tidak melihat apa-pun yang ada di sekitar.
+XANDER (netral_2_duplicated): Aku mencoba bertahan hidup dari block block yang berjatuhan tetapi aku gagal, aku tertimpa oleh block-block itu dan tanpa sadar pandanganku terasa hampa  aku tidak melihat apa-pun yang ada di sekitar.
 [wait time="1.5" hide_text="false"]
-XANDER: Aku terbangun kembali ke dalam dunia game ini tetapi tanpa sadar tubuhku berubah menjadi cube, aku melihat korban selanjutnya dan aku berusaha menolong mereka tetapi aku gagal.
+XANDER (netral_duplicated): Aku terbangun kembali ke dalam dunia game ini tetapi tanpa sadar tubuhku berubah menjadi cube, aku melihat korban selanjutnya dan aku berusaha menolong mereka tetapi aku gagal.
 [wait time="1.5" hide_text="false"]
-XANDER: Suasana kembali hampa kegagalan yang ku dapat membuatku merasa tidak berguna, tetapi aku kembali lagi dan bertemu dengan kamu dan akhirnya aku berhasil menyelamatkan mu tetapi aku tidak  tahu bagaimana keluar dalam game ini
+XANDER (netral_2_duplicated): Suasana kembali hampa kegagalan yang ku dapat membuatku merasa tidak berguna, tetapi aku kembali lagi dan bertemu dengan kamu dan akhirnya aku berhasil menyelamatkan mu tetapi aku tidak  tahu bagaimana keluar dalam game ini
 [wait time="1.5" hide_text="false"]
-update XANDER rightmost
-join Carissa (side/sedih_1) leftmost [animation="Slide In Up"]
-Carissa (side/sedih_1): XA-XANDER AKU TERHARU BANGETT
+update XANDER (netral_2) right
+join Carissa (side/sedih_3) leftmost [animation="Slide In Up"]
+Carissa (side/sedih_3): XA-XANDER AKU TERHARU BANGETT
 [wait time="0.5" hide_text="false"]
 XANDER (malu): Ga usah segitunya, itu emang tugasku
-Carissa (side/sedih_1): Tapi kau sudah seperti hero di pandangan ku
-Carissa (side/senyum_1): Terimakasih ya Xander
+Carissa (side/sedih_3): Tapi kau sudah seperti hero di pandangan ku
+Carissa (side/senyum_3): Terimakasih ya Xander
 [wait time="1.0" hide_text="false"]
 XANDER (malu): Iya sama-sama
 [wait time="1.0" hide_text="false"]
-Carissa (side/senyum_1): Aku janji akan membantu mu keluar dari sini
+Carissa (side/senyum_2): Aku janji akan membantu mu keluar dari sini
 XANDER (netral): Ta-Tapii
 Carissa (side/senyum_1): Kita akan nyari jalan keluarnya
 XANDER (uncomfortable): (menghela nafas) aku tidak di dengar yaaa, ya sudahlah

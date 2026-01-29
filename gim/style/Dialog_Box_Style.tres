@@ -16,6 +16,7 @@
 script = ExtResource("2_gh2t8")
 scene = ExtResource("1_ryia3")
 overrides = {
+"global_font": "\"res://assets/font/Font_Teks dialog & Nama char.ttf\"",
 "global_font_color": "Color(0, 0, 0, 1)",
 "global_font_size": "30.0"
 }
@@ -45,7 +46,7 @@ overrides = {
 "box_panel": "\"res://assets/box dialog/new_style_box_texture.tres\"",
 "box_size": "Vector2(1770, 200)",
 "name_label_box_modulate": "Color(0, 0, 0, 0)",
-"name_label_box_offset": "Vector2(7, -40)",
+"name_label_box_offset": "Vector2(7, -30)",
 "name_label_box_use_global_color": "false",
 "name_label_custom_color": "Color(0, 0, 0, 1)",
 "name_label_custom_font_size": "40.0",
@@ -95,4 +96,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_gh2t8")]([])
-metadata/_latest_layer = ""
+metadata/_latest_layer = "13"

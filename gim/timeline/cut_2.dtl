@@ -1,21 +1,21 @@
 audio music "res://assets/backsound/Song 3.mp3" [fade="1.0" volume="0.0"]
 [background arg="res://assets/background/Background_kamar.png" fade="0.0"]
 Setelah sepulang sekolah CARISSA cepat cepat masuk kedalam kamarnya dan merasa penasaran dangan game yang dibicarakan saat dikelas
-join Carissa right [animation="Instant In"]
-Carissa (side/marah_1): Ahhhhhhhhh, Kenapa aku malah penasaran dengan game nyaaa, tapi aku takut itu beneran terjadi.
-Carissa (side/senyum_1): Oke, Mungkin aku coba download game nya aku takut aku mati penasaran.
+join Carissa (center/pusing) center [animation="Instant In"]
+Carissa (center/pusing): Ahhhhhhhhh, Kenapa aku malah penasaran dengan game nyaaa, tapi aku takut itu beneran terjadi.
+Carissa (center/senyum_2_duplicated): Oke, Mungkin aku coba download game nya aku takut aku mati penasaran.
 Lalu karena Carissa sangat penasaran ia pun menginstal gamenya
 [wait time="0.3" hide_text="false"]
-Carissa (side/netral_1): Sip aku sudah mendownload nya, Akan ku buktikan kalo game itu hanyalah hoax dari Social media.
+Carissa (center/netral_1_duplicated): Sip aku sudah mendownload nya, Akan ku buktikan kalo game itu hanyalah hoax dari Social media.
 Setelah Selesai menginstal
 [wait time="0.3" hide_text="false"]
 audio music "res://assets/backsound/Song 3.mp3" [fade="1.0" volume="-80.0"]
-Carissa (side/senyum_1): Baiklah akan aku buktikan kalo ini palsu. (membuka game tersebut)
-Carissa (side/senyum_1): Eh tidak terjadi apa-apa.
+Carissa (center/senyum_1_duplicated): Baiklah akan aku buktikan kalo ini palsu. (membuka game tersebut)
+Carissa (center/kaget_1_duplicated): Eh tidak terjadi apa-apa.
 join layar_HP rightmost
 audio music "res://assets/backsound/Tense_Normal (Dialogue Non chill).wav" [fade="1.0" volume="0.0"]
 layar_HP: Selamat datang.
-Carissa (side/kaget_1): HEI! TUNGGU-AHHHHHHHH
+Carissa (center/kaget_2_duplicated): HEI! TUNGGU-AHHHHHHHH
 [wait time="0.3"]
 leave --All-- [animation="Instant Out"]
 [signal arg="cut_02"]

@@ -1,23 +1,23 @@
 Suara dari ruangan tetris yang terdapat Speaker yang menunjukan hitungan waktu mundur
-join Carissa (side/kaget_1) leftmost
-join XANDER rightmost
-Carissa (side/kaget_1): Apa kita balik ke ruangan sebelumnya?
+join Carissa (side/kaget_3) leftmost
+join XANDER (kaget) right
+Carissa (side/kaget_3): Apa kita balik ke ruangan sebelumnya?
 XANDER (kaget): Mungkin saja
 [wait time="1.0" hide_text="false"]
 join "tanda tanya" center
 "tanda tanya": 10...9...8..
 [wait time="3.0" hide_text="false"]
-Carissa (side/netral_1): Xander Suara apa itu?
+Carissa (side/takut_3): Xander Suara apa itu?
 leave --All-- [animation="Instant Out"]
 Xander pun kebingungan mendengar hitungan mundur itu
 [wait time="0.7" hide_text="false"]
 join "tanda tanya" center [animation="Instant In"]
-join Carissa leftmost [animation="Instant In"]
-join XANDER rightmost [animation="Instant In"]
+join Carissa (side/takut_3) leftmost [animation="Instant In"]
+join XANDER (kaget) right [animation="Instant In"]
 "tanda tanya": 7...6...5..
 [wait time="3.0" hide_text="false"]
 XANDER (netral): Aku tidak tahu tapi kita harus berjaga-jaga
-Carissa (side/senyum_1): Ya!
+Carissa (side/senyum_3): Ya!
 [wait time="1.5" hide_text="false"]
 "tanda tanya": 4...3...2...1
 [wait time="4.0" hide_text="false"]
@@ -25,7 +25,7 @@ leave --All-- [animation="Instant Out"]
 Suara itu berhenti setelah angka 1 disebut, menandakan penghitungan mundur telah selesai.
 join Morana (tersenyum left) leftmost [animation="Instant In"]
 Morana (tersenyum left): HAHAHAHAHAHAHA, Aku kembali kelinci kelinci ku
-join XANDER (netral) rightmost [animation="Instant In"]
+join XANDER (netral) right [animation="Instant In"]
 XANDER: Suara ini!! Jangan-jangan!!
 [wait time="0.8" hide_text="false"]
 Morana (tersenyum left): Ya kau benar, aku belum kalah cube jelek
@@ -33,26 +33,26 @@ XANDER (marah): MAU KAU APA BRENGSEKKKK
 [wait time="1.5" hide_text="false"]
 Morana (tersenyum left): HAHAHAHA mau aku apa? Mau aku kalian menghiburku dan mati disini
 leave XANDER [animation="Instant Out"]
-join Carissa (side/kaget_right) rightmost [animation="Instant In"]
+join Carissa (side/kaget_right) right [animation="Instant In"]
 Carissa (side/kaget_right): Jahat sekali, dia mempermainkan kita seperti kelinci
 [wait time="0.6" hide_text="false"]
 Morana (marah left): Tidak usah banyak bicara, Sekarang matilah dengan block ini
 [wait time="0.5" hide_text="false"]
 leave --All-- [animation="Instant Out"]
 [signal arg="morana_new_attack"]
-join Carissa (side/kaget_1) leftmost [animation="Instant In"]
-Carissa (side/kaget_1): Apa itu barusan
-join XANDER (kaget) rightmost
+join Carissa (side/kaget_2) leftmost [animation="Instant In"]
+Carissa (side/kaget_2): Apa itu barusan
+join XANDER (kaget) right
 XANDER (kaget): Aku pun tidak tahu
 leave --All-- [animation="Instant Out"]
-join Morana (tersenyum) rightmost [animation="Instant In"]
+join Morana (tersenyum) right [animation="Instant In"]
 Morana (tersenyum): HAHAHAHA rasakan itu, itu adalah lighning strike yang membuat kalian terkena stun dan tidak bisa bergerak dan bom ini untuk membuat kali cepat mati.
 [wait time="1.5" hide_text="false"]
 leave --All-- [animation="Instant Out"]
-join XANDER (kaget) rightmost
+join XANDER (kaget) right
 XANDER (kaget): Mustahil dia kembali dengan kekuatan terbaru!!
 XANDER (netral): Pokoknya kita harus berhati-hati dan fokus
-join Carissa (side/netral_1) leftmost
-Carissa (side/netral_1): Yaa!!
+join Carissa (side/takut_1) leftmost
+Carissa (side/takut_1): Yaa!!
 [wait time="1.5" hide_text="false"]
 [signal arg="cut_in_02"]
