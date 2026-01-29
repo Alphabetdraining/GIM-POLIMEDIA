@@ -11,7 +11,7 @@ var hit_count = 0
 
 func _ready():
 	current_tetromino = Shared.Tetromino.values().pick_random()
-	board.spawn_tetromino(current_tetromino, false, null)
+	board.spawn_tetromino(current_tetromino, false)
 	board.tetromino_locked.connect(on_tetromino_locked)
 	board.game_over.connect(on_game_over)
 	board.line_cleared.connect(on_line_cleared)
@@ -29,7 +29,7 @@ func on_tetromino_locked():
 	if is_game_over:
 		return
 	var new_tetromino = Shared.Tetromino.values().pick_random()
-	board.spawn_tetromino(new_tetromino, false, null)
+	board.spawn_tetromino(new_tetromino, false)
 
 func on_game_over():
 	is_game_over = true

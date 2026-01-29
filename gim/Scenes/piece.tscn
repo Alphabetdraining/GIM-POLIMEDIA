@@ -1,13 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2x362mw1cmu5"]
 
-[ext_resource type="Script" path="res://script/piece.gd" id="1_y70yu"]
-[ext_resource type="Texture2D" uid="uid://cfuvkh4vj3uo5" path="res://assets/Yellow.png" id="2_l2hco"]
+[ext_resource type="Script" uid="uid://co6pohd5btwsy" path="res://script/piece.gd" id="1_y70yu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jf0mb"]
+load_path = "res://.godot/imported/Blocks_Biru.png-9a7606752cf09549c492c0fb750ae7b3.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66160"]
-size = Vector2(120, 120)
+size = Vector2(85, 83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_platform"]
-size = Vector2(120, 120)
+size = Vector2(85, 83)
 
 [node name="Piece" type="Area2D"]
 collision_layer = 4
@@ -17,15 +19,16 @@ script = ExtResource("1_y70yu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-58, -60)
-scale = Vector2(0.62, 0.62)
-texture = ExtResource("2_l2hco")
+texture = SubResource("CompressedTexture2D_jf0mb")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-17.5, -18.5)
 shape = SubResource("RectangleShape2D_66160")
 
 [node name="Platform" type="StaticBody2D" parent="."]
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(-17.5, -18.5)
 shape = SubResource("RectangleShape2D_platform")
