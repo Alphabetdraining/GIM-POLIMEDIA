@@ -19,7 +19,7 @@
 &"portraits": {
 "bingung": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) confused (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) confused (2).png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -38,7 +38,7 @@
 },
 "kaget": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) scared (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) scared (2).png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -56,7 +56,7 @@
 },
 "malu": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) embarassed.png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) embarrassed.png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -65,7 +65,7 @@
 },
 "marah": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) angry (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) angry (2).png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -74,7 +74,7 @@
 },
 "netral": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 1 (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) netral 1 (2).png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -83,7 +83,7 @@
 },
 "netral_2": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 2 (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) netral 2 (2).png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -92,7 +92,7 @@
 },
 "netral_2_duplicated": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 2 (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) netral 2 (2).png\""
 },
 "mirror": true,
 "offset": Vector2(-100, 0),
@@ -101,7 +101,7 @@
 },
 "netral_duplicated": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 1 (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) netral 1 (2).png\""
 },
 "mirror": true,
 "offset": Vector2(-100, 0),
@@ -110,7 +110,7 @@
 },
 "senyum": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 1 (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) netral 1 (2).png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
@@ -119,7 +119,7 @@
 },
 "uncomfortable": {
 "export_overrides": {
-"image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) uncomfortable (1).png\""
+"image": "\"res://assets/character portrait/xander cube/Dialog_Xander(Cube) uncomfortable (2).png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),
