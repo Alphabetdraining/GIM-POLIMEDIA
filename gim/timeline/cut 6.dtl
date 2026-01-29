@@ -1,3 +1,4 @@
+[background arg="res://assets/background/Background_Ruang gelap.png" fade="0.0"]
 Tidak Ada Informasi Tentang Keberadaan Xander serta Informasi The Falling Order, Seperti Menghilang, Tidak Pernah Diciptakan, Tidak Satupun Orang Yang Mengetahui, Sepertinya Xander Menempatkan Janjinya, Tetapi Apa Yang Terjadi Dengannya?
 [wait time="5.0" hide_text="false"]
 [signal arg="cut_06"]

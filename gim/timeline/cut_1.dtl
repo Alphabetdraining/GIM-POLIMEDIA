@@ -1,15 +1,19 @@
+audio music "res://assets/backsound/Song 3.mp3" [fade="1.0" volume="0.0"]
+[background arg="res://assets/background/Background_kelas.png" fade="0.0"]
 Suatu Hari di dalam kelas X di sekolah XX saat jam istirahat Carissa dan kedua temannya sedang membicarakan game dari website yang aneh
-join teman_1 rightmost [animation="Instant In"]
+join teman_1 right [animation="Instant In"]
 teman_1: Eh, Kalian tau ga, Ada game yang bisa membuat pemainnya masuk ke dalam game nya loh.
-join Carissa leftmost
-Carissa: Serius? Tidak mungkin ada game seperti itu, pasti cuman hoax dari social media.
+join Carissa (side/takut_2) leftmost
+Carissa (side/takut_2): Serius? Tidak mungkin ada game seperti itu, pasti cuman hoax dari social media.
 leave teman_1
-join teman_2 rightmost
+join teman_2 right
 teman_2: Oh kalo boleh tau nama game nya apa? Aku penasaran banget dengan game nya.
 leave teman_2
-join teman_1 rightmost
+join teman_1 right
 teman_1: Nama game nya yang aku liat itu namanya The Falling Order (nama sementara).
-Carissa: (SUARA HATI) The Falling Order ya, Aku takut banget itu bakalan terjadi tapi aku penasaran banget.
+leave Carissa [animation="Instant Out"]
+join "carissa inner" leftmost [animation="Instant In"]
+"carissa inner": The Falling Order ya, Aku takut banget itu bakalan terjadi tapi aku penasaran banget.
 [wait time="0.3" hide_text="false"]
 leave --All-- [animation="Instant Out"]
 Alarm berbunyi menandakan pelajaran kembali di mulai.

@@ -26,6 +26,7 @@ directories/dch_directory={
 "Carissa": "res://character/Carissa.dch",
 "Morana": "res://character/Morana.dch",
 "XANDER": "res://character/XANDER.dch",
+"carissa inner": "res://character/carissa inner.dch",
 "cube": "res://character/cube.dch",
 "layar_HP": "res://character/layar_HP.dch",
 "tanda tanya": "res://character/tanda tanya.dch",
@@ -49,6 +50,7 @@ directories/dtl_directory={
 glossary/default_case_sensitive=true
 layout/style_list=["res://style/Dialog_Box_Style.tres"]
 layout/default_style="res://style/Dialog_Box_Style.tres"
+variables={}
 
 [display]
 

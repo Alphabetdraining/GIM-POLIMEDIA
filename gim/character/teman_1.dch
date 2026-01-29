@@ -12,14 +12,14 @@
 },
 &"default_portrait": "New portrait",
 &"description": "",
-&"display_name": "teman_1",
+&"display_name": "teman 1",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(0, 0),
+&"offset": Vector2(100, 250),
 &"portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://assets/dummy/Jenny.png\""
+"image": "\"res://assets/character portrait/npc/Dialog_NPD 1.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -27,5 +27,5 @@
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 }
 },
-&"scale": 0.5
+&"scale": 1.2
 }

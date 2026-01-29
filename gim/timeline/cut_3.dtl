@@ -1,17 +1,18 @@
-[background fade="0.0"]
+audio music "res://assets/backsound/Tense_Normal (Dialogue Non chill).wav" [fade="1.0" volume="0.0"]
+[background arg="res://assets/background/Background_Ruang gelap.png" fade="0.0"]
 Pada akhirnya Carissa pun terhisap di dalam game tersebut dan terjebak didalam game, kondisi Carissa terjatuh dan berbaring lemas
-join Carissa (Netral) center [animation="Slide In Up"]
-Carissa (Netral): Aw.. Ruangan apa ini?
+join Carissa (side/Netral_2) leftmost [animation="Slide In Up"]
+Carissa (side/Netral_2): Aw.. Ruangan apa ini?
 [wait time="0.4" hide_text="false"]
-Carissa (takut): EHHHHHHH APAAA APA AKU MASUK KE DALAM GAME NYAA
+Carissa (side/kaget_3): EHHHHHHH APAAA APA AKU MASUK KE DALAM GAME NYAA
 leave --All-- [animation="Instant Out"]
 Suara lampu yang menyala dan menerangi ruangan dan sambutan oleh
 [wait time="0.3" hide_text="false"]
-join tanuki rightmost
+join tanuki right
 tanuki: Selamat datang di dunia The Falling Order
-join Carissa (kaget) leftmost
-Carissa (kaget): Su-su-su suara apa itu???
+join Carissa (side/takut_3) leftmost
+Carissa (side/takut_3): Su-su-su suara apa itu???
 leave tanuki [animation="Instant Out"]
-join Morana (tersenyum) rightmost [animation="Instant In"]
+join Morana (tersenyum) right [animation="Instant In"]
 Morana (tersenyum): Oh tidak perlu takut nona kecil, perkenalkan namaku Morana, Ai di Game ini
 [signal arg="cut_03"]

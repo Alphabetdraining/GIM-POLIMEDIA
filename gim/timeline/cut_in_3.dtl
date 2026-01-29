@@ -1,16 +1,20 @@
 Ruangan tetris yang menjadi sempit
 [wait time="1.5" hide_text="false"]
-<Empty Text Event>
-join Carissa (kaget) leftmost
-Carissa (kaget): Xander ruangannya…
-join XANDER (netral) rightmost
+join Carissa (side/kaget_2) leftmost
+Carissa (side/kaget_2): Xander ruangannya…
+join XANDER (netral) right
 XANDER (netral): Ya kau benar, ruangan ini mulai menyempit
-join Morana (tersenyum) center
+leave XANDER [animation="Instant Out"]
+leave Carissa [animation="Instant Out"]
+join Morana (tersenyum) right
 Morana (tersenyum): Hahaha matilah kau
 [wait time="1.5" hide_text="false"]
+leave Morana [animation="Instant Out"]
+join XANDER (marah) right
 XANDER (marah): Tch dia tidak kapok-kapok
 XANDER (netral): Carissa kita harus bergegas mengalahkan dia
 [wait time="0.7" hide_text="false"]
-Carissa (marah): YA
+join Carissa (side/marah_5) leftmost
+Carissa (side/marah_5): YA
 [wait time="1.3" hide_text="false"]
 [signal arg="cut_in_03"]
