@@ -80,6 +80,204 @@
 "scale": 1,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 },
+"ruang_gelap/kaget_1": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 terkejut 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/kaget_2": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 terkejut 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/kaget_3": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 terkejut 3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/marah-2": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 marah 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/marah_1": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 marah 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/marah_3": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 marah 4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/marah_4": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 marah 4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/marah_5": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 marah 5.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/marah_6": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 marah 6.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/netral_1": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 netral 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/netral_2": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 netral 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/netral_3": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 netral 3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/pusing": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 pusing.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/sedih_3": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 sedih 3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/senyum_1": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 senyum 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/senyum_2": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 senyum 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/senyum_3": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 senyum 3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/senyum_3_duplicated": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 senyum 3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/takut_1": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 takut 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/takut_2": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 takut 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/takut_3": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 takut 3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"ruang_gelap/takut_4": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/Dialog_Carissa 2 takut 4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
 "side/Netral_2": {
 "export_overrides": {
 "image": "\"res://assets/character portrait/carissa/Dialog_Carissa netral 2.png\""

@@ -9,7 +9,7 @@ func _ready() -> void:
 	await get_tree().process_frame
 	Dialogic.signal_event.connect(_on_signal)
 	fade_in()
-	Dialogic.start("cut_1")
+	Dialogic.start("cut 5")
 
 
 func fade_in(duration := 2.5):
@@ -25,15 +25,15 @@ func fade_out(duration := 2.5):
 
 func _on_signal(signal_passed_in):
 	match signal_passed_in:
-		"cut_01":
+		"cut_05":
 			Dialogic.end_timeline()
 			Dialogic.clear()
 
-			# FADE OUT
+			
 			fade_out()
 			await get_tree().create_timer(1.6).timeout
 
-			# PINDAH SCENE
+			
 			get_tree().change_scene_to_file(
-				"res://Scenes/cutscene_2.tscn"
+				"res://Scenes/cutscene_6.tscn"
 			)

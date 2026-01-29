@@ -12,12 +12,12 @@ func _ready() -> void:
 	Dialogic.start("cut_2")
 
 
-func fade_in(duration := 1.5):
+func fade_in(duration := 2.5):
 	var tween := create_tween()
 	tween.tween_property(fade_rect, "modulate:a", 0.0, duration)
 
 
-func fade_out(duration := 1.5):
+func fade_out(duration := 2.5):
 	fade_rect.visible = true
 	var tween := create_tween()
 	tween.tween_property(fade_rect, "modulate:a", 1.0, duration)
@@ -31,7 +31,7 @@ func _on_signal(signal_passed_in):
 
 			
 			fade_out()
-			await get_tree().create_timer(0.6).timeout
+			await get_tree().create_timer(1.6).timeout
 
 			
 			get_tree().change_scene_to_file(

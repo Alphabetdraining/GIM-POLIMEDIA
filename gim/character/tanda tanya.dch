@@ -7,7 +7,7 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "",
+"style": "Dialog_Box_Style",
 "suffix": ""
 },
 &"default_portrait": "New portrait",

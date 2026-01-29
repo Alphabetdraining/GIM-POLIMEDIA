@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c16d24nnb0aop"]
+
+[ext_resource type="Script" uid="uid://cqjva5lo5hqmq" path="res://script/cutscene_4.gd" id="1_hvxjt"]
+
+[node name="cutscene_4" type="Node2D"]
+script = ExtResource("1_hvxjt")
+
+[node name="FadeLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="FadeRect" type="ColorRect" parent="FadeLayer"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
