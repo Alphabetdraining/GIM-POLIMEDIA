@@ -1,15 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjh2gu4a3omka"]
+[gd_scene load_steps=3 format=3 uid="uid://dwlbfynqn5x2d"]
 
 [ext_resource type="Script" uid="uid://c6ri8y0jo70gl" path="res://script/cut_in_1.gd" id="1_1kjv2"]
+[ext_resource type="PackedScene" uid="uid://bsfygwd1xilaa" path="res://Scenes/fade_transition.tscn" id="2_p81pd"]
 
 [node name="cut_in_1" type="Node2D"]
 script = ExtResource("1_1kjv2")
 
-[node name="FadeLayer" type="CanvasLayer" parent="."]
-layer = 100
+[node name="A" type="CanvasLayer" parent="."]
+layer = 6
 
-[node name="FadeRect" type="ColorRect" parent="FadeLayer"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="FadeTransition" parent="A" instance=ExtResource("2_p81pd")]

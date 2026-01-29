@@ -29,8 +29,8 @@ func transition_and_change(target_scene_path) -> void:
 	await $A/FadeTransition/AnimationPlayer.animation_finished
 	get_tree().change_scene_to_file(target_scene_path)
 
-func circle_transition(target_scene_path) -> void:
-	$A/CircleTransition.show()
-	$A/CircleTransition/AnimationPlayer.play("Fade_in")
-	await $A/CircleTransition/AnimationPlayer.animation_finished
-	get_tree().change_scene_to_file(target_scene_path)
+#func circle_transition(target_scene_path) -> void:
+	#$A/CircleTransition.show()
+	#$A/CircleTransition/AnimationPlayer.play("Fade_in")
+	#await $A/CircleTransition/AnimationPlayer.animation_finished
+	#get_tree().change_scene_to_file(target_scene_path)
