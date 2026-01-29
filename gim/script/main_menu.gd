@@ -7,7 +7,7 @@ func _ready() -> void:
 	$A/FadeTransition/AnimationPlayer.play("Fade_out")
 
 func _on_new_game_pressed() -> void:
-	transition_and_change("res://Scenes/main.tscn")
+	transition_and_change("res://Scenes/cutscene_1.tscn")
 
 func _on_continue_pressed() -> void:
 	transition_and_change("res://Scenes/main.tscn")
