@@ -1,10 +1,12 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://p4fifhnchnas"]
 
-[ext_resource type="Texture2D" uid="uid://b5hksoqy1xxon" path="res://resources/Blocks_Taro.png" id="1_43whv"]
 [ext_resource type="Script" uid="uid://3n1j3mlgas1x" path="res://script/pieces_data.gd" id="2_k6hwm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jyd3h"]
+load_path = "res://.godot/imported/Blocks_Taro.png-e70480f20916558a6482a2d0708fc21d.ctex"
 
 [resource]
 script = ExtResource("2_k6hwm")
-piece_texture = ExtResource("1_43whv")
+piece_texture = SubResource("CompressedTexture2D_jyd3h")
 tetromino_type = 6
-spawn_position = Vector2(0, 0)
+spawn_position = Vector2(128, -867)

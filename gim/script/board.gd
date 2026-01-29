@@ -5,123 +5,99 @@ signal tetromino_locked
 signal game_over
 signal line_cleared(count: int)
 
-# ================= GRID SETTINGS =================
-const TILE_SIZE = 128 # sesuai asset kamu
-const ROW_COUNT = 16
-const COLUMN_COUNT = 16
-
-var grid := []
-var tetrominos: Array[Tetromino] = []
-var cleared_lines_count = 0
+const ROW_COUNT = 20
+const COLUMN_COUNT = 20
 
 @onready var player = $"../Player"
-@export var tetromino_scene : PackedScene
 
-# ================= READY =================
+var tetrominos: Array[Tetromino] = []
+var cleared_lines_count = 0
+@export var tetromino_scene : PackedScene  
 func _ready():
-	grid.resize(ROW_COUNT)
-	for y in range(ROW_COUNT):
-		grid[y] = []
-		grid[y].resize(COLUMN_COUNT)
+	await get_tree().process_frame 
 
-	await get_tree().process_frame
-
-# ================= GRID CONVERSION =================
-func world_to_grid(pos: Vector2) -> Vector2i:
-	# floor, bukan round!
-	var x = int(floor(pos.x / TILE_SIZE)) + COLUMN_COUNT / 2
-	var y = int(floor(pos.y / TILE_SIZE)) + ROW_COUNT / 2
-	return Vector2i(x, y)
-
-func grid_to_world(grid_pos: Vector2i) -> Vector2:
-	var x = (grid_pos.x - COLUMN_COUNT / 2) * TILE_SIZE
-	var y = (grid_pos.y - ROW_COUNT / 2) * TILE_SIZE
-	return Vector2(x, y)
-
-# ================= SPAWN =================
-func spawn_tetromino(type: Shared.Tetromino, is_next_piece := false):
+func spawn_tetromino(type:Shared.Tetromino, is_next_piece, spawn_position):
 	var tetromino_data = Shared.data[type]
-	var tetromino = tetromino_scene.instantiate() as Tetromino
-	
+	var tetromino = tetromino_scene.instantiate() as Tetromino  
+
 	tetromino.tetromino_data = tetromino_data
 	tetromino.is_next_piece = is_next_piece
-	tetromino.player = player
-	
-	if not is_next_piece:
-		var spawn_grid = Vector2i(COLUMN_COUNT / 2 - 2, 0)
-		tetromino.global_position = grid_to_world(spawn_grid)
-		tetromino.target_position = tetromino.global_position
-		
+	tetromino.player = player 
+
+	if is_next_piece == false:
+		tetromino.position = tetromino_data.spawn_position
 		tetromino.other_tetrominos = tetrominos
 		tetromino.lock_tetromino.connect(on_tetromino_locked)
 		add_child(tetromino)
 
-# ================= LOCK =================
-func on_tetromino_locked(tetromino: Tetromino):
+func on_tetromino_locked(tetromino : Tetromino):
 	tetrominos.append(tetromino)
 	tetromino_locked.emit()
-	
+	#TODO check Game Over
 	check_game_over()
+	#Check clear line
 	clear_lines()
 
-# ================= GAME OVER =================
 func check_game_over():
+	# ambil batas spawn dari tetromino data pertama (atau hardcode)
+	var spawn_y = Shared.data[Shared.Tetromino.I].spawn_position.y
+
 	for tetromino in tetrominos:
 		var pieces = tetromino.get_children().filter(func(c): return c is Piece)
+		
 		for piece in pieces:
-			var grid_pos = world_to_grid(piece.global_position)
-			if grid_pos.y <= 0:
+			var y = piece.global_position.y
+			
+			# jika ada block di atas spawn line → GAME OVER
+			if y <= spawn_y:
+				print("GAME OVER TRIGGERED AT:", y)
 				game_over.emit()
 				return
 
-# ================= LINE CLEAR =================
 func clear_lines():
 	var board_pieces = fill_board_pieces()
-	var cleared = clear_board_pieces(board_pieces)
-	
-	if cleared > 0:
-		cleared_lines_count += cleared
-		line_cleared.emit(cleared)
-
-# ================= FILL GRID =================
+	var lines_cleared_this_time = clear_board_pieces(board_pieces)
+	if lines_cleared_this_time > 0:
+		cleared_lines_count += lines_cleared_this_time
+		line_cleared.emit(lines_cleared_this_time)
 func fill_board_pieces():
 	var board_pieces = []
-	for i in range(ROW_COUNT):
+	
+	for i in ROW_COUNT:
 		board_pieces.append([])
-	
+		
 	for tetromino in tetrominos:
-		var pieces = tetromino.get_children().filter(func(c): return c is Piece)
-		for piece in pieces:
-			var grid_pos = world_to_grid(piece.global_position)
-			if grid_pos.y >= 0 and grid_pos.y < ROW_COUNT:
-				board_pieces[grid_pos.y].append(piece)
-	
+		var tetromino_pieces = tetromino.get_children().filter(func (c): return c is Piece)
+		for piece in tetromino_pieces:
+			var piece_size = piece.get_size().y
+			var row = round((piece.global_position.y + piece_size / 2) / piece_size + ROW_COUNT / 2)
+			if row >= 1 and row <= ROW_COUNT:
+				board_pieces[row - 1].append(piece)
 	return board_pieces
-
-# ================= CLEAR GRID =================
+	
 func clear_board_pieces(board_pieces):
-	var y = ROW_COUNT - 1
-	var cleared = 0
-	
-	while y >= 0:
-		if board_pieces[y].size() == COLUMN_COUNT:
-			clear_row(board_pieces[y])
-			board_pieces[y].clear()
-			move_all_pieces_down(board_pieces, y)
-			cleared += 1
+	var i = ROW_COUNT - 1
+	var lines_cleared = 0
+	while i >= 0:
+		if board_pieces[i].size() == COLUMN_COUNT:
+			clear_row(board_pieces[i])
+			board_pieces[i].clear()
+			move_all_pieces_down(board_pieces, i)
+			lines_cleared += 1
 		else:
-			y -= 1
-	
-	return cleared
+			i -= 1
+	return lines_cleared
 
+
+
+			
 func clear_row(row):
 	for piece in row:
 		piece.queue_free()
-
-# ================= DROP ABOVE PIECES =================
+		
 func move_all_pieces_down(board_pieces, cleared_row):
 	for y in range(cleared_row - 1, -1, -1):
 		for piece in board_pieces[y]:
-			piece.position.y += TILE_SIZE
+			piece.position.y += piece.get_size().y
 			board_pieces[y + 1].append(piece)
 		board_pieces[y].clear()

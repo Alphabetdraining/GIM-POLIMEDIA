@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gu6p0hbgyc17"
-path="res://.godot/imported/In Game_Block background(1).png-8a9fa7a8b060a5b1a40ac90f22e7dd46.ctex"
+uid="uid://b6jjpw1xtosjf"
+path="res://.godot/imported/Blocks_Kaca(1).png-92992795dc3d2c45419d3f1ef9b4af00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/In Game_Block background(1).png"
-dest_files=["res://.godot/imported/In Game_Block background(1).png-8a9fa7a8b060a5b1a40ac90f22e7dd46.ctex"]
+source_file="res://assets/Blocks_Kaca(1).png"
+dest_files=["res://.godot/imported/Blocks_Kaca(1).png-92992795dc3d2c45419d3f1ef9b4af00.ctex"]
 
 [params]
 

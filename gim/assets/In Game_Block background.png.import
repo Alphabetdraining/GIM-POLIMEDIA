@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fvo842t2pv1w"
-path="res://.godot/imported/Blocks_Biru.png-9a7606752cf09549c492c0fb750ae7b3.ctex"
+uid="uid://dtauko0aygyik"
+path="res://.godot/imported/In Game_Block background.png-f3ea5bb6f6f3dcda4a62ddac308bdb41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Blocks_Biru.png"
-dest_files=["res://.godot/imported/Blocks_Biru.png-9a7606752cf09549c492c0fb750ae7b3.ctex"]
+source_file="res://assets/In Game_Block background.png"
+dest_files=["res://.godot/imported/In Game_Block background.png-f3ea5bb6f6f3dcda4a62ddac308bdb41.ctex"]
 
 [params]
 

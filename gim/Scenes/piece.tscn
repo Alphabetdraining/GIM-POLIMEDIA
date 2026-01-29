@@ -6,10 +6,10 @@
 load_path = "res://.godot/imported/Blocks_Biru.png-9a7606752cf09549c492c0fb750ae7b3.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66160"]
-size = Vector2(85, 83)
+size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_platform"]
-size = Vector2(85, 83)
+size = Vector2(128, 128)
 
 [node name="Piece" type="Area2D"]
 collision_layer = 4
@@ -18,17 +18,16 @@ monitoring = false
 script = ExtResource("1_y70yu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-58, -60)
+scale = Vector2(0.65, 0.65)
 texture = SubResource("CompressedTexture2D_jf0mb")
-centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-17.5, -18.5)
+scale = Vector2(0.65, 0.65)
 shape = SubResource("RectangleShape2D_66160")
 
 [node name="Platform" type="StaticBody2D" parent="."]
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(-17.5, -18.5)
+scale = Vector2(0.65, 0.65)
 shape = SubResource("RectangleShape2D_platform")

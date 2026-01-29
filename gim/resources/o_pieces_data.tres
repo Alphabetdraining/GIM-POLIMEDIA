@@ -1,10 +1,12 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://c4w3n7kov1dub"]
 
-[ext_resource type="Texture2D" uid="uid://btpnkxmtbvjj3" path="res://resources/Blocks_Pink.png" id="1_5lpgn"]
 [ext_resource type="Script" uid="uid://3n1j3mlgas1x" path="res://script/pieces_data.gd" id="2_njvx2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wrh35"]
+load_path = "res://.godot/imported/Blocks_Pink.png-edb41edc83e6a0200bdb2a288ea16a5e.ctex"
 
 [resource]
 script = ExtResource("2_njvx2")
-piece_texture = ExtResource("1_5lpgn")
+piece_texture = SubResource("CompressedTexture2D_wrh35")
 tetromino_type = 1
-spawn_position = Vector2(0, 0)
+spawn_position = Vector2(128, -867)

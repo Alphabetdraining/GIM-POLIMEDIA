@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fvo842t2pv1w"
-path="res://.godot/imported/Blocks_Biru.png-9a7606752cf09549c492c0fb750ae7b3.ctex"
+uid="uid://dec4o3yxtyp8d"
+path="res://.godot/imported/Claw_Claw.png-1f622fb74a2e58384e1aad5e989cdc54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Blocks_Biru.png"
-dest_files=["res://.godot/imported/Blocks_Biru.png-9a7606752cf09549c492c0fb750ae7b3.ctex"]
+source_file="res://assets/Claw_Claw.png"
+dest_files=["res://.godot/imported/Claw_Claw.png-1f622fb74a2e58384e1aad5e989cdc54.ctex"]
 
 [params]
 
