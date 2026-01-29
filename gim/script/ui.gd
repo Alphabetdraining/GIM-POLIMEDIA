@@ -12,6 +12,7 @@ class_name UI
 @export var enemy_portrait_normal: Texture2D
 @export var enemy_portrait_hurt: Texture2D
 @export var enemy_portrait_dying: Texture2D
+@export var music_menu: AudioStream
 
 var mc_portraits = {
 	3: null,
@@ -67,6 +68,7 @@ func damage_enemy(amount: int):
 	update_enemy_hp_display(enemy_hp)
 	
 	if enemy_hp <= 0:
+		AudioManager.stop_music()
 		print("Enemy defeated!")
 		get_tree().change_scene_to_file(
 				"res://Scenes/cutscene_4.tscn"
