@@ -1,9 +1,10 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://4f32af6y8fug"]
 
-[ext_resource type="Texture2D" uid="uid://2efqqecj5dph" path="res://assets/Orange.png" id="1_plx4w"]
+[ext_resource type="Texture2D" uid="uid://cvhk82u7sx5ly" path="res://resources/Blocks_Kuning.png" id="1_x2uvd"]
 [ext_resource type="Script" uid="uid://3n1j3mlgas1x" path="res://script/pieces_data.gd" id="2_3f1lk"]
 
 [resource]
 script = ExtResource("2_3f1lk")
-piece_texture = ExtResource("1_plx4w")
+piece_texture = ExtResource("1_x2uvd")
 tetromino_type = 3
+spawn_position = Vector2(0, 0)

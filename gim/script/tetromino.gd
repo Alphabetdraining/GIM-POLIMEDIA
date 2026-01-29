@@ -7,7 +7,7 @@ signal lock_tetromino(tetromino: Tetromino)
 var bounds = {
 	"min_x": -900,
 	"max_x": 900,
-	"max_y": 564
+	"max_y": 939
 }
 # ================= MOVE SMOOTH =================
 var target_position: Vector2
@@ -133,10 +133,11 @@ func is_colliding_with_other_tetromino(direction: Vector2, start_pos):
 		var others = tetromino.get_children().filter(func(c): return c is Piece)
 		for o in others:
 			for p in pieces:
-				var my_pos = start_pos + p.position + direction * p.get_size().x
+				var my_pos = start_pos + p.position + direction * Board.TILE_SIZE
+
 				var other_pos = tetromino.global_position + o.position
 
-				if my_pos.distance_to(other_pos) < p.get_size().x * 0.5:
+				if my_pos.distance_to(other_pos) < Board.TILE_SIZE * 0.5:
 					return true
 	return false
 
