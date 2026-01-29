@@ -27,8 +27,8 @@ var is_dashing = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var used_jumps = MAX_JUMPS
 
-const MIN_X = -900
-const MAX_X = 900
+const MIN_X = -9000
+const MAX_X = 9000
 
 var is_dead = false
 

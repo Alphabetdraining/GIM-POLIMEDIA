@@ -55,5 +55,6 @@ func damage_enemy(amount: int):
 		print("Enemy defeated!")
 
 func _on_button_pressed():
-	#ini restart
+	get_tree().paused = false
+	Engine.time_scale = 1.0
 	get_tree().reload_current_scene()

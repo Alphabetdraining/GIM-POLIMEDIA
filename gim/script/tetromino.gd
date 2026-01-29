@@ -6,12 +6,14 @@ signal lock_tetromino(tetromino: Tetromino)
 # ================= GRID LIMIT =================
 var bounds = {
 	"min_x": -900,
-	"max_x": 900,
-	"max_y": 939
+	"max_x": 890,
+	"max_y": 470
 }
+
 # ================= MOVE SMOOTH =================
 var target_position: Vector2
 @export var smooth_speed = 12.0
+
 # ================= STATE SYSTEM =================
 enum DropState {
 	FLOATING,
@@ -65,7 +67,6 @@ var float_wave = 0.0
 func _ready() -> void:
 	tetromino_cells = Shared.cells[tetromino_data.tetromino_type]
 	
-
 	is_locked = false
 	follow_timer = 0
 	auto_hard_dropped = false
@@ -79,15 +80,17 @@ func _ready() -> void:
 		pieces.append(piece)
 		add_child(piece)
 		piece.set_texture(tetromino_data.piece_texture)
-		piece.position = cell * Board.TILE_SIZE
+		piece.position = cell * piece.get_size()
 
-	var tile = Board.TILE_SIZE
+	var tile = pieces[0].get_size().x
 	bounds.min_x = - (Board.COLUMN_COUNT / 2.0) * tile
 	bounds.max_x = (Board.COLUMN_COUNT / 2.0) * tile - tile
 	bounds.max_y = (Board.ROW_COUNT / 2.0) * tile
+
 	target_position = global_position
+
 	if is_next_piece == false:
-		#position = tetromino_data.spawn_position
+		position = tetromino_data.spawn_position
 		wall_kicks = Shared.wall_kicks_i if tetromino_data.tetromino_type == Shared.Tetromino.I else Shared.wall_kicks_jlostz
 
 
@@ -108,6 +111,9 @@ func _input(_event):
 # ================= GRID MOVE =================
 func move(direction: Vector2) -> bool:
 	var new_position = calculate_global_position(direction, target_position)
+	print("MOVE REQUEST:", direction)
+	print("TARGET BEFORE:", target_position)
+	print("NEW POS:", new_position)
 	if new_position:
 		target_position = new_position
 		return true
@@ -119,7 +125,8 @@ func calculate_global_position(direction: Vector2, start_pos: Vector2):
 		return null
 	if !is_within_game_bounds(direction, start_pos):
 		return null
-	return start_pos + direction * Board.TILE_SIZE
+	return start_pos + direction * pieces[0].get_size().x
+
 
 func is_within_game_bounds(direction: Vector2, start_pos):
 	for piece in pieces:
@@ -128,19 +135,18 @@ func is_within_game_bounds(direction: Vector2, start_pos):
 			return false
 	return true
 
+
 func is_colliding_with_other_tetromino(direction: Vector2, start_pos):
 	for tetromino in other_tetrominos:
 		var others = tetromino.get_children().filter(func(c): return c is Piece)
 		for o in others:
 			for p in pieces:
-				var my_pos = start_pos + p.position + direction * Board.TILE_SIZE
-
+				var my_pos = start_pos + p.position + direction * p.get_size().x
 				var other_pos = tetromino.global_position + o.position
 
-				if my_pos.distance_to(other_pos) < Board.TILE_SIZE * 0.5:
+				if my_pos.distance_to(other_pos) < p.get_size().x * 0.5:
 					return true
 	return false
-
 
 
 # ================= ROTATION =================
@@ -156,6 +162,7 @@ func rotate_tetromino(direction: int):
 		rotation_index = old
 		apply_rotation(-direction)
 
+
 func test_wall_kicks(rot_i: int, dir: int):
 	var index = get_wall_kick_index(rot_i, dir)
 	for i in wall_kicks[0].size():
@@ -163,11 +170,13 @@ func test_wall_kicks(rot_i: int, dir: int):
 			return true
 	return false
 
+
 func get_wall_kick_index(rot_i: int, dir: int):
 	var idx = rot_i * 2
 	if dir < 0:
 		idx -= 1
 	return wrap(idx, 0, wall_kicks.size())
+
 
 func apply_rotation(dir: int):
 	var mat = Shared.clockwise_rotation_matrix if dir == 1 else Shared.counter_clockwise_rotation_matrix
@@ -177,8 +186,7 @@ func apply_rotation(dir: int):
 		cells[i] = mat[0] * cells[i].x + mat[1] * cells[i].y
 
 	for i in pieces.size():
-		pieces[i].position = cells[i] * Board.TILE_SIZE
-
+		pieces[i].position = cells[i] * pieces[i].get_size()
 
 
 # ================= HARD DROP =================
@@ -214,29 +222,18 @@ func _physics_process(delta):
 			state_timer = 0
 			drop_state = DropState.HARD_DROP
 
-		#DropState.ROTATING:
-			#if state_timer >= rotate_interval:
-				#state_timer = 0
-				#rotate_tetromino(1)
-				#rotate_time -= rotate_interval
-#
-			#if rotate_time <= 0:
-				#drop_state = DropState.HARD_DROP
-
 		DropState.HARD_DROP:
 			hard_drop()
 			drop_state = DropState.NORMAL
 
 
-# ================= VISUAL FLOAT (NO GRID DAMAGE) =================
+# ================= VISUAL FLOAT =================
 func _process(delta):
 	global_position = global_position.lerp(target_position, delta * smooth_speed)
 
 	if drop_state == DropState.FLOATING:
 		float_wave += delta * 2.0
-		for piece in pieces:
-			piece.position.y += sin(float_wave) * 0.2
-
+		position.y += sin(float_wave) * 0.2
 
 
 # ================= PLAYER FOLLOW =================
@@ -271,24 +268,11 @@ func lock():
 	if is_locked:
 		return
 
-	var board = get_parent() as Board
-	var piece = pieces[0]
-
-	# ambil posisi grid dari salah satu piece
-	var grid_pos = board.world_to_grid(piece.global_position)
-
-	# konversi balik ke world (grid snapping)
-	var world_pos = board.grid_to_world(grid_pos)
-
-	# hitung offset piece ke root tetromino
-	var offset = piece.global_position - global_position
-
-	# kunci tetromino ke grid
-	global_position = world_pos - offset
+	var tile = pieces[0].get_size().x
+	global_position = global_position.snapped(Vector2(tile, tile))
 
 	is_locked = true
 	lock_tetromino.emit(self)
 	set_process_input(false)
-	print(board.world_to_grid(pieces[0].global_position))
-
-	
+	if is_locked:
+		global_position = target_position
