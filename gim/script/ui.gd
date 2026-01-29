@@ -9,6 +9,10 @@ class_name UI
 @onready var hp_label = $MCPanel/VBoxContainer/HPLabel
 @onready var enemy_hp_label = $EnemyPanel/VBoxContainer/HPLabel
 
+@export var enemy_portrait_normal: Texture2D
+@export var enemy_portrait_hurt: Texture2D
+@export var enemy_portrait_dying: Texture2D
+
 var mc_portraits = {
 	3: null,
 	2: null,
@@ -43,8 +47,19 @@ func update_hp_display(hp: int):
 
 func update_enemy_hp_display(hp: int):
 	enemy_hp = hp
+
 	if enemy_hp_label:
-		enemy_hp_label.text = "Enemy HP: %d/%d" % [enemy_hp, max_enemy_hp]
+		enemy_hp_label.text = "HP: %d/%d" % [enemy_hp, max_enemy_hp]
+
+	if not enemy_portrait:
+		return
+
+	if enemy_hp >= 7:
+		enemy_portrait.texture = enemy_portrait_normal
+	elif enemy_hp >= 4:
+		enemy_portrait.texture = enemy_portrait_hurt
+	else:
+		enemy_portrait.texture = enemy_portrait_dying
 
 func damage_enemy(amount: int):
 	enemy_hp -= amount

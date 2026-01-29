@@ -1,9 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://70xyug53wjvd"]
+[gd_scene load_steps=18 format=3 uid="uid://70xyug53wjvd"]
 
 [ext_resource type="Script" uid="uid://dhuqfu6xbhkin" path="res://script/ui.gd" id="1_jxero"]
+[ext_resource type="Script" uid="uid://cgry7qg32umr2" path="res://script/player_condition.gd" id="2_q7pk6"]
+[ext_resource type="Texture2D" uid="uid://c8fa3jnsxchkk" path="res://assets/character_conditions/Character condition_Morana normal.png" id="3_m78vo"]
+[ext_resource type="Texture2D" uid="uid://ld277nmrrjq8" path="res://assets/character_conditions/Copy of Dialog_Carissa 2 netral 1.png" id="3_q7pk6"]
+[ext_resource type="Texture2D" uid="uid://mo2gwl5ak23a" path="res://assets/character_conditions/Copy of Dialog_Carissa 2 pusing.png" id="4_m78vo"]
+[ext_resource type="Texture2D" uid="uid://bx5uibdf8fhhl" path="res://assets/character_conditions/Character condition_Morana lelah.png" id="4_smcll"]
+[ext_resource type="Texture2D" uid="uid://dsy53f5yar0i3" path="res://assets/character_conditions/Character condition_Morana sekarat.png" id="5_ryf15"]
+[ext_resource type="Texture2D" uid="uid://1wrg4kgk7qf5" path="res://assets/character_conditions/Copy of Dialog_Carissa 2 sekarat.png" id="5_smcll"]
+[ext_resource type="Texture2D" uid="uid://bevfj6to1c8hr" path="res://assets/character_conditions/Morana_control room.png" id="9_mmixe"]
+[ext_resource type="Texture2D" uid="uid://bpyw6hxwkdoao" path="res://assets/power_up/Power Up_Rotate.png" id="10_8fs27"]
+[ext_resource type="Script" uid="uid://d3vuslk4jsx0g" path="res://script/powerup.gd" id="10_whq80"]
+[ext_resource type="Texture2D" uid="uid://dn6fhksdb1bpn" path="res://assets/power_up/Power Up_Indicator frame.png" id="11_whq80"]
+[ext_resource type="Texture2D" uid="uid://c46cfx2pf2yh6" path="res://assets/power_up/Power Up_Ready.png" id="12_kuui0"]
+[ext_resource type="Texture2D" uid="uid://cynv4s8lir2c4" path="res://assets/power_up/Power Up_Coldown.png" id="13_smy1h"]
+[ext_resource type="Texture2D" uid="uid://p36a2fhlpq2y" path="res://assets/power_up/Power Up_Dash.png" id="14_lkjmk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7pk6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nt8jn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_jxero")
+enemy_portrait_normal = ExtResource("3_m78vo")
+enemy_portrait_hurt = ExtResource("4_smcll")
+enemy_portrait_dying = ExtResource("5_ryf15")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 visible = false
@@ -36,22 +59,29 @@ text = "Restart
 "
 
 [node name="MCPanel" type="PanelContainer" parent="."]
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 220.0
-offset_bottom = 270.0
+offset_left = -46.0
+offset_top = 91.0
+offset_right = 154.0
+offset_bottom = 341.0
+scale = Vector2(2.56, 2.54918)
+theme_override_styles/panel = SubResource("StyleBoxFlat_q7pk6")
+script = ExtResource("2_q7pk6")
+portrait_full = ExtResource("3_q7pk6")
+portrait_hurt = ExtResource("4_m78vo")
+portrait_critical = ExtResource("5_smcll")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MCPanel"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MCPanel/VBoxContainer"]
 layout_mode = 2
-text = "PLAYER"
+text = "Carissa"
 horizontal_alignment = 1
 
 [node name="Portrait" type="TextureRect" parent="MCPanel/VBoxContainer"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
+texture = ExtResource("3_q7pk6")
 expand_mode = 1
 stretch_mode = 5
 
@@ -60,33 +90,104 @@ layout_mode = 2
 text = "HP: 3/3"
 horizontal_alignment = 1
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1721, 893)
+scale = Vector2(0.450492, 0.450492)
+texture = ExtResource("9_mmixe")
+
+[node name="Power Up" type="PanelContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nt8jn")
+
+[node name="rotate" type="Sprite2D" parent="Power Up"]
+position = Vector2(130, -174)
+scale = Vector2(1.01337, 1.01337)
+texture = ExtResource("10_8fs27")
+
+[node name="frame" type="Sprite2D" parent="Power Up/rotate"]
+position = Vector2(53.2878, -110.523)
+scale = Vector2(0.829261, 0.829261)
+texture = ExtResource("11_whq80")
+
+[node name="cooldown" type="TextureRect" parent="Power Up/rotate/frame"]
+offset_left = -33.3197
+offset_top = -33.3196
+offset_right = 40.6803
+offset_bottom = 37.6804
+scale = Vector2(0.901646, 0.905807)
+texture = ExtResource("13_smy1h")
+
+[node name="active" type="TextureRect" parent="Power Up/rotate/frame"]
+offset_left = -33.3197
+offset_top = -33.3196
+offset_right = 40.6803
+offset_bottom = 37.6804
+scale = Vector2(0.901646, 0.905807)
+texture = ExtResource("12_kuui0")
+
+[node name="dash_timer" type="Control" parent="Power Up"]
+layout_mode = 2
+script = ExtResource("10_whq80")
+
+[node name="dash" type="Sprite2D" parent="Power Up/dash_timer"]
+position = Vector2(299, -188)
+scale = Vector2(1.01337, 1.01337)
+texture = ExtResource("14_lkjmk")
+
+[node name="frame" type="Sprite2D" parent="Power Up/dash_timer/dash"]
+position = Vector2(53.2878, -94.7339)
+scale = Vector2(0.829261, 0.829261)
+texture = ExtResource("11_whq80")
+
+[node name="active" type="TextureRect" parent="Power Up/dash_timer/dash/frame"]
+offset_left = -33.3197
+offset_top = -33.3197
+offset_right = 40.6803
+offset_bottom = 37.6803
+scale = Vector2(0.901646, 0.905807)
+texture = ExtResource("12_kuui0")
+
+[node name="cooldown" type="TextureRect" parent="Power Up/dash_timer/dash/frame"]
+offset_left = -33.3197
+offset_top = -33.3197
+offset_right = 40.6803
+offset_bottom = 37.6803
+scale = Vector2(0.901646, 0.905807)
+texture = ExtResource("13_smy1h")
+
 [node name="EnemyPanel" type="PanelContainer" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -220.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = 270.0
+offset_left = -444.0
+offset_top = 84.0
+offset_right = -244.0
+offset_bottom = 334.0
 grow_horizontal = 0
+scale = Vector2(2.49049, 2.49049)
+theme_override_styles/panel = SubResource("StyleBoxFlat_nt8jn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="EnemyPanel"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="EnemyPanel/VBoxContainer"]
 layout_mode = 2
-text = "ENEMY"
+text = "Morana"
 horizontal_alignment = 1
 
 [node name="Portrait" type="TextureRect" parent="EnemyPanel/VBoxContainer"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
+texture = ExtResource("3_m78vo")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="HPLabel" type="Label" parent="EnemyPanel/VBoxContainer"]
 layout_mode = 2
-text = "Enemy HP: 10/10"
+text = "HP: 10/10"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
