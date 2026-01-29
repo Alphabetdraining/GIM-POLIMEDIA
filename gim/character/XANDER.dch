@@ -49,6 +49,7 @@
 "export_overrides": {
 "image": "\"res://assets/character portrait/xander/Dialog_Xander(Cube) netral 2 (1).png\""
 },
+"ignore_char_scale": true,
 "mirror": true,
 "offset": Vector2(-100, 0),
 "scale": 0.01,

@@ -121,18 +121,19 @@ Carissa (ruang_gelap/senyum_3): Ya....
 [wait time="2.0" hide_text="false"]
 leave --All-- [animation="Instant Out"]
 Carissa pun mulai berlari dan keluar dari ruangan itu
-join Carissa (ruang_gelap/senyum_2) leftmost
-Carissa (ruang_gelap/senyum_2): XANDER…
+join Carissa (side/kecil) leftmost
+[background arg="res://assets/background/Tak berjudul47_20260129174518.png" fade="1.0"]
+Carissa (side/kecil): XANDER…
 [wait time="2.0" hide_text="false"]
-Carissa (ruang_gelap/senyum_2): TERIMAKASIH BANYAK DAN SELAMAT TINGGAL
+Carissa (side/kecil): TERIMAKASIH BANYAK DAN SELAMAT TINGGAL
 [wait time="1.5" hide_text="false"]
-Carissa (ruang_gelap/senyum_2): AKU TIDAK AKAN MELUPAKAN MU.
+Carissa (side/kecil): AKU TIDAK AKAN MELUPAKAN MU.
 [wait time="1.5" hide_text="false"]
 leave --All-- [animation="Instant Out"]
 Saat Carissa menyatakan perpisahan, Carissa melihat sekilas entitas asli Xander—sebuah wujud roh yang menyunggingkan senyum penuh kebanggaan.
 [wait time="3.0" hide_text="false"]
-[background arg="res://assets/background/Background_Ruang gelap.png" fade="1.0"]
-join XANDER (human) center
-XANDER (human): Ya, selamat tinggal carissa
+[background arg="res://assets/background/Ending scene_Xander1.png" fade="1.0"]
+join XANDER (kecil) center [animation="Fade In"]
+XANDER (kecil): Ya, selamat tinggal carissa
 [wait time="2.0" hide_text="false"]
 [signal arg="cut_in_03_clear"]

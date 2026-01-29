@@ -1,9 +1,9 @@
-Ruangan tetris yang menjadi sempit
+Morana menjadi sangat marah dan gila
 [wait time="1.5" hide_text="false"]
 join Carissa (side/kaget_2) leftmost
-Carissa (side/kaget_2): Xander ruangannya…
+Carissa (side/kaget_2): Xander di mangkin menggila
 join XANDER (netral) right
-XANDER (netral): Ya kau benar, ruangan ini mulai menyempit
+XANDER (netral): Ya kau benar, kita harus berhati-hati
 leave XANDER [animation="Instant Out"]
 leave Carissa [animation="Instant Out"]
 join Morana (tersenyum) right
@@ -11,7 +11,7 @@ Morana (tersenyum): Hahaha matilah kau
 [wait time="1.5" hide_text="false"]
 leave Morana [animation="Instant Out"]
 join XANDER (marah) right
-XANDER (marah): Tch dia tidak kapok-kapok
+XANDER (marah): Tch dia menjadi sangat gila
 XANDER (netral): Carissa kita harus bergegas mengalahkan dia
 [wait time="0.7" hide_text="false"]
 join Carissa (side/marah_5) leftmost

@@ -39,6 +39,7 @@ Carissa (side/kaget_right): Jahat sekali, dia mempermainkan kita seperti kelinci
 Morana (marah left): Tidak usah banyak bicara, Sekarang matilah dengan block ini
 [wait time="0.5" hide_text="false"]
 leave --All-- [animation="Instant Out"]
+Morana menyerang dengan serangan baru
 [signal arg="morana_new_attack"]
 join Carissa (side/kaget_2) leftmost [animation="Instant In"]
 Carissa (side/kaget_2): Apa itu barusan
@@ -46,7 +47,7 @@ join XANDER (kaget) right
 XANDER (kaget): Aku pun tidak tahu
 leave --All-- [animation="Instant Out"]
 join Morana (tersenyum) right [animation="Instant In"]
-Morana (tersenyum): HAHAHAHA rasakan itu, itu adalah lighning strike yang membuat kalian terkena stun dan tidak bisa bergerak dan bom ini untuk membuat kali cepat mati.
+Morana (tersenyum): HAHAHAHA rasakan itu
 [wait time="1.5" hide_text="false"]
 leave --All-- [animation="Instant Out"]
 join XANDER (kaget) right

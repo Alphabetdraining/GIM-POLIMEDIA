@@ -17,6 +17,16 @@
 &"nicknames": [""],
 &"offset": Vector2(100, 800),
 &"portraits": {
+"center/ending": {
+"export_overrides": {
+"image": "\"res://assets/character portrait/carissa_ruang_gelap/WhatsApp Image 2026-01-29 at 17.27.24 (1).jpeg\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(-500, -1000),
+"scale": 0.7,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
 "center/kaget_1_duplicated": {
 "export_overrides": {
 "image": "\"res://assets/character portrait/carissa/Dialog_Carissa terkejut 1.png\""
