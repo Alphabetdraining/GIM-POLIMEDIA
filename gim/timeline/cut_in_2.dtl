@@ -1,3 +1,5 @@
+[background fade="0.0"]
+audio music "res://assets/backsound/Tense_Normal (Dialogue Non chill).wav" [fade="1.0"]
 Suara dari ruangan tetris yang terdapat Speaker yang menunjukan hitungan waktu mundur
 join Carissa (side/kaget_3) leftmost
 join XANDER (kaget) right

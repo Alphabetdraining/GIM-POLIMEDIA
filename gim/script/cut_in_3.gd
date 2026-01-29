@@ -9,7 +9,7 @@ func _ready() -> void:
 	await get_tree().process_frame
 	Dialogic.signal_event.connect(_on_signal)
 	fade_in()
-	Dialogic.start("cut 4")
+	Dialogic.start("cut_in_3")
 
 
 func fade_in(duration := 2.5):
@@ -25,7 +25,7 @@ func fade_out(duration := 2.5):
 
 func _on_signal(signal_passed_in):
 	match signal_passed_in:
-		"cut_04":
+		"cut_in_03":
 			Dialogic.end_timeline()
 			Dialogic.clear()
 
@@ -35,5 +35,5 @@ func _on_signal(signal_passed_in):
 
 			
 			get_tree().change_scene_to_file(
-				"res://Scenes/cut_in_2.tscn"
+				"res://Scenes/main.tscn"
 			)

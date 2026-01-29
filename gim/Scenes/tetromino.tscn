@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cnsa8frlc3yut" path="res://script/tetromino.gd" id="1_vnj2s"]
 [ext_resource type="Texture2D" uid="uid://dec4o3yxtyp8d" path="res://assets/Claw_Claw.png" id="2_yc4i1"]
-[ext_resource type="Script" uid="uid://bach777oqvum3" path="res://script/claw.gd" id="3_q7wfc"]
+[ext_resource type="Script" path="res://script/claw.gd" id="3_q7wfc"]
 
 [node name="Tetromino" type="Node2D"]
 script = ExtResource("1_vnj2s")

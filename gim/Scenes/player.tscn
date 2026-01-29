@@ -751,7 +751,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -813,7 +813,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_critical",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -875,7 +875,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_hurt",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -937,7 +937,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -999,7 +999,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump_critical",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1061,7 +1061,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump_hurt",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1123,7 +1123,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1185,7 +1185,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_critical",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1247,7 +1247,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_hurt",
-"speed": 8.0
+"speed": 30.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_giuho"]
@@ -1255,8 +1255,8 @@ radius = 33.8378
 height = 136.168
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmm01"]
-radius = 33.8378
-height = 136.168
+radius = 38.75
+height = 177.547
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
@@ -1266,12 +1266,11 @@ script = ExtResource("1_x3wgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.758933, -7.58933)
-scale = Vector2(0.144201, 0.144201)
+scale = Vector2(0.144201, 0.140678)
 sprite_frames = SubResource("SpriteFrames_81gkq")
-animation = &"jump_critical"
+animation = &"run_hurt"
 autoplay = "idle"
-frame = 18
-frame_progress = 1.0
+frame_progress = 0.634429
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.38419e-07, -6.4995)
@@ -1283,6 +1282,7 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitDetector"]
 position = Vector2(0, -6.4995)
+scale = Vector2(0.763829, 0.757142)
 shape = SubResource("CapsuleShape2D_gmm01")
 
 [connection signal="area_entered" from="HitDetector" to="." method="_on_hit_detector_area_entered"]
