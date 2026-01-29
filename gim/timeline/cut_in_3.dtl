@@ -1,3 +1,5 @@
+[background fade="0.0"]
+audio music "res://assets/backsound/Tense_Normal (Dialogue Non chill).wav" [fade="1.0" loop="true"]
 Morana menjadi sangat marah dan gila
 [wait time="1.5" hide_text="false"]
 join Carissa (side/kaget_2) leftmost

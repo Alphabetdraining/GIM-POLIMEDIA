@@ -1,4 +1,5 @@
 [background arg="res://assets/background/Background_Ruang gelap.png" fade="0.0"]
+audio music "res://assets/backsound/Song 3.mp3" [fade="1.0" loop="true"]
 join Morana (marah_duplicated) center
 Morana (marah_duplicated): Akh! Sialan... Kau pikir ini... sudah berakhir? Sshhh... l-lihat saja nanti...
 [wait time="1.5" hide_text="false"]

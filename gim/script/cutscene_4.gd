@@ -35,5 +35,5 @@ func _on_signal(signal_passed_in):
 
 			
 			get_tree().change_scene_to_file(
-				""
+				"res://Scenes/cut_in_2.tscn"
 			)

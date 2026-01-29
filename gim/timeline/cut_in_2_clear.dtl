@@ -1,3 +1,5 @@
+[background fade="0.0"]
+audio music "res://assets/backsound/Tense_Normal (Dialogue Non chill).wav" [fade="1.0"]
 join Carissa (side/takut_1) leftmost [animation="Instant In"]
 Carissa (side/takut_1): Apa kita berhasil?
 [wait time="1.0" hide_text="false"]
