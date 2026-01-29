@@ -71,9 +71,6 @@ Carissa (ruang_gelap/senyum_2): Aku janji akan membantu mu keluar dari sini
 XANDER (netral): Ta-Tapii
 Carissa (ruang_gelap/senyum_1): Kita akan nyari jalan keluarnya
 XANDER (uncomfortable): (menghela nafas) aku tidak di dengar yaaa, ya sudahlah
-[wait time="1.0" hide_text="false"]
-leave --All--
-Alarm berbunyi yang membuat Xander dan Carissa terkejut\
-Seketika lampu menyala dan memperlihatkan ruangan yang sama seperti sebelumnya tetapi.
 [wait time="1.5" hide_text="false"]
+leave --All--
 [signal arg="cut_04"]

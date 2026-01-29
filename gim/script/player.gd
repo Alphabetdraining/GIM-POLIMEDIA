@@ -3,8 +3,8 @@ extends CharacterBody2D
 signal hp_changed(new_hp)
 signal player_died
 
-const SPEED = 500.0
-const JUMP_VELOCITY = -500.0
+const SPEED = 800.0
+const JUMP_VELOCITY = -700.0
 const MAX_JUMPS = 2
 
 const MAX_HP = 3

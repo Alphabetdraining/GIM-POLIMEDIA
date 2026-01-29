@@ -19,8 +19,8 @@ var mc_portraits = {
 	1: null
 }
 
-var enemy_hp = 10
-var max_enemy_hp = 10
+var enemy_hp = 6
+var max_enemy_hp = 6
 
 func _ready():
 	if center_container:
@@ -68,6 +68,9 @@ func damage_enemy(amount: int):
 	
 	if enemy_hp <= 0:
 		print("Enemy defeated!")
+		get_tree().change_scene_to_file(
+				"res://Scenes/cutscene_4.tscn"
+			)
 
 func _on_button_pressed():
 	get_tree().paused = false

@@ -1,44 +1,4 @@
-[background arg="res://assets/background/Background_Ruang gelap.png" fade="0.0"]
 audio music "res://assets/backsound/Song 3.mp3" [fade="1.0" loop="true"]
-join Morana (marah_duplicated) center
-Morana (marah_duplicated): Akh! Sialan... Kau pikir ini... sudah berakhir? Sshhh... l-lihat saja nanti...
-[wait time="1.5" hide_text="false"]
-leave --All-- [animation="Instant Out"]
-Dalam sekejap, Morana tampak terserpih menjadi debu sebelum akhirnya benar-benar menghilang dari pandangan.
-[wait time="1.5" hide_text="false"]
-join Carissa (ruang_gelap/netral_3) leftmost
-Carissa (ruang_gelap/netral_3): Fuuuh ... Xander, apa kita benar-benar berhasil mengalahkannya?
-[wait time="1.0" hide_text="false"]
-join XANDER (bingung) right
-XANDER (bingung): Ya mungkin
-[wait time="0.7" hide_text="false"]
-XANDER (netral_2): Lagian juga dia sudah mengerahkan semua kekuatannya, mustahil dia bisa bangkit kembali
-Carissa (ruang_gelap/senyum_2): Syukurlah
-[wait time="2.0" hide_text="false"]
-Carissa (ruang_gelap/sedih_3): Hiks…
-[wait time="2.0" hide_text="false"]
-XANDER (bingung): Eh kau kenapa Carissa?
-Carissa (ruang_gelap/sedih_3): Aku. Hiks. Aku. hiks…
-[wait time="2.0" hide_text="false"]
-XANDER (uncomfortable): ...
-[wait time="2.0" hide_text="false"]
-Carissa (ruang_gelap/sedih_3): Aku ... aku tidak tahu harus membalasnya dengan apa. Huuu ... terima kasih Xander sudah membantuku sampai sini
-XANDER (uncomfortable): ...
-[wait time="2.0" hide_text="false"]
-XANDER (senyum): Sudahlah, aku juga bersyukur kau selamat dari tantangan ini
-XANDER (senyum): Itu sudah tugasku sebagai block yang tinggal di sini
-XANDER (netral): Aku tidak ingin lagi ada korban yang mati sia-sia
-Carissa (ruang_gelap/senyum_3): Kau adalah heroku xander
-[wait time="1.5" hide_text="false"]
-XANDER (malu): He-hero? Aneh aja kamu ini
-Carissa (ruang_gelap/senyum_2): HAHAHAHA
-[wait time="2.0" hide_text="false"]
-XANDER (uncomfortable): ...
-[wait time="1.5" hide_text="false"]
-XANDER (senyum): Syukurlah kau sudah tertawa lagi
-Carissa (ruang_gelap/senyum_3): Ya, Sekali lagi Terimakasih Xander
-update Carissa (side/kecil) [animation="Instant In"]
-update XANDER (kecil) rightmost
 [background arg="res://assets/background/Background_ruangan gelap ada pintu.png" fade="1.0"]
 XANDER (kecil): Hei Carissa liat itu, Ada cahaya di situ
 XANDER (kecil): Mari kita hampiri
