@@ -55,9 +55,9 @@ func update_enemy_hp_display(hp: int):
 	if not enemy_portrait:
 		return
 
-	if enemy_hp >= 7:
+	if enemy_hp >= 5:
 		enemy_portrait.texture = enemy_portrait_normal
-	elif enemy_hp >= 4:
+	elif enemy_hp >= 3:
 		enemy_portrait.texture = enemy_portrait_hurt
 	else:
 		enemy_portrait.texture = enemy_portrait_dying

@@ -10,7 +10,7 @@ join teman_2 right
 teman_2: Oh kalo boleh tau nama game nya apa? Aku penasaran banget dengan game nya.
 leave teman_2
 join teman_1 right
-teman_1: Nama game nya yang aku liat itu namanya The Falling Order (nama sementara).
+teman_1: Nama game nya yang aku liat itu namanya The Falling Order.
 leave Carissa [animation="Instant Out"]
 join "carissa inner" leftmost [animation="Instant In"]
 "carissa inner": The Falling Order ya, Aku takut banget itu bakalan terjadi tapi aku penasaran banget.
